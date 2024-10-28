@@ -19,7 +19,7 @@ const Footer = () => {
         <ul className={socialLinks}>
           <li className={socialLinkItem}>
             <a
-              href="https://www.linkedin.com/in/your-profile"
+              href="https://www.linkedin.com/in/dymitr-dworakowski/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -28,7 +28,7 @@ const Footer = () => {
           </li>
           <li className={socialLinkItem}>
             <a
-              href="https://github.com/your-profile"
+              href="https://github.com/DymitrDworakowski"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -36,7 +36,7 @@ const Footer = () => {
             </a>
           </li>
           <li className={socialLinkItem}>
-            <a href="mailto:your-email@example.com">Email</a>
+            <a href="d.dvorakivskyi@gmail.com">Email</a>
           </li>
         </ul>
       </div>

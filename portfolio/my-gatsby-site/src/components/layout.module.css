@@ -1,26 +1,57 @@
+/* src/components/layout.module.css */
+
 .container {
-  margin: auto;
-  max-width: 800px;
-  font-family: sans-serif;
+  margin: 0 auto;
+  max-width: 900px; /* трішки більше простору для контенту */
+  padding: 0 1.5rem;
+  font-family: 'Roboto', sans-serif; /* додаємо стильний шрифт */
 }
 
 .heading {
-  color: rebeccapurple;
+  color: #3d5afe; /* темно-синій відтінок для заголовка */
+  font-size: 2.5rem;
+  margin-top: 2rem;
+  font-weight: bold;
+  text-align: center;
 }
-.nav-links {
+
+.navLinks {
   display: flex;
+  justify-content: center;
+  gap: 1.5rem;
   list-style: none;
-  padding-left: 0;
+  padding: 1rem 0;
+  margin: 0;
+  background-color: #f5f5f5;
+  border-radius: 8px;
 }
-.nav-link-item {
-  padding-right: 2rem;
+
+.navLinkItem {
+  transition: transform 0.2s;
 }
-.nav-link-text {
-  color: black;
+
+.navLinkItem:hover {
+  transform: scale(1.05); /* трохи збільшує при наведенні */
 }
-.site-title {
-  font-size: 3rem;
-  color: gray;
-  font-weight: 700;
-  margin: 3rem 0;
+
+.navLinkText {
+  color: #1a1a1a;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.navLinkText:hover {
+  color: #3d5afe; /* синій відтінок при наведенні */
+}
+
+.siteTitle {
+  font-size: 2.5rem;
+  color: #424242;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }

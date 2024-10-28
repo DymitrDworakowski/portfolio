@@ -1,7 +1,6 @@
 import * as React from "react"
 import Layout from "../components/layout"
-import Header from "../components/header"
-import Footer from "../components/footer"
+
 import { StaticImage } from "gatsby-plugin-image"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { graphql } from "gatsby"
@@ -13,7 +12,6 @@ const IndexPage = () => {
 
   return (
     <section className={section}>
-      <Header />
       <Layout pageTitle="Home Page">
         <h1>{t("greeting")}</h1>
         <p>{t("description")}</p>
@@ -22,7 +20,6 @@ const IndexPage = () => {
         </p>
         <StaticImage alt="Progman" src="../images/ImgHomePage.png" />
       </Layout>
-      <Footer />
     </section>
   )
 }

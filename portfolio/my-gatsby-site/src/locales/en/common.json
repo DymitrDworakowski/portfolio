@@ -1,4 +1,8 @@
 {
+  "Home":"Home",
+  "About": "About",
+  "Projects": "Projects",
+  "Certificates": "Certificates",
   "greeting": "Hello",
   "description": "Welcome to our site!"
 }
