@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
-import LanguageSwitcher from "./languageSwitcher"
+
 import {
   container,
   heading,
@@ -22,7 +22,7 @@ const Layout = ({ pageTitle, children }) => {
   `)
   return (
     <div className={container}>
-      <LanguageSwitcher />
+    
       <header className={siteTitle}>{data.site.siteMetadata.title}</header>
       <nav>
         <ul className={navLinks}>

@@ -1,0 +1,40 @@
+/* src/components/footer.module.css */
+.footerContainer {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    padding: 1.5rem;
+    text-align: center;
+  }
+  
+  .footerContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .socialLinks {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+    margin: 1rem 0;
+  }
+  
+  .socialLinkItem a {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .socialLinkItem a:hover {
+    color: #3db4f2; /* Вибери будь-який приємний колір для ховера */
+  }
+  
+  .copyright {
+    font-size: 0.875rem;
+    color: #a0a0a0;
+    margin-top: 1rem;
+  }
+  
