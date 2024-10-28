@@ -13,6 +13,7 @@
     "gatsby-plugin-mdx": "^5.13.1",
     "gatsby-plugin-react-i18next": "^3.0.1",
     "gatsby-plugin-sharp": "^5.13.1",
+    "gatsby-plugin-use-dark-mode": "^2.0.1",
     "gatsby-source-filesystem": "^5.13.1",
     "gatsby-transformer-sharp": "^5.13.1",
     "i18next": "^22.5.1",

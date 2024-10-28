@@ -8,16 +8,14 @@ import Seo from "../components/seo"
 import section from "./index.module.css"
 
 const IndexPage = () => {
-  const { t } = useTranslation()
+  const { t } = useTranslation(["home"])
 
   return (
     <section className={section}>
       <Layout pageTitle="Home Page">
-        <h1>{t("greeting")}</h1>
-        <p>{t("description")}</p>
-        <p>
-          Hi! my name is Dymitr Dworakowski. I'm Junior Full-Stack Developer
-        </p>
+        {/* <h1>{t("greeting")}</h1>
+        <p>{t("description")}</p> */}
+        <p>{t("home:main")}</p>
         <StaticImage alt="Progman" src="../images/ImgHomePage.png" />
       </Layout>
     </section>

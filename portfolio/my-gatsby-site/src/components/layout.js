@@ -1,6 +1,8 @@
 import * as React from "react"
-import { Link, Trans, useTranslation } from "gatsby-plugin-react-i18next"
+import { Link, Trans } from "gatsby-plugin-react-i18next"
 import { graphql, useStaticQuery } from "gatsby"
+import Seo from "./seo"
+import ThemeToggle from "./ThemeToggle"
 import Header from "./header"
 import Footer from "./footer"
 import {
@@ -13,20 +15,20 @@ import {
 } from "./layout.module.css"
 
 const Layout = ({ pageTitle, children }) => {
-  const { t } = useTranslation()
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+  // const data = useStaticQuery(graphql`
+  //   query {
+  //     site {
+  //       siteMetadata {
+  //         title
+  //       }
+  //     }
+  //   }
+  // `)
   return (
     <div className={container}>
       <header className={siteTitle}>
-        {data.site.siteMetadata.title}
+        <ThemeToggle />
+        <Seo />
         <Header />
       </header>
       <nav>
@@ -42,7 +44,7 @@ const Layout = ({ pageTitle, children }) => {
             </Link>
           </li>
           <li className={navLinkItem}>
-            <Link to="/blog" className={navLinkText}>
+            <Link to="/projects" className={navLinkText}>
               <Trans>Projects</Trans>
             </Link>
           </li>
@@ -63,5 +65,17 @@ const Layout = ({ pageTitle, children }) => {
     </div>
   )
 }
-
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`
 export default Layout
