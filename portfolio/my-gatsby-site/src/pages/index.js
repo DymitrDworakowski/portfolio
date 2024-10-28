@@ -1,20 +1,41 @@
-import * as React from 'react'
-import Layout from '../components/layout'
-import { StaticImage } from 'gatsby-plugin-image';
-import Seo from '../components/seo';
+import * as React from "react"
+import Layout from "../components/layout"
+import Footer from "../components/footer"
+import { StaticImage } from "gatsby-plugin-image"
+import { useTranslation } from "gatsby-plugin-react-i18next"
+import Seo from "../components/seo"
+import section from "./index.module.css"
 
 const IndexPage = () => {
+  const { t } = useTranslation()
+
   return (
-    <Layout pageTitle="Home Page">
-      <p>I'm making this by following the Gatsby Tutorial.</p>
-      <StaticImage
-        alt="Clifford, a reddish-brown pitbull, posing on a couch and looking stoically at the camera"
-        src="https://pbs.twimg.com/media/E1oMV3QVgAIr1NT?format=jpg&name=large"
-      />
-    </Layout>
+    <section className={section}>
+      <Layout pageTitle="Home Page">
+        <h1>{t("greeting")}</h1>
+        <p>{t("description")}</p>
+        <p>
+          Hi! my name is Dymitr Dworakowski. I'm Junior Full-Stack Developer
+        </p>
+        <StaticImage alt="Progman" src="../images/ImgHomePage.png" />
+      </Layout>
+      <Footer />
+    </section>
   )
 }
-
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`
 export const Head = () => <Seo title="Home Page" />
 
 export default IndexPage

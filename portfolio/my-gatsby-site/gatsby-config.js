@@ -9,19 +9,47 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `My First Gatsby Site`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `My Portfolio`,
+    description: `Its my portfolio with projects and skils.`,
+    author: `Dymitr Dworakowski`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
   plugins: [
     `gatsby-plugin-image`,
     "gatsby-transformer-sharp",
     {
+      resolve: `gatsby-plugin-react-i18next`,
+      options: {
+        localeJsonSourceName: `locales`, // вкажи джерело для мовних файлів
+        languages: [`en`, `pl`], // масив з кодами мов
+        defaultLanguage: `en`, // мова за замовчуванням
+        siteUrl: `https://www.example.com/`,
+        i18nextOptions: {
+          interpolation: {
+            escapeValue: false,
+          },
+        },
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/locales`,
+        name: `locales`,
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `blog`,
         path: `${__dirname}/blog`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
       },
     },
     "gatsby-plugin-mdx",
@@ -38,7 +66,7 @@ module.exports = {
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/emile-perron-xrVDYZRGdw4-unsplash.jpg`, // This path is relative to the root of the site.
       },
     },
   ],
