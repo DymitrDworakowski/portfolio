@@ -3,6 +3,7 @@ import Layout from "../components/layout"
 import Footer from "../components/footer"
 import { StaticImage } from "gatsby-plugin-image"
 import { useTranslation } from "gatsby-plugin-react-i18next"
+import { graphql } from "gatsby"
 import Seo from "../components/seo"
 import section from "./index.module.css"
 
