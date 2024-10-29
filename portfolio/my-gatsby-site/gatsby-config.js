@@ -16,7 +16,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-image`,
-    `gatsby-plugin-use-dark-mode`,
+    "gatsby-plugin-use-dark-mode",
     "gatsby-transformer-sharp",
     {
       resolve: `gatsby-plugin-react-i18next`,

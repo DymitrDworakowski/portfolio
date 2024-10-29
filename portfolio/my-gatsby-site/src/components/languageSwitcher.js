@@ -7,7 +7,11 @@ const LanguageSwitcher = () => {
   return (
     <div>
       {languages.map(lng => (
-        <button key={lng} onClick={() => changeLanguage(lng)}>
+        <button
+          className="btn btn-lighter"
+          key={lng}
+          onClick={() => changeLanguage(lng)}
+        >
           {lng}
         </button>
       ))}

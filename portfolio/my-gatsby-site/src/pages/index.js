@@ -5,20 +5,22 @@ import { StaticImage } from "gatsby-plugin-image"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { graphql } from "gatsby"
 import Seo from "../components/seo"
-import section from "./index.module.css"
+// import section from "./index.module.css"
 
 const IndexPage = () => {
   const { t } = useTranslation(["home"])
 
   return (
-    <section className={section}>
-      <Layout pageTitle="Home Page">
-        {/* <h1>{t("greeting")}</h1>
+    <Layout pageTitle="Home Page">
+      {/* <h1>{t("greeting")}</h1>
         <p>{t("description")}</p> */}
-        <p>{t("home:main")}</p>
-        <StaticImage alt="Progman" src="../images/ImgHomePage.png" />
-      </Layout>
-    </section>
+      <p>{t("home:main")}</p>
+      <StaticImage
+        alt="Progman"
+        src="../images/ImgHomePage.png"
+        className="img-fluid"
+      />
+    </Layout>
   )
 }
 export const query = graphql`
