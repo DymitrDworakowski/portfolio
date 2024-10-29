@@ -22,7 +22,7 @@ const Layout = ({ pageTitle, children }) => {
             <Trans>My Portfolio</Trans>
           </h1>
         </div>
-        <nav className=" column-2">
+        <nav className="column-2 ">
           <ul className={navLinks}>
             <li className={navLinkItem}>
               <Link to="/" className={navLinkText}>
@@ -46,12 +46,9 @@ const Layout = ({ pageTitle, children }) => {
             </li>
           </ul>
         </nav>
-        <div className="column-2">
-          <ThemeToggle />
-          <LanguageSwitcher />
-        </div>
+        <ThemeToggle />
+        <LanguageSwitcher />
       </header>
-
       <main className="row">
         <div className="column">
           <h1 className={heading}>{pageTitle}</h1>

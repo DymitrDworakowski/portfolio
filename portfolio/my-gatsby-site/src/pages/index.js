@@ -13,8 +13,8 @@ const IndexPage = () => {
   return (
     <Layout pageTitle="Home Page">
       <div className={custom_bg}>
-        <div className="d-flex align-items-center">
-          <p className="p-2 flex-grow-1">{t("home:main")}</p>
+        <div className="column">
+          <p className="">{t("home:main")}</p>
           {/* <StaticImage
             alt="Progman"
             src="../images/ilya-pavlov-OqtafYT5kTw-unsplash.jpg"

@@ -2,7 +2,7 @@
   background-image: url("../images/nubelson-fernandes--Xqckh_XVU4-unsplash.jpg");
   background-size: cover; /* Покриває весь елемент */
   background-position: center; /* Центрує зображення */
-  height: 100%; /* Висота блоку */
+  height: 1200px; /* Висота блоку */
   width: 100%;
   color: white; /* Колір тексту */
   display: flex; /* Додаємо флекс для центрування тексту */
