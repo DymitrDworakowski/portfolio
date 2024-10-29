@@ -5,21 +5,23 @@ import { StaticImage } from "gatsby-plugin-image"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { graphql } from "gatsby"
 import Seo from "../components/seo"
-// import section from "./index.module.css"
+import { custom_bg } from "./index.module.css"
 
 const IndexPage = () => {
   const { t } = useTranslation(["home"])
 
   return (
     <Layout pageTitle="Home Page">
-      {/* <h1>{t("greeting")}</h1>
-        <p>{t("description")}</p> */}
-      <p>{t("home:main")}</p>
-      <StaticImage
-        alt="Progman"
-        src="../images/ImgHomePage.png"
-        className="img-fluid"
-      />
+      <div className={custom_bg}>
+        <div className="d-flex align-items-center">
+          <p className="p-2 flex-grow-1">{t("home:main")}</p>
+          {/* <StaticImage
+            alt="Progman"
+            src="../images/ilya-pavlov-OqtafYT5kTw-unsplash.jpg"
+            className="img-fluid opacity-0 border rounded"
+          /> */}
+        </div>
+      </div>
     </Layout>
   )
 }

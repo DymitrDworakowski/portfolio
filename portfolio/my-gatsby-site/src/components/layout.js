@@ -2,8 +2,8 @@
 import React from "react"
 import { Link, Trans } from "gatsby-plugin-react-i18next"
 import ThemeToggle from "./ThemeToggle"
-import LanguageSwitcher from "./languageSwitcher"
-import Footer from "./footer"
+import LanguageSwitcher from "./LanguageSwitcher"
+import Footer from "./Footer"
 import {
   container,
   heading,
@@ -15,61 +15,54 @@ import {
 
 const Layout = ({ pageTitle, children }) => {
   return (
-    <div className="container-fluid">
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <div className="container">
-          <Link to="/" className="navbar-brand">
-            <Trans>My Portfolio</Trans> {/* Назва вашого сайту */}
-          </Link>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav me-auto">
-              <li className="nav-item">
-                <Link to="/" className="nav-link">
-                  <Trans>Home</Trans>
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/about" className="nav-link">
-                  <Trans>About</Trans>
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/projects" className="nav-link">
-                  <Trans>Projects</Trans>
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/certificates" className="nav-link">
-                  <Trans>Certificates</Trans>
-                </Link>
-              </li>
-            </ul>
-            <div className="d-flex">
-              <ThemeToggle />
-              <LanguageSwitcher />
-            </div>
-          </div>
+    <div className="container">
+      <header className="row">
+        <div className="column">
+          <h1 className={siteTitle}>
+            <Trans>My Portfolio</Trans>
+          </h1>
         </div>
-      </nav>
+        <nav className=" column-2">
+          <ul className={navLinks}>
+            <li className={navLinkItem}>
+              <Link to="/" className={navLinkText}>
+                <Trans>Home</Trans>
+              </Link>
+            </li>
+            <li className={navLinkItem}>
+              <Link to="/about" className={navLinkText}>
+                <Trans>About</Trans>
+              </Link>
+            </li>
+            <li className={navLinkItem}>
+              <Link to="/projects" className={navLinkText}>
+                <Trans>Projects</Trans>
+              </Link>
+            </li>
+            <li className={navLinkItem}>
+              <Link to="/certificates" className={navLinkText}>
+                <Trans>Certificates</Trans>
+              </Link>
+            </li>
+          </ul>
+        </nav>
+        <div className="column-2">
+          <ThemeToggle />
+          <LanguageSwitcher />
+        </div>
+      </header>
 
-      <main className="container my-4">
-        <h1 className="display-4">{pageTitle}</h1>
-        {children}
+      <main className="row">
+        <div className="column">
+          <h1 className={heading}>{pageTitle}</h1>
+          {children}
+        </div>
       </main>
 
-      <footer className="bg-light text-center py-4">
-        <Footer />
+      <footer className="row">
+        <div className="column">
+          <Footer />
+        </div>
       </footer>
     </div>
   )

@@ -1,9 +1,111 @@
+/* Теми */
 .light-mode {
   background-color: #ffffff;
   color: #000000;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .dark-mode {
   background-color: #121212;
   color: #ffffff;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Підключення Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Montserrat:wght@700&display=swap');
+
+/* Налаштування базових стилів */
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  color: #222;
+  line-height: 1.2;
+}
+
+p {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+/* Контейнер з відступами */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+/* Базова сітка з Flexbox */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -10px; /* Відступи між колонками */
+}
+
+.column {
+  flex: 1 1 100%;
+  padding: 10px;
+  box-sizing: border-box; /* Забезпечує правильні відступи */
+}
+
+/* Адаптивні колонки */
+.column-1 {
+  flex: 1 1 100%;
+}
+
+@media (min-width: 576px) {
+  .column-2 {
+    flex: 1 1 50%;
+  }
+}
+
+@media (min-width: 768px) {
+  .column-3 {
+    flex: 1 1 33.3333%;
+  }
+}
+
+@media (min-width: 992px) {
+  .column-4 {
+    flex: 1 1 25%;
+}
+
+/* Забезпечення більш точного контролю на великих екранах */
+  .column-2, .column-3, .column-4 {
+    max-width: 100%; /* Забезпечує правильне вирівнювання */
+  }
+}
+
+/* Кнопки */
+.button {
+  background-color: #3d5afe;
+  color: #ffffff;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #293bda;
+}
+
+/* Посилання */
+a {
+  color: #3d5afe;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #293bda;
 }

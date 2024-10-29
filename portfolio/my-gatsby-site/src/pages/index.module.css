@@ -1,5 +1,11 @@
-/* section {
-  background-image: url(../images/emile-perron-xrVDYZRGdw4-unsplash.jpg);
-  background-size: cover;
-  background-position: center;
-} */
+.custom_bg {
+  background-image: url("../images/nubelson-fernandes--Xqckh_XVU4-unsplash.jpg");
+  background-size: cover; /* Покриває весь елемент */
+  background-position: center; /* Центрує зображення */
+  height: 100%; /* Висота блоку */
+  width: 100%;
+  color: white; /* Колір тексту */
+  display: flex; /* Додаємо флекс для центрування тексту */
+  align-items: center; /* Вертикальне центрування */
+  justify-content: center; /* Горизонтальне центрування */
+}
