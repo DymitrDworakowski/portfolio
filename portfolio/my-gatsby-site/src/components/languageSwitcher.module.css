@@ -1,50 +1,22 @@
-/* .button_50 {
-  appearance: button;
-  background-color: #000;
-  background-image: none;
-  border: 1px solid #000;
-  border-radius: 4px;
-  box-shadow: #fff 4px 4px 0 0, #000 4px 4px 0 1px;
-  box-sizing: border-box;
-  color: #fff;
-  cursor: pointer;
-  display: inline-block;
-  font-family: ITCAvantGardeStd-Bk, Arial, sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 20px;
-  margin: 0 5px 10px 0;
-  overflow: visible;
-  padding: 12px 40px;
-  text-align: center;
-  text-transform: none;
-  touch-action: manipulation;
-  user-select: none;
-  -webkit-user-select: none;
-  vertical-align: middle;
-  white-space: nowrap;
-}
-
-.button_50:focus {
-  text-decoration: none;
+.button_50 {
+  background-color: #05081a; /* Основний колір кнопки */
+  color: #ffffff; /* Колір тексту */
+  padding: 0.2rem 0.3rem; /* Відступи кнопки */
+  border: none; /* Без обводки */
+  border-radius: 5px; /* Закруглені кути */
+  font-size: 1rem; /* Розмір шрифту */
+  font-weight: bold; /* Жирний шрифт */
+  cursor: pointer; /* Курсор при наведенні */
+  margin: 0 2px; /* Відступи між кнопками */
+  transition: background-color 0.3s, transform 0.2s; /* Плавні переходи */
 }
 
 .button_50:hover {
-  text-decoration: none;
+  background-color: #293bda; /* Темніший відтінок при наведенні */
+  transform: scale(1.05); /* Трохи збільшує при наведенні */
 }
 
-.button_50:active {
-  box-shadow: rgba(0, 0, 0, 0.125) 0 3px 5px inset;
-  outline: 0;
+.button_50:focus {
+  outline: none; /* Без контурів при фокусуванні */
+  box-shadow: 0 0 0 2px rgba(61, 90, 254, 0.5); /* Світла тінь для фокусу */
 }
-
-.button_50:not([disabled]):active {
-  box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
-  transform: translate(2px, 2px);
-}
-
-@media (min-width: 768px) {
-  .button_50 {
-    padding: 12px 50px;
-  }
-} */

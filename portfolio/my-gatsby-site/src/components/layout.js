@@ -5,7 +5,6 @@ import ThemeToggle from "./ThemeToggle"
 import LanguageSwitcher from "./LanguageSwitcher"
 import Footer from "./Footer"
 import {
-  container,
   heading,
   navLinks,
   navLinkItem,
@@ -21,6 +20,8 @@ const Layout = ({ pageTitle, children }) => {
           <h1 className={siteTitle}>
             <Trans>My Portfolio</Trans>
           </h1>
+          <ThemeToggle />
+          <LanguageSwitcher />
         </div>
         <nav className="column-2 ">
           <ul className={navLinks}>
@@ -46,8 +47,6 @@ const Layout = ({ pageTitle, children }) => {
             </li>
           </ul>
         </nav>
-        <ThemeToggle />
-        <LanguageSwitcher />
       </header>
       <main className="row">
         <div className="column">

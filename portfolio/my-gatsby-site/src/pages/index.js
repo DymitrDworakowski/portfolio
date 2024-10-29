@@ -13,14 +13,12 @@ const IndexPage = () => {
   return (
     <Layout pageTitle="Home Page">
       <div className={custom_bg}>
-        <div className="column">
-          <p className="">{t("home:main")}</p>
-          {/* <StaticImage
+        <p className="">{t("home:main")}</p>
+        {/* <StaticImage
             alt="Progman"
             src="../images/ilya-pavlov-OqtafYT5kTw-unsplash.jpg"
             className="img-fluid opacity-0 border rounded"
           /> */}
-        </div>
       </div>
     </Layout>
   )
