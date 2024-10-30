@@ -48,8 +48,8 @@ const Layout = ({ pageTitle, children }) => {
           </ul>
         </nav>
       </header>
-      <main className="row">
-        <div className="column">
+      <main className="column">
+        <div className="row">
           {/* <h1 className={heading}>{pageTitle}</h1> */}
           {children}
         </div>

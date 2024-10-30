@@ -2,22 +2,22 @@ import * as React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
-import { StaticImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { image,project } from "./index.module.css"
+
 const BlogPage = ({ data }) => {
   return (
     <Layout>
       {data.allMdx.nodes.map(node => (
-        <article key={node.id}>
-          <h2>
+        <article key={node.id} className={project}>
+          <div className={image}>
+          <h2 >
             <Link to={`/projects/${node.frontmatter.slug}`}>
               {node.frontmatter.title}
-              <StaticImage
-            alt="Progman"
-            src={node.frontmatter.hero_image}
-            className=""
-          /> 
+              <GatsbyImage image={getImage(node.frontmatter.hero_image)} alt={node.frontmatter.hero_image_alt} />
             </Link>
           </h2>
+          </div>
           <p>Posted: {node.frontmatter.date}</p>
           <p>Role: {node.frontmatter.role}</p>
         </article>
@@ -35,6 +35,12 @@ export const query = graphql`
           title
           slug
           role
+          hero_image_alt
+          hero_image {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
         }
         id
       }
