@@ -1,0 +1,37 @@
+/* about.module.css */
+.aboutContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  line-height: 1.8;
+  font-family: "Roboto", sans-serif;
+}
+
+.sectionTitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  color: #3d5afe;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 0.2rem;
+}
+
+.aboutText {
+  color: #333;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.aboutText:last-of-type {
+  margin-bottom: 0;
+}
+
+.connectText {
+  font-weight: 500;
+  color: #293bda;
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}

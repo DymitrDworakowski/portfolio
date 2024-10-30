@@ -1,8 +1,8 @@
 .custom_bg {
-  background-image: url("../images/nubelson-fernandes--Xqckh_XVU4-unsplash.jpg");
+  background-image: url("../images/ImageHome.jpeg");
   background-size: cover; /* Покриває весь елемент */
   background-position: center; /* Центрує зображення */
-  height: 1200px; /* Висота блоку */
+  height: 500px; /* Висота блоку */
   width: 100%;
   color: white; /* Колір тексту */
   display: flex; /* Додаємо флекс для центрування тексту */

@@ -50,7 +50,7 @@ const Layout = ({ pageTitle, children }) => {
       </header>
       <main className="row">
         <div className="column">
-          <h1 className={heading}>{pageTitle}</h1>
+          {/* <h1 className={heading}>{pageTitle}</h1> */}
           {children}
         </div>
       </main>
