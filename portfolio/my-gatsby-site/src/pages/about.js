@@ -50,10 +50,26 @@ const AboutPage = () => {
 
         <span className={sectionTitle}>Let’s Connect!</span>
         <p className={`${aboutText} ${connectText}`}>
-          <Trans i18nKey="connect"></Trans>
-          I am always open to new ideas and cooperation. If you have an
-          interesting project or a question, I would be happy to chat!
+          <Trans i18nKey="connect"></Trans>I am always open to new ideas and
+          cooperation. If you have an interesting project or a question, I would
+          be happy to chat!
         </p>
+      </div>
+      <div>
+        <h2>Experience</h2>
+        <ul>
+          <li>
+            <h3>July 2021 - Current</h3>
+            <p>
+              System and Network Administrator Intersport Poland, Krakow, Poland
+            </p>
+          </li>
+          <li>
+            <h3>October 2017 - July 2021</h3>
+            <p>Technical Support Engineer Ensalta, Krakow, Poland</p>
+            <p></p>
+          </li>
+        </ul>
       </div>
     </Layout>
   )

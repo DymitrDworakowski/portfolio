@@ -1,14 +1,26 @@
 /* Теми */
+@import './variables.module.css'; /* Імпортуй змінні */
 .light-mode {
-  background-color: #ffffff;
-  color: #000000;
+  background-color: var(--background);
+  color:var(--text);
   transition: background-color 0.3s, color 0.3s;
 }
 
 .dark-mode {
-  background-color: #121212;
-  color: #ffffff;
+  background-color: var(--background);
+  color: var(--text);
   transition: background-color 0.3s, color 0.3s;
+
+}
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4,
+.dark-mode h5,
+.dark-mode h6,
+.dark-mode p,
+.dark-mode ul {
+  color: var(--text);
 }
 
 /* Підключення Google Fonts */
@@ -17,10 +29,10 @@
 /* Налаштування базових стилів */
 body {
   font-family: 'Roboto', sans-serif;
-  color: #333;
+  color: var(--primary);
   margin: 0;
   padding: 0;
-  background-color: #f9f9f9;
+  background-color: var(--background);
 }
 
 h1, h2, h3, h4, h5, h6 {

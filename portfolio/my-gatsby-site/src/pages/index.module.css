@@ -5,7 +5,16 @@
   height: 500px; /* Висота блоку */
   width: 100%;
   color: white; /* Колір тексту */
-  display: flex; /* Додаємо флекс для центрування тексту */
-  align-items: center; /* Вертикальне центрування */
-  justify-content: center; /* Горизонтальне центрування */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.main{
+  text-align: center;
+  color: rgb(254, 254, 255);
+}
+.skills{
+  display: flex;
+  justify-content: space-around;
 }

@@ -1,0 +1,19 @@
+:root {
+  --primary: #333;
+  --secondary: #2ecc71;
+  --background: #ffffff;
+  --text: #333333;
+  --button: ;
+}
+
+.dark-mode {
+  --primary: #1abc9c; /* Темна тема - основний колір */
+  --secondary: #2ecc71; /* Темна тема - другорядний колір */
+  --background: #121212; /* Темна тема - фон */
+  --text: #f9f9f9; /* Темна тема - текст */
+}
+
+.light-mode {
+  --background: #f9f9f9;
+  --text: #000000;
+}
