@@ -48,17 +48,18 @@ p {
 
 /* Контейнер з відступами */
 .container {
-  width: 100%;
-  max-width: 1200px;
+  width: 100vw; /* Займає всю ширину вьюпорту */
+  max-width: 100vw; /* Гарантує, що контент не буде звужуватися */
   padding: 0 20px;
   margin: 0 auto;
+   box-sizing: border-box; /* Включає відступи у ширину контейнера */
 }
 
 /* Базова сітка з Flexbox */
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin: -10px; /* Відступи між колонками */
+  margin: -10px; 
 }
 
 .column {
