@@ -13,6 +13,7 @@ import {
 const AboutPage = () => {
   return (
     <Layout pageTitle="About Me">
+      <section>
       <div className={aboutContainer}>
         <span className={sectionTitle}>My Journey</span>
         <p className={aboutText}>
@@ -71,6 +72,7 @@ const AboutPage = () => {
           </li>
         </ul>
       </div>
+      </section>
     </Layout>
   )
 }

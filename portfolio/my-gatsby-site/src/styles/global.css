@@ -46,9 +46,11 @@ p {
   line-height: 1.6;
 }
 
+
+
 /* Контейнер з відступами */
 .container {
-  width: 100vw; /* Займає всю ширину вьюпорту */
+  
   max-width: 100vw; /* Гарантує, що контент не буде звужуватися */
   padding: 0 20px;
   margin: 0 auto;
@@ -58,8 +60,9 @@ p {
 /* Базова сітка з Flexbox */
 .row {
   display: flex;
+  gap:5px;
   flex-wrap: wrap;
-  margin: -10px; 
+  justify-content: center;
 }
 
 .column {
@@ -69,30 +72,44 @@ p {
 }
 
 /* Адаптивні колонки */
-.column-1 {
-  flex: 1 1 100%;
-}
+/* Додай це до свого CSS-файлу */
 
 @media (min-width: 576px) {
+  .row {
+    flex-direction: row; /* Вирівнювання в ряд на малих екранах */
+  }
+
+  .column {
+    flex: 1 1 auto; /* Додаємо можливість ширини для колонок */
+  }
+
   .column-2 {
-    flex: 1 1 50%;
+    flex: 1 1 50%; /* Колонка навігації займатиме 50% ширини */
+  }
+
+  .siteTitle {
+    font-size: 2rem; /* Збільшуємо розмір заголовка */
   }
 }
 
 @media (min-width: 768px) {
-  .column-3 {
-    flex: 1 1 33.3333%;
+  .column-2 {
+    flex: 1 1 25%; /* На середніх екранах колонка навігації 25% */
+  }
+
+  .siteTitle {
+    font-size: 2.5rem; /* Збільшуємо заголовок на великих екранах */
   }
 }
 
 @media (min-width: 992px) {
-  .column-4 {
-    flex: 1 1 25%;
-}
+  .row {
+    justify-content: center; /* Вирівнювання з простором між колонками */
+  }
 
-/* Забезпечення більш точного контролю на великих екранах */
-  .column-2, .column-3, .column-4 {
-    max-width: 100%; /* Забезпечує правильне вирівнювання */
+  .navLinks {
+    display: flex; /* Вирівнюємо навігаційні пункти в ряд */
+    gap: 1rem; /* Додаємо простір між елементами */
   }
 }
 

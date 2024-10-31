@@ -23,7 +23,7 @@ const Layout = ({ pageTitle, children }) => {
           <ThemeToggle />
           <LanguageSwitcher />
         </div>
-        <nav className="column-2 ">
+        <nav className="column-2">
           <ul className={navLinks}>
             <li className={navLinkItem}>
               <Link to="/" className={navLinkText}>
@@ -50,7 +50,6 @@ const Layout = ({ pageTitle, children }) => {
       </header>
       <main className="column">
         <div className="row">
-          {/* <h1 className={heading}>{pageTitle}</h1> */}
           {children}
         </div>
       </main>
