@@ -1,8 +1,8 @@
 /* Теми */
-@import './variables.module.css'; /* Імпортуй змінні */
+@import "./variables.module.css"; /* Імпортуй змінні */
 .light-mode {
   background-color: var(--background);
-  color:var(--text);
+  color: var(--text);
   transition: background-color 0.3s, color 0.3s;
 }
 
@@ -10,7 +10,6 @@
   background-color: var(--background);
   color: var(--text);
   transition: background-color 0.3s, color 0.3s;
-
 }
 .dark-mode h1,
 .dark-mode h2,
@@ -24,19 +23,24 @@
 }
 
 /* Підключення Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Montserrat:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Montserrat:wght@700&display=swap");
 
 /* Налаштування базових стилів */
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: var(--primary);
   margin: 0;
   padding: 0;
   background-color: var(--background);
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Montserrat', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
   color: #222;
   line-height: 1.2;
 }
@@ -46,21 +50,18 @@ p {
   line-height: 1.6;
 }
 
-
-
 /* Контейнер з відступами */
 .container {
-  
   max-width: 100vw; /* Гарантує, що контент не буде звужуватися */
   padding: 0 20px;
   margin: 0 auto;
-   box-sizing: border-box; /* Включає відступи у ширину контейнера */
+  box-sizing: border-box; /* Включає відступи у ширину контейнера */
 }
 
 /* Базова сітка з Flexbox */
 .row {
   display: flex;
-  gap:5px;
+  gap: 5px;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -69,48 +70,6 @@ p {
   flex: 1 1 100%;
   padding: 10px;
   box-sizing: border-box; /* Забезпечує правильні відступи */
-}
-
-/* Адаптивні колонки */
-/* Додай це до свого CSS-файлу */
-
-@media (min-width: 576px) {
-  .row {
-    flex-direction: row; /* Вирівнювання в ряд на малих екранах */
-  }
-
-  .column {
-    flex: 1 1 auto; /* Додаємо можливість ширини для колонок */
-  }
-
-  .column-2 {
-    flex: 1 1 50%; /* Колонка навігації займатиме 50% ширини */
-  }
-
-  .siteTitle {
-    font-size: 2rem; /* Збільшуємо розмір заголовка */
-  }
-}
-
-@media (min-width: 768px) {
-  .column-2 {
-    flex: 1 1 25%; /* На середніх екранах колонка навігації 25% */
-  }
-
-  .siteTitle {
-    font-size: 2.5rem; /* Збільшуємо заголовок на великих екранах */
-  }
-}
-
-@media (min-width: 992px) {
-  .row {
-    justify-content: center; /* Вирівнювання з простором між колонками */
-  }
-
-  .navLinks {
-    display: flex; /* Вирівнюємо навігаційні пункти в ряд */
-    gap: 1rem; /* Додаємо простір між елементами */
-  }
 }
 
 /* Кнопки */

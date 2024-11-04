@@ -1,6 +1,7 @@
 // src/components/Layout.js
 import React from "react"
 import { Link, Trans } from "gatsby-plugin-react-i18next"
+import Navbar from "./Navbar";
 import ThemeToggle from "./ThemeToggle"
 import LanguageSwitcher from "./LanguageSwitcher"
 import Footer from "./Footer"
@@ -15,13 +16,15 @@ import {
 const Layout = ({ pageTitle, children }) => {
   return (
     <div className="container">
-      <header className="row">
+      <Navbar />
+      <ThemeToggle />
+      <LanguageSwitcher />
+      {/* <header className="row">
         <div className="column">
           <h1 className={siteTitle}>
             <Trans>My Portfolio</Trans>
           </h1>
-          <ThemeToggle />
-          <LanguageSwitcher />
+         
         </div>
         <nav className="column-2">
           <ul className={navLinks}>
@@ -47,7 +50,8 @@ const Layout = ({ pageTitle, children }) => {
             </li>
           </ul>
         </nav>
-      </header>
+      </header> */}
+      
       <main className="column">
         <div className="row">
           {children}
