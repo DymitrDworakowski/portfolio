@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from "react"
 import styled, { createGlobalStyle } from "styled-components"
 import { Link, Trans } from "gatsby-plugin-react-i18next"
 
-function Navbar() {
+const Navbar=()=> {
   const [openDrawer, toggleDrawer] = useState(false)
   const drawerRef = useRef(null)
 
@@ -54,6 +54,7 @@ const Styles = {
   Wrapper: styled.main`
     display: flex;
     background-color: #eeeeee;
+    hight: 100vw;
   `,
 }
 
