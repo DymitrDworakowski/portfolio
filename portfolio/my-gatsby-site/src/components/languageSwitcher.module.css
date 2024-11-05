@@ -4,7 +4,7 @@
   padding: 0.2rem 0.3rem; /* Відступи кнопки */
   border: none; /* Без обводки */
   border-radius: 5px; /* Закруглені кути */
-  font-size: 1rem; /* Розмір шрифту */
+  font-size: 14px; /* Розмір шрифту */
   font-weight: bold; /* Жирний шрифт */
   cursor: pointer; /* Курсор при наведенні */
   margin: 0 2px; /* Відступи між кнопками */

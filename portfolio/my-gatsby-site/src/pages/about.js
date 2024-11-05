@@ -51,9 +51,9 @@ const AboutPage = () => {
 
         <span className={sectionTitle}>Let’s Connect!</span>
         <p className={`${aboutText} ${connectText}`}>
-          <Trans i18nKey="connect"></Trans>I am always open to new ideas and
+          <Trans i18nKey="connect">I am always open to new ideas and
           cooperation. If you have an interesting project or a question, I would
-          be happy to chat!
+          be happy to chat!</Trans>
         </p>
       </div>
       <div>
