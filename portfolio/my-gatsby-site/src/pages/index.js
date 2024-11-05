@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { graphql } from "gatsby"
 import Seo from "../components/seo"
-import { custom_bg, main,skills } from "./index.module.css"
+import { custom_bg, main, skills, skill, item,skill_item } from "./index.module.css"
 
 const IndexPage = () => {
   const { t } = useTranslation(["home"])
@@ -22,39 +22,43 @@ const IndexPage = () => {
           /> */}
       </div>
       <div className={skills}>
-        <ul>
+        <div className={skill_item}>
           <h3>Hard Skills</h3>
-          <li>React</li>
-          <li>Gatsby</li>
-          <li>Node.js</li>
-          <li>CSS</li>
-          <li>HTML</li>
-          <li>JavaScript</li>
-          <li>Python</li>
-          <li>Django</li>
-          <li>Git</li>
-          <li>AWS</li>
-          <li>Docker</li>
-          <li>Redux</li>
-          <li>MongoDB</li>
-          <li>Firebase</li>
-          <li>Google Cloud</li>
-          <li>SQL</li>
-          <li>NoSQL</li>
-          <li>Testing</li>
-          <li>CI/CD</li>
-          <li>Agile</li>
-          <li>Scrum</li>
-          <li>Jira</li>
-          <li>Kubernetes</li>
+          <ul className={skill}>
+            <li className={item}>React</li>
+            <li className={item}>Gatsby</li>
+            <li className={item}>Node.js</li>
+            <li className={item}>CSS</li>
+            <li className={item}>HTML</li>
+            <li className={item}>JavaScript</li>
+            <li className={item}>Python</li>
+            <li className={item}>Django</li>
+            <li className={item}>Git</li>
+            <li className={item}>AWS</li>
+            <li className={item}>Docker</li>
+            <li className={item}>Redux</li>
+            <li className={item}>MongoDB</li>
+            <li className={item}>Firebase</li>
+            <li className={item}>Google Cloud</li>
+            <li className={item}>SQL</li>
+            <li className={item}>NoSQL</li>
+            <li className={item}>Testing</li>
+            <li className={item}>CI/CD</li>
+            <li className={item}>Agile</li>
+            <li className={item}>Scrum</li>
+            <li className={item}>Jira</li>
+            <li className={item}>Kubernetes</li>
+          </ul>
+        </div>
+        <div className={skill_item}>
+        <h3>Soft Skills</h3>
+        <ul className={skill}>
+          <li className={item}>Attentive</li>
+          <li className={item}>Coordination</li>
+          <li className={item}>Cooperative</li>
+          <li className={item}>Critical thinking</li>
         </ul>
-        <ul>
-          <h3>Soft Skills</h3>
-          <li>Attentive</li>
-          <li>Coordination</li>
-          <li>Cooperative</li>
-          <li>Critical thinking</li>
-        </ul>
+        </div>
       </div>
     </Layout>
   )

@@ -13,11 +13,12 @@ const BlogPage = ({ data }) => {
           <Link to={`/projects/${node.frontmatter.slug}`}>
             <div className={image}>
               <h2>
-                {node.frontmatter.title}
+                
                 <GatsbyImage
                   image={getImage(node.frontmatter.hero_image)}
                   alt={node.frontmatter.hero_image_alt}
                 />
+                {node.frontmatter.title}
               </h2>
             </div>
             <p>Posted: {node.frontmatter.date}</p>

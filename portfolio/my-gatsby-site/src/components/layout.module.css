@@ -1,3 +1,11 @@
+.buttons{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+
+
 .container {
   margin: 0 auto;
   max-width: 900px; /* трішки більше простору для контенту */
