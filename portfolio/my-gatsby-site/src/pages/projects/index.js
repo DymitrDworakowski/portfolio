@@ -3,28 +3,25 @@ import { Link, graphql } from "gatsby"
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { image, project } from "./index.module.css"
+import { image, project, project_item } from "./index.module.css"
 
 const BlogPage = ({ data }) => {
   return (
     <Layout>
       {data.allMdx.nodes.map(node => (
-        <article key={node.id} className={project}>
-          <Link to={`/projects/${node.frontmatter.slug}`}>
+        <Link className={project} to={`/projects/${node.frontmatter.slug}`}>
+          <article key={node.id} className={project_item}>
             <div className={image}>
-              <h2>
-                
-                <GatsbyImage
-                  image={getImage(node.frontmatter.hero_image)}
-                  alt={node.frontmatter.hero_image_alt}
-                />
-                {node.frontmatter.title}
-              </h2>
+              <GatsbyImage
+                image={getImage(node.frontmatter.hero_image)}
+                alt={node.frontmatter.hero_image_alt}
+              />
             </div>
-            <p>Posted: {node.frontmatter.date}</p>
+            <h2>{node.frontmatter.title}</h2>
+            {/* <p>Posted: {node.frontmatter.date}</p> */}
             <p>Role: {node.frontmatter.role}</p>
-          </Link>
-        </article>
+          </article>
+        </Link>
       ))}
     </Layout>
   )

@@ -30,7 +30,7 @@
 // `; */
 
 
-button {
+.button {
     background: none;       /* Прибирає фон */
     border: none;           /* Прибирає межі */
     padding: 0;             /* Прибирає внутрішні відступи */
@@ -40,14 +40,14 @@ button {
     justify-content: center;
   }
   
-  button svg {
+  .button .svg {
     width: 24px;  /* Задаємо розмір SVG (змінюй за необхідності) */
     height: 24px;
-    fill: currentColor; /* Використовуємо колір тексту для іконки */
+    fill: blue; /* Використовуємо колір тексту для іконки */
   }
   
   /* Додаткові ефекти при наведенні, щоб іконка змінювала колір */
-  button:hover svg {
+  .button:hover .svg {
     fill: #3d5afe; /* Змінюємо колір іконки при наведенні */
   }
 

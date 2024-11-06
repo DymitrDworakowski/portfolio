@@ -1,8 +1,3 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/
- */
 
 /**
  * @type {import('gatsby').GatsbyConfig}
@@ -22,9 +17,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-react-i18next`,
       options: {
-        localeJsonSourceName: `locales`, // вкажи джерело для мовних файлів
-        languages: [`en`, `pl`], // масив з кодами мов
-        defaultLanguage: `en`, // мова за замовчуванням
+        localeJsonSourceName: `locales`, 
+        languages: [`en`, `pl`],
+        defaultLanguage: `en`, 
         siteUrl: `https://www.example.com/`,
         i18nextOptions: {
           interpolation: {
@@ -45,6 +40,13 @@ module.exports = {
       options: {
         name: `blog`,
         path: `${__dirname}/blog`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/blog/images`,
       },
     },
     {
