@@ -6,9 +6,34 @@ import Seo from "../components/seo"
 
 const Certificates = () => (
   <Layout>
-    <h1>Hi from the second page</h1>
-    <p>Welcome to page 2</p>
-    <Link to="/">Go back to the homepage</Link>
+    <h1>Мої сертифікати</h1>
+
+    <div
+      style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fit, minmax(400px, 1fr))",
+        gap: "20px",
+      }}
+    >
+      <iframe
+        src="/certificates/Dymitr Dworakowski.pdf"
+        title="Сертифікат 1"
+        width="100%"
+        height="500px"
+        style={{ border: "1px solid #ccc", borderRadius: "8px" }}
+      ></iframe>
+      <iframe
+        src="/certificates/certificate2.pdf"
+        title="Сертифікат 2"
+        width="100%"
+        height="500px"
+        style={{ border: "1px solid #ccc", borderRadius: "8px" }}
+      ></iframe>
+    </div>
+
+    <Link to="/" style={{ marginTop: "20px", display: "inline-block" }}>
+      Повернутися на головну
+    </Link>
   </Layout>
 )
 

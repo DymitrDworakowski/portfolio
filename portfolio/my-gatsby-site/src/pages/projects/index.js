@@ -5,7 +5,7 @@ import Seo from "../../components/seo"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { image, project, project_item } from "./index.module.css"
 
-const BlogPage = ({ data }) => {
+const ProjectPage = ({ data }) => {
   return (
     <Layout>
       {data.allMdx.nodes.map(node => (
@@ -51,4 +51,4 @@ export const query = graphql`
 
 export const Head = () => <Seo title="My Projects" />
 
-export default BlogPage
+export default ProjectPage

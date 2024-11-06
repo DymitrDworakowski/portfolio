@@ -5,7 +5,7 @@ import styled from "styled-components"
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
 
-const BlogPost = ({ data, children }) => {
+const Project = ({ data, children }) => {
   const image = getImage(data.mdx.frontmatter.hero_image)
   
   return (
@@ -18,7 +18,7 @@ const BlogPost = ({ data, children }) => {
 }
 
 export const query = graphql`
-  query BlogPostAndLocales($id: String, $language: String!) {
+  query ProjectAndLocales($id: String, $language: String!) {
     mdx(id: { eq: $id }) {
       frontmatter {
         title
@@ -70,4 +70,4 @@ const Content = styled.div`
 `
 
 export const Head = ({ data }) => <Seo title={data.mdx.frontmatter.title} />
-export default BlogPost
+export default Project
