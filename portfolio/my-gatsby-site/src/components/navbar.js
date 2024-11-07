@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from "react"
 import styled, { createGlobalStyle } from "styled-components"
 import { Link, Trans } from "gatsby-plugin-react-i18next"
 
-const Navbar=()=> {
+const Navbar = () => {
   const [openDrawer, toggleDrawer] = useState(false)
   const drawerRef = useRef(null)
 
@@ -23,7 +23,9 @@ const Navbar=()=> {
 
       <NavbarWrapper>
         <Logo>
-          <Trans>My Portfolio</Trans>
+          <Link to="/">
+            <Trans>My Portfolio</Trans>
+          </Link>
         </Logo>
 
         <HamburgerButton onClick={() => toggleDrawer(true)}>
