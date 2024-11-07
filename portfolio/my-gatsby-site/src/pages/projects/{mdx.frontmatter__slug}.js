@@ -4,6 +4,8 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
+import { MDXProvider } from "@mdx-js/react"
+import { Trans } from "gatsby-plugin-react-i18next"
 
 const Project = ({ data, children }) => {
   const image = getImage(data.mdx.frontmatter.hero_image)
@@ -12,7 +14,9 @@ const Project = ({ data, children }) => {
     <Layout pageTitle={data.mdx.frontmatter.title}>
       <PostDate>Posted: {data.mdx.frontmatter.date}</PostDate>
       <HeroImage image={image} alt={data.mdx.frontmatter.hero_image_alt} />
-      <Content>{children}</Content>
+      <MDXProvider components={{ Trans }}>
+        <Content>{children}</Content>
+      </MDXProvider>
     </Layout>
   )
 }
