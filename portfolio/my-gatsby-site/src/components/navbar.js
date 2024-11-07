@@ -35,7 +35,7 @@ const Navbar=()=> {
             <Trans>Home</Trans>
           </NavItem>
           <NavItem to="/about">
-            <Trans>About</Trans>
+            <Trans>About Me</Trans>
           </NavItem>
           <NavItem to="/projects">
             <Trans>Projects</Trans>
