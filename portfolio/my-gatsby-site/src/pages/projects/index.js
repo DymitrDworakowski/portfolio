@@ -9,8 +9,12 @@ const ProjectPage = ({ data }) => {
   return (
     <Layout>
       {data.allMdx.nodes.map(node => (
-        <Link className={project} to={`/projects/${node.frontmatter.slug}`}>
-          <article key={node.id} className={project_item}>
+        <Link
+          className={project}
+          to={`/projects/${node.frontmatter.slug}`}
+          key={node.id}
+        >
+          <article className={project_item}>
             <div className={image}>
               <GatsbyImage
                 image={getImage(node.frontmatter.hero_image)}
@@ -28,7 +32,7 @@ const ProjectPage = ({ data }) => {
 }
 
 export const query = graphql`
-  query {
+  query ($language: String!) {
     allMdx(sort: { frontmatter: { date: DESC } }) {
       nodes {
         frontmatter {
@@ -44,6 +48,15 @@ export const query = graphql`
           }
         }
         id
+      }
+    }
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
       }
     }
   }
