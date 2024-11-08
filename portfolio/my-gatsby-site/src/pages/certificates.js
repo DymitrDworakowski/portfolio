@@ -6,8 +6,8 @@ import Seo from "../components/seo"
 
 const Certificates = () => (
   <Layout>
-    <h1>Мої сертифікати</h1>
-
+    <div>
+    <h1>My certificates</h1>
     <div
       style={{
         display: "grid",
@@ -22,18 +22,12 @@ const Certificates = () => (
         height="500px"
         style={{ border: "1px solid #ccc", borderRadius: "8px" }}
       ></iframe>
-      <iframe
-        src="/certificates/certificate2.pdf"
-        title="Сертифікат 2"
-        width="100%"
-        height="500px"
-        style={{ border: "1px solid #ccc", borderRadius: "8px" }}
-      ></iframe>
     </div>
 
     <Link to="/" style={{ marginTop: "20px", display: "inline-block" }}>
-      Повернутися на головну
+    Return to the main page
     </Link>
+    </div>
   </Layout>
 )
 
