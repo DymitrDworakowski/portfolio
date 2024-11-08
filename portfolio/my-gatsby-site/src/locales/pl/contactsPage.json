@@ -1,0 +1,29 @@
+{
+  "description": "Contact Management Web Application",
+  "project_description": "Aplikacja internetowa do zarządzania kontaktami - ta aplikacja została zaprojektowana, aby pomóc użytkownikom w efektywnym zarządzaniu i organizowaniu swoich kontaktów. Zbudowana przy użyciu Reacta na froncie, oferuje interfejs przyjazny użytkownikowi do dodawania, edytowania, usuwania i wyszukiwania kontaktów. Backend został stworzony przy użyciu Node.js i połączony z bazą danych MongoDB w celu bezpiecznego i wydajnego przechowywania danych. Backend jest hostowany na Render.com, aby zapewnić niezawodną wydajność.",
+
+  "features": "Kluczowe funkcje",
+  "features_1": "Zarządzanie kontaktami:",
+  "features_2": "Funkcja ulubionych:",
+  "features_3": "Responsywny design:",
+  "features_4": "Aktualizacje w czasie rzeczywistym:",
+  "features_5": "Autentykacja:",
+  "features_1_1": "Użytkownicy mogą dodawać, edytować, usuwać i przeglądać szczegółowe informacje o swoich kontaktach, w tym imię, numer telefonu i e-mail.",
+  "features_1_2": "Oznaczanie kontaktów jako 'ulubione' w celu łatwego dostępu do często używanych kontaktów.",
+  "features_1_3": "Zmiany w kontaktach są natychmiast widoczne w interfejsie użytkownika, zapewniając dynamiczne i responsywne doświadczenie.",
+  "features_1_4": "Aplikacja jest zoptymalizowana zarówno dla urządzeń desktopowych, jak i mobilnych, co pozwala na płynne korzystanie z aplikacji na różnych rozmiarach ekranów.",
+  "features_1_5": "Zaimplementowano autentykację użytkownika w celu zabezpieczenia informacji kontaktowych, zapewniając, że tylko upoważnieni użytkownicy mają dostęp do swoich danych.",
+
+  "descriptsion": "Strona 'Home' zapewnia ogólny przegląd aplikacji z przyciskami do rejestracji użytkownika i logowania.",
+
+  "contacts_page": "Strona Kontaktów",
+  "contacts_page_desc": "Strona 'Contacts', na której wyświetlane są kontakty użytkownika z możliwością filtrowania i dodawania do ulubionych.",
+
+  "technologies": "Zastosowane technologie",
+  "technologies_1": "React.js, CSS do stylizacji i responsywnego designu",
+  "technologies_2": "Node.js, Express.js do zarządzania API",
+  "technologies_3": "MongoDB do skalowalnego przechowywania danych",
+  "technologies_4": "Backend jest hostowany na Render.com, a frontend można wdrożyć na GitHub Pages lub innym serwisie hostującym statyczne strony.",
+  "how_it_works": "Jak to działa:",
+  "how_it_works_1": "Użytkownicy logują się do aplikacji. Mogą dodawać nowe kontakty, przeglądać listę istniejących kontaktów, oznaczać ważne kontakty jako ulubione oraz usuwać lub aktualizować dane kontaktowe w razie potrzeby. Aplikacja automatycznie zapisuje wszystkie zmiany do MongoDB, zapewniając, że dane kontaktowe są zawsze aktualne. Ta aplikacja do zarządzania kontaktami jest idealna dla osób lub małych zespołów, które szukają prostego, niezawodnego sposobu organizowania informacji kontaktowych."
+}
