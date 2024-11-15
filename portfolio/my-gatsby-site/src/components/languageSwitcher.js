@@ -1,20 +1,23 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { useI18next } from "gatsby-plugin-react-i18next"
-import { button_50 } from "./languageSwitcher.module.css"
+import { switcherContainer, languageSelect } from "./languageSwitcher.module.css"
+
 const LanguageSwitcher = () => {
-  const { languages, changeLanguage } = useI18next()
+  const { languages, changeLanguage, language } = useI18next()
 
   return (
-    <div>
-      {languages.map(lng => (
-        <button
-          className={button_50}
-          key={lng}
-          onClick={() => changeLanguage(lng)}
-        >
-          {lng}
-        </button>
-      ))}
+    <div className={switcherContainer}>
+      <select
+        className={languageSelect}
+        value={language} // Відображає поточну мову
+        onChange={(e) => changeLanguage(e.target.value)}
+      >
+        {languages.map((lng) => (
+          <option key={lng} value={lng}>
+            {lng.toUpperCase()}
+          </option>
+        ))}
+      </select>
     </div>
   )
 }

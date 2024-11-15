@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby"
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { image, project, project_item } from "./index.module.css"
+import { image, project, project_item, project_title,project_des } from "./index.module.css"
 
 const ProjectPage = ({ data }) => {
   return (
@@ -21,9 +21,9 @@ const ProjectPage = ({ data }) => {
                 alt={node.frontmatter.hero_image_alt}
               />
             </div>
-            <h2>{node.frontmatter.title}</h2>
+            <h2 className={project_title}>{node.frontmatter.title}</h2>
             {/* <p>Posted: {node.frontmatter.date}</p> */}
-            <p>Role: {node.frontmatter.role}</p>
+            <p className={project_des}>Role: {node.frontmatter.role}</p>
           </article>
         </Link>
       ))}

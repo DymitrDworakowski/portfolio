@@ -1,23 +1,74 @@
 .project {
   margin: 0 3px;
-  width: 350px;
-  height: 400px;
-  border-radius: 8px;
- 
-  box-shadow: 5px 5px 15px #afafaf;
+  width: 360px;
+  height: 300px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px rgba(175, 175, 175, 0.5);
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2); /* градієнт */
+   overflow: hidden; /* обрізає зайвий контент */
+  opacity: 0; /* Початковий стан: прозорий */
+  transform: translateY(20px); /* Початковий стан: трохи нижче своєї позиції */
+  animation: fadeIn 0.5s forwards; /* Запускає анімацію */
 }
-.project_item {
-  margin-top: 20px;
-  margin-left: 10px;
-  gap: 10px;
-  display: flex;
-  
-  flex-wrap: wrap;
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.image {
+.project:hover {
+  transform: translateY(-10px); /* піднімається вгору */
+  box-shadow: 10px 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* .project:hover .image {
+  transform: scale(1.1) rotate(3deg); 
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);}
+
+*/
+
+
+.project_item {
+  display: flex;
+  flex-direction: column; /* вирівнює елементи вертикально */
+  align-items: center; /* центр тексту відносно зображення */
+  justify-content: center;
+  text-align: center;
+  padding: 15px;
+  gap: 10px;
+}
+
+.project_des {
+  font-size: 1rem;
+  color: #555;
+  margin: 0;
+}
+
+/* .image {
   z-index: 500;
   width: 75%;
   height: 75%;
   border-radius: 10px;
+} */
+.image {
+  z-index: 500;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
+
+
+.project_title {
+  font-size: 1.5rem;
+  text-align: center;
+  color: #333;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* h2:hover {
+  color: #ff7b7b;
+  text-shadow: 2px 2px 10px rgba(255, 123, 123, 0.5);
+} */

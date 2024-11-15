@@ -2,7 +2,8 @@
 import React, { useState, useEffect, useRef } from "react"
 import styled, { createGlobalStyle } from "styled-components"
 import { Link, Trans } from "gatsby-plugin-react-i18next"
-
+import ThemeToggle from "./ThemeToggle"
+import LanguageSwitcher from "./LanguageSwitcher"
 const Navbar = () => {
   const [openDrawer, toggleDrawer] = useState(false)
   const drawerRef = useRef(null)
@@ -33,6 +34,8 @@ const Navbar = () => {
         </HamburgerButton>
 
         <NavItems ref={drawerRef} openDrawer={openDrawer}>
+          <LanguageSwitcher />
+          <ThemeToggle />
           <NavItem to="/">
             <Trans>Home</Trans>
           </NavItem>
@@ -67,7 +70,7 @@ const NavbarWrapper = styled.nav`
   justify-content: space-between;
   align-items: center;
   background-color: white;
- z-index: 1000;
+  z-index: 1000;
   @media only screen and (max-width: 640px) {
     position: fixed;
     width: 100vw;
@@ -79,7 +82,6 @@ const NavbarWrapper = styled.nav`
 const Logo = styled.h1`
   border: 1px solid gray;
   padding: 0.5rem 1rem;
-  
 `
 
 const NavItems = styled.ul`
@@ -88,7 +90,7 @@ const NavItems = styled.ul`
 
   @media only screen and (max-width: 640px) {
     position: fixed;
-    
+
     right: 0;
     top: 0;
     height: 100%;
@@ -106,10 +108,9 @@ const NavItem = styled(Link)`
   cursor: pointer;
   text-decoration: none;
   color: black;
- 
+
   @media only screen and (max-width: 640px) {
     padding: 1rem 0;
-     
   }
 `
 
@@ -118,10 +119,9 @@ const HamburgerButton = styled.button`
   width: 3rem;
   position: relative;
   display: none;
- 
+
   @media only screen and (max-width: 640px) {
     display: block;
-    
   }
 
   border: none;
@@ -139,7 +139,6 @@ const Lines = styled.div`
     width: 100%;
     background-color: black;
     position: absolute;
-   
   }
 
   &:after {
