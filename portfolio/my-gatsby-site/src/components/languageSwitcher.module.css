@@ -11,14 +11,14 @@
   padding: 8px 12px;
   font-size: 0.9rem;
   font-weight: 500;
-  color: #4a4a4a;
+  color: #000000;
   background: #f0f0f0;
-  border: 2px solid #000000; 
-  border-radius: 8px; 
+  border: 1px solid #000000; 
+  /* border-radius: 8px;  */
   cursor: pointer;
   transition: all 0.3s ease;
   outline: none;
-  appearance: none; /* Сховати стандартну стрілку браузера */
+  appearance: none; 
   /* background-repeat: no-repeat;
   background-position: right 10px center; */
 }

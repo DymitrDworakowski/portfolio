@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { graphql } from "gatsby"
 import Seo from "../components/seo"
-import { custom_bg, main, skills, skill, item,skill_item } from "./index.module.css"
+import { custom_bg,main_div, main, skills, skill, item,skill_item } from "./index.module.css"
 
 const IndexPage = () => {
   const { t } = useTranslation(["home"])
@@ -13,6 +13,7 @@ const IndexPage = () => {
   return (
     <Layout pageTitle="Home Page">
       <div className={custom_bg}>
+        <div className={main_div}>
         <h2>{t("home:title")}</h2>
         <p className={main}>{t("home:main")}</p>
         {/* <StaticImage
@@ -20,6 +21,7 @@ const IndexPage = () => {
             src="../images/ilya-pavlov-OqtafYT5kTw-unsplash.jpg"
             className="img-fluid opacity-0 border rounded"
           /> */}
+          </div>
       </div>
       <div className={skills}>
         <div className={skill_item}>

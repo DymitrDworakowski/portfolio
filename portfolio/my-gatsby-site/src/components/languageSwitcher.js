@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import { useI18next } from "gatsby-plugin-react-i18next"
 import { switcherContainer, languageSelect } from "./languageSwitcher.module.css"
 

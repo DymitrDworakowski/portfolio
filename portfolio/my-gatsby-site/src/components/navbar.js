@@ -87,7 +87,8 @@ const Logo = styled.h1`
 const NavItems = styled.ul`
   display: flex;
   list-style: none;
-
+  align-items: center;
+  
   @media only screen and (max-width: 640px) {
     position: fixed;
 

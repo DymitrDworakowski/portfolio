@@ -1,24 +1,23 @@
 .button {
+  margin-left: 3px;
   background-color: transparent;
   border: none;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
+  border: 1px solid black;
+  /* border-radius: 50%; */
   width: 40px;
-  height: 40px;
+  height: 28px;
   transition: background-color 0.3s ease;
 }
 
 .button:hover {
-  background-color: rgba(0, 0, 0, 0.1); /* Ефект при наведенні */
+  background-color: rgba(0, 0, 0, 0.1); 
 }
 
 .svg {
-  transition: transform 0.3s ease; /* Анімація переходу */
+  transition: transform 0.3s ease; 
 }
 
 .button:active .svg {
-  transform: scale(0.9); /* Ефект натискання */
+  transform: scale(0.9); 
 }
