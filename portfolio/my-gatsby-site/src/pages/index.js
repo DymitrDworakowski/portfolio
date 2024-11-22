@@ -5,13 +5,14 @@ import Layout from "../components/layout"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { graphql } from "gatsby"
 import Seo from "../components/seo"
-import { custom_bg,main_div, main, skills, skill, item,skill_item } from "./index.module.css"
+import { custom, custom_bg,main_div, main, skills, skill, item,skill_item } from "./index.module.css"
 
 const IndexPage = () => {
   const { t } = useTranslation(["home"])
 
   return (
     <Layout pageTitle="Home Page">
+      <div className={custom}>
       <div className={custom_bg}>
         <div className={main_div}>
         <h2>{t("home:title")}</h2>
@@ -61,6 +62,7 @@ const IndexPage = () => {
           <li className={item}>Critical thinking</li>
         </ul>
         </div>
+      </div>
       </div>
     </Layout>
   )

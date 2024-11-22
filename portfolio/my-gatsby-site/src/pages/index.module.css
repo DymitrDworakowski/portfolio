@@ -1,3 +1,6 @@
+.custom{
+  background-image: url("../images/bg.jpg");
+}
 .custom_bg {
   background-image: url("../images/ImageHome.jpeg");
   background-size: cover; /* Покриває весь елемент */
