@@ -1,24 +1,24 @@
 {
-    "opis": "Opis projektu",
-    "opis_2": "To jest projekt zespołowy opracowany jako harmonogram zadań z rejestracją użytkowników i integracją z backendem. Aplikacja pomaga efektywnie organizować czas i planować zadania w pracy.",
-    
-    "possibility": "Kluczowe funkcje",
-    "possibility_1": "Responsywny design",
-    "possibility_2": "Tryb ciemny/jasny",
-    "possibility_4_1": "Dodawanie i usuwanie książek z koszyka.",
-    
-    "page_overview": "Przegląd strony",
-    "home_page_title": "Strona główna",
-    "home_page_1": "Strona \"Home\" posiada wybór książek podzielonych na kategorie.",
-    
-    "shoopinglist": "Lista zakupów",
-    "shoopinglist_1": "Na stronie „Lista zakupów” można dodawać i usuwać książki.",
-    
-    "technologies": "Zastosowane technologie",
-    "technologies_1_1": "JavaScript, SCSS do stylizacji i responsywnego projektowania..",
-    
-    "role_in_project": "Rola w projekcie",
-    "role_1": "Odpowiedzialny za rozwój sekcji listy zakupów.",
+  "opis": "Opis projektu",
+  "opis_2_1": "To projekt zespołowy z bloku JavaScript. Witryna do wyszukiwania książek z linkami prowadzącymi do sklepów internetowych. Zaimplementowano układ adaptacyjny dla różnych urządzeń, a także istnieje przełączanie między ciemnymi i jasnymi motywami, przy czym wybrany motyw jest zachowywany przy następnym ładowaniu.",
 
-    "link": "Linki"
+  "possibility": "Kluczowe funkcje",
+  "possibility_1": "Responsywny design",
+  "possibility_2": "Tryb ciemny/jasny",
+  "possibility_4_1": "Dodawanie i usuwanie książek z koszyka.",
+
+  "page_overview": "Przegląd strony",
+  "home_page_title": "Strona główna",
+  "home_page_1": "Strona \"Home\" posiada wybór książek podzielonych na kategorie.",
+
+  "shoopinglist": "Lista zakupów",
+  "shoopinglist_1": "Na stronie „Lista zakupów” można dodawać i usuwać książki.",
+
+  "technologies": "Zastosowane technologie",
+  "technologies_1_1": "JavaScript, SCSS do stylizacji i responsywnego projektowania..",
+
+  "role_in_project": "Rola w projekcie",
+  "role_1": "Odpowiedzialny za rozwój sekcji listy zakupów.",
+
+  "link": "Linki"
 }
