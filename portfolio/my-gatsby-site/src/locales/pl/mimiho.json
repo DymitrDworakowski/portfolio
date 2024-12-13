@@ -19,15 +19,10 @@
   "footer_section": "Sekcja footer",
   "footer_section_desc": "Stopka zawiera niezbędne linki, dane kontaktowe i ikony mediów społecznościowych, wszystkie dostosowane do estetyki witryny.",
 
-  "day_calendar_page_title": "Kalendarz dzienny",
-  "day_calendar_page_desc": "Na stronie \"Kalendarz dzienny\" można dodać zadania według kategorii na wybrany dzień, zmieniać ich kategorie i priorytet.",
-
-  "account_page_title": "Moje konto",
-  "account_page_desc": "Strona \"Moje konto\" pozwala przeglądać i zmieniać dane osobowe użytkownika.",
-
-  "statistics_page_title": "Statystyki",
-  "statistics_page_desc": "Strona \"Statystyki\" pokazuje miesięczne i dzienne statystyki zadań.",
+  "technologies": "Zastosowane technologie:",
+  "technologies_m1": "HTML5, CSS3, SCSS do stylizacji i JavaScript do elementów interaktywnych.",
+  "technologies_m2": "Git do kontroli wersji i współpracy przy tworzeniu oprogramowania.",
 
   "role_in_project": "Rola w projekcie",
-  "role_desc": "Programista odpowiedzialny za funkcjonalność i integrację z backendem, responsywne projektowanie, realizację trybów ciemnego/jasnego."
+  "role_m": "Odpowiedzialny za opracowanie sekcji footer, w tym za układ, styl i zapewnienie responsywności na różnych urządzeniach."
 }
