@@ -1,0 +1,33 @@
+{
+  "opis": "Opis projektu",
+  "m_opis": "To projekt zespołowy z bloku HTML/CSS. Ta strona internetowa została stworzona dla restauracji i charakteryzuje się responsywnym designem, oknem modalnym i eleganckim interfejsem użytkownika. Projekt demonstruje nowoczesne techniki tworzenia stron internetowych i współpracę w zespole.",
+
+  "possibility": "Kluczowe funkcje",
+  "possibility_1": "Responsywny design",
+  "possibility_m1_desc": "Zoptymalizowany pod kątem różnych urządzeń, gwarantujący bezproblemową obsługę na urządzeniach mobilnych, tabletach i komputerach stacjonarnych.",
+
+  "possibility_2m": "Okno modalne",
+  "possibility_m2_desc": "Interaktywne okna modalne umożliwiające interakcję użytkownika.",
+
+  "possibility_3m": "Nowoczesna estetyka",
+  "possibility_m3_desc": "Czysty i atrakcyjny wizualnie design, z dbałością o szczegóły.",
+
+  "page_overview": "Przegląd stron",
+  "home_page_title": "Strona główna",
+  "home_page_m": "Strona główna stanowi punkt wejścia, prezentuje najważniejsze oferty restauracji i umożliwia łatwą nawigację.",
+
+  "footer_section": "Sekcja footer",
+  "footer_section_desc": "Stopka zawiera niezbędne linki, dane kontaktowe i ikony mediów społecznościowych, wszystkie dostosowane do estetyki witryny.",
+
+  "day_calendar_page_title": "Kalendarz dzienny",
+  "day_calendar_page_desc": "Na stronie \"Kalendarz dzienny\" można dodać zadania według kategorii na wybrany dzień, zmieniać ich kategorie i priorytet.",
+
+  "account_page_title": "Moje konto",
+  "account_page_desc": "Strona \"Moje konto\" pozwala przeglądać i zmieniać dane osobowe użytkownika.",
+
+  "statistics_page_title": "Statystyki",
+  "statistics_page_desc": "Strona \"Statystyki\" pokazuje miesięczne i dzienne statystyki zadań.",
+
+  "role_in_project": "Rola w projekcie",
+  "role_desc": "Programista odpowiedzialny za funkcjonalność i integrację z backendem, responsywne projektowanie, realizację trybów ciemnego/jasnego."
+}
