@@ -16,8 +16,8 @@
 .projectsGrid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 2rem;
-  padding: 2rem;
+  gap: 1rem;
+  padding: 10rem;
   max-width: 1400px;
   margin: 0 auto;
 }
