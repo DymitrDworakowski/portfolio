@@ -48,12 +48,30 @@ links:
   .project-links a:hover {
     background: #e2e8f0;
   }
-  .gallery-image {
-    max-width: 100%;
-    height: auto;
+ .image-gallery {
+    display: grid;
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+  .image-wrapper {
     border-radius: 8px;
-    margin: 1rem 0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  .gallery-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+  .gallery-image:hover {
+    transform: scale(1.02);
+  }
+  .image-caption {
+    text-align: center;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #666;
   }
 `}</style>
 
@@ -80,20 +98,29 @@ import ImageGallery from "../src/components/ImageGallery.js"
   <Trans i18nKey="bookshelf.feature_cart_text">Add/remove books with cart persistence</Trans>
 
 ## <Trans i18nKey="bookshelf.screenshots">Project Screenshots</Trans>
-
-<div className="gallery-image">
-  <img
-    src="/images/bookshelf_homepage.png"
-    alt={<Trans i18nKey="bookshelf.screenshot_home">Home Page - Book Categories</Trans>}
-    caption={<Trans i18nKey="bookshelf.screenshot_home_text">Main page with featured book categories</Trans>}
-  />
-
-  <img
-    src="/images/bookshelf_shoppingList.png"
-    alt={<Trans i18nKey="bookshelf.screenshot_cart">Shopping Cart Page</Trans>}
-    caption={<Trans i18nKey="bookshelf.screenshot_cart_text">User's shopping cart with book management</Trans>}
-  />
-</div>
+ <div className="image-gallery">
+    <div className="image-wrapper">
+      <img
+        src="/images/bookshelf_homepage.png"
+        alt={<Trans i18nKey="bookshelf.screenshot_home">Home Page</Trans>}
+        className="gallery-image"
+      />
+      <p className="image-caption">
+        <Trans i18nKey="bookshelf.screenshot_home_text">Main page with categories</Trans>
+      </p>
+    </div>
+    
+    <div className="image-wrapper">
+      <img
+        src="/images/bookshelf_shoppingList.png"
+        alt={<Trans i18nKey="bookshelf.screenshot_cart">Shopping Cart</Trans>}
+        className="gallery-image"
+      />
+      <p className="image-caption">
+        <Trans i18nKey="bookshelf.screenshot_cart_text">Cart management</Trans>
+      </p>
+    </div>
+  </div>
 
 ## <Trans i18nKey="bookshelf.technologies">Technologies</Trans>
 
