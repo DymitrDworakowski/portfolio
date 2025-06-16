@@ -1,24 +1,26 @@
 {
-  "opis": "Opis projektu",
-  "opis_2_1": "To projekt zespołowy z bloku JavaScript. Witryna do wyszukiwania książek z linkami prowadzącymi do sklepów internetowych. Zaimplementowano układ adaptacyjny dla różnych urządzeń, a także istnieje przełączanie między ciemnymi i jasnymi motywami, przy czym wybrany motyw jest zachowywany przy następnym ładowaniu.",
+  "bookshelf.description": "Opis projektu",
+  "bookshelf.description_text": "To projekt zespołowy z bloku JavaScript. Witryna do wyszukiwania książek z linkami prowadzącymi do sklepów internetowych. Zaimplementowano układ adaptacyjny dla różnych urządzeń, a także istnieje przełączanie między ciemnymi i jasnymi motywami, przy czym wybrany motyw jest zachowywany przy następnym ładowaniu.",
 
-  "possibility": "Kluczowe funkcje",
-  "possibility_1": "Responsywny design",
-  "possibility_2": "Tryb ciemny/jasny",
-  "possibility_4_1": "Dodawanie i usuwanie książek z koszyka.",
+  "bookshelf.features": "Kluczowe funkcje",
+  "bookshelf.feature_responsive": "Responsywny design",
+  "bookshelf.feature_responsive_1":"W pełni responsywny układ dla wszystkich rozmiarów urządzeń",
+  "bookshelf.feature_theming": "System Theme",
+  "bookshelf.feature_theming_text": "Tryb ciemny/jasny",
+  "bookshelf.feature_cart_text": "Dodawanie i usuwanie książek z koszyka.",
 
   "page_overview": "Przegląd strony",
-  "home_page_title": "Strona główna",
-  "home_page_1": "Strona \"Home\" posiada wybór książek podzielonych na kategorie.",
+  "bookshelf.screenshot_home": "Strona główna",
+  "bookshelf.screenshot_home_text": "Strona \"Home\" posiada wybór książek podzielonych na kategorie.",
 
-  "shoopinglist": "Lista zakupów",
-  "shoopinglist_1": "Na stronie „Lista zakupów” można dodawać i usuwać książki.",
+  "bookshelf.screenshot_cart": "Lista zakupów",
+  "bookshelf.screenshot_cart_text": "Na stronie „Lista zakupów” można dodawać i usuwać książki.",
 
-  "technologies": "Zastosowane technologie",
+  "bookshelf.technologies": "Zastosowane technologie",
   "technologies_1_1": "JavaScript, SCSS do stylizacji i responsywnego projektowania..",
 
-  "role_in_project": "Rola w projekcie",
-  "role_1": "Odpowiedzialny za rozwój sekcji listy zakupów.",
+  "bookshelf.role": "Rola w projekcie",
+  "bookshelf.role_1": "Odpowiedzialny za rozwój sekcji listy zakupów.",
 
-  "link": "Linki"
+  "bookshelf.links": "Linki"
 }

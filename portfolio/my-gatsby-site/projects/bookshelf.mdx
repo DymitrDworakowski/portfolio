@@ -62,7 +62,7 @@ import ProjectLayout from "../src/components/ProjectLayout"
 import TechBadge from "../src/components/TechBadge"
 import ImageGallery from "../src/components/ImageGallery.js"
 
-<ProjectLayout>
+<div className="project-container">
 
 ## <Trans i18nKey="bookshelf.description">Project Description</Trans>
 
@@ -71,7 +71,7 @@ import ImageGallery from "../src/components/ImageGallery.js"
 ### <Trans i18nKey="bookshelf.features">Key Features</Trans>
 
 - **<Trans i18nKey="bookshelf.feature_responsive">Responsive Design</Trans>**  
-  <Trans i18nKey="bookshelf.feature_responsive_text">Fully responsive layout for all device sizes</Trans>
+  <Trans i18nKey="bookshelf.feature_responsive_1">Fully responsive layout for all device sizes</Trans>
 
 - **<Trans i18nKey="bookshelf.feature_theming">Theme System</Trans>**  
   <Trans i18nKey="bookshelf.feature_theming_text">Dark/light mode with persistent settings</Trans>
@@ -81,7 +81,7 @@ import ImageGallery from "../src/components/ImageGallery.js"
 
 ## <Trans i18nKey="bookshelf.screenshots">Project Screenshots</Trans>
 
-<ImageGallery>
+<div className="gallery-image">
   <img
     src="/images/bookshelf_homepage.png"
     alt={<Trans i18nKey="bookshelf.screenshot_home">Home Page - Book Categories</Trans>}
@@ -93,7 +93,7 @@ import ImageGallery from "../src/components/ImageGallery.js"
     alt={<Trans i18nKey="bookshelf.screenshot_cart">Shopping Cart Page</Trans>}
     caption={<Trans i18nKey="bookshelf.screenshot_cart_text">User's shopping cart with book management</Trans>}
   />
-</ImageGallery>
+</div>
 
 ## <Trans i18nKey="bookshelf.technologies">Technologies</Trans>
 
@@ -116,4 +116,4 @@ import ImageGallery from "../src/components/ImageGallery.js"
 [GitHub Repository]({props.frontmatter.links.github})
 </div>
 
-</ProjectLayout>
+</div>
