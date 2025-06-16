@@ -1,23 +1,89 @@
-.button {
-  margin-left: 3px;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  border: 1px solid black;
-  /* border-radius: 50%; */
+/* Base variables */
+:root {
+  --primary-color: #6e8efb;
+  --secondary-color: #a777e3;
+  --text-dark: #333;
+  --text-light: #fff;
+  --bg-light: #fff;
+  --bg-dark: #1a1a1a;
+  --border-radius: 50%;
+  --transition: all 0.3s ease;
+}
+
+/* Theme button */
+.themeButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 40px;
-  height: 28px;
-  transition: background-color 0.3s ease;
+  height: 40px;
+  background: transparent;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: var(--transition);
+  padding: 0;
+  margin-left: 10px;
 }
 
-.button:hover {
-  background-color: rgba(0, 0, 0, 0.1); 
+.themeButton:hover {
+  background: rgba(110, 142, 251, 0.1);
 }
 
-.svg {
-  transition: transform 0.3s ease; 
+.themeButton:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(110, 142, 251, 0.3);
 }
 
-.button:active .svg {
-  transform: scale(0.9); 
+/* Theme icon */
+.themeIcon {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: var(--transition);
+}
+
+/* Sun icon (light mode) */
+.sunIcon {
+  color: var(--text-dark);
+  transform: rotate(0deg);
+}
+
+.themeButton:hover .sunIcon {
+  color: var(--primary-color);
+  transform: rotate(15deg);
+}
+
+/* Moon icon (dark mode) */
+.moonIcon {
+  color: var(--text-dark);
+  fill: var(--text-dark);
+  stroke: none;
+}
+
+.themeButton:hover .moonIcon {
+  color: var(--primary-color);
+  fill: var(--primary-color);
+}
+
+/* Dark mode styles */
+[data-theme="dark"] .themeButton:hover {
+  background: rgba(167, 119, 227, 0.1);
+}
+
+[data-theme="dark"] .sunIcon {
+  color: var(--text-light);
+}
+
+[data-theme="dark"] .moonIcon {
+  color: var(--text-light);
+  fill: var(--text-light);
+}
+
+[data-theme="dark"] .themeButton:hover .sunIcon,
+[data-theme="dark"] .themeButton:hover .moonIcon {
+  color: var(--secondary-color);
+  fill: var(--secondary-color);
 }

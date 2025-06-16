@@ -1,34 +1,78 @@
-/* Контейнер для select */
-/* .switcherContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 10px 0;
-} */
-
-/* Стиль для select */
-.languageSelect {
-  padding: 8px 12px;
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: #000000;
-  background: #f0f0f0;
-  border: 1px solid #000000; 
-  /* border-radius: 8px;  */
-  cursor: pointer;
-  transition: all 0.3s ease;
-  outline: none;
-  appearance: none; 
-  /* background-repeat: no-repeat;
-  background-position: right 10px center; */
+/* Base variables */
+:root {
+  --primary-color: #6e8efb;
+  --secondary-color: #a777e3;
+  --text-dark: #333;
+  --text-light: #fff;
+  --bg-light: #fff;
+  --border-radius: 4px;
+  --transition: all 0.3s ease;
 }
 
+/* Container */
+.switcherContainer {
+  position: relative;
+  z-index: 1;
+}
+
+/* Custom select wrapper */
+.selectWrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* Select element */
+.languageSelect {
+  padding: 0.5rem 2rem 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  background-color: var(--bg-light);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: var(--transition);
+  appearance: none;
+  outline: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Custom arrow */
+.selectArrow {
+  position: absolute;
+  top: 50%;
+  right: 0.8rem;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 0.8rem;
+  color: var(--text-dark);
+  transition: var(--transition);
+}
+
+/* Hover & Focus states */
 .languageSelect:hover {
-  background: #e6f0ff; /* Світліший фон при наведенні */
-  border-color: #32343a;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 1px var(--primary-color);
 }
 
 .languageSelect:focus {
-  border-color: #565757; /* Темніша рамка при фокусі */
-  box-shadow: 0 0 5px rgba(109, 109, 109, 0.5);
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(110, 142, 251, 0.3);
+}
+
+/* Active state */
+.languageSelect:active {
+  transform: translateY(1px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .languageSelect {
+    padding: 0.4rem 1.8rem 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+  
+  .selectArrow {
+    right: 0.6rem;
+  }
 }

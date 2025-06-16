@@ -1,57 +1,122 @@
-.custom{
-  background-image: url("../images/bg.jpg");
-}
-.custom_bg {
-  background-image: url("../images/ImageHome.jpeg");
-  background-size: cover; /* Покриває весь елемент */
-  background-position: center; /* Центрує зображення */
-  height: 500px; /* Висота блоку */
-  width: 100%;
-  color: white; /* Колір тексту */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-.main_div {
-  width: 50%;
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: white;
+  padding: 100px 0;
   text-align: center;
+  margin-bottom: 60px;
 }
-.main {
-  text-align: center;
-  color: rgb(230, 230, 230);
-}
-.skills {
-  display: flex;
-  width: 100%;
 
-  @media only screen and (max-width: 640px) {
-    flex-wrap: wrap;
+.heroContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.heroSubtitle {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  font-weight: 300;
+}
+
+.heroText {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Sections */
+.sections {
+  margin-bottom: 60px;
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #333;
+}
+
+/* Skills */
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.skillCard {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.skillCard:hover {
+  transform: translateY(-5px);
+}
+
+.skillCategory {
+  margin-bottom: 15px;
+}
+
+.skillCategory h3 {
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.skillList {
+  height: 8px;
+  background: #f0f0f0;
+  border-radius: 4px;
+  margin-bottom: 5px;
+}
+
+.skillItem {
+  height: 100%;
+  background: linear-gradient(90deg, #6e8efb, #a777e3);
+  border-radius: 4px;
+}
+
+/* About Section */
+.about {
+  background: #f9f9f9;
+  padding: 60px 0;
+  margin-bottom: 60px;
+}
+
+.aboutText {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2.2rem;
   }
-}
-.skill {
-  margin: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  font-size: 1.5rem;
-  padding: 0.5rem;
-  border-radius: 8px;
-}
-
-.item {
-  margin: 1rem;
-  padding: 1rem;
-  color: rgb(0, 0, 0);
-  text-align: center;
-  background-color: #c8c9ce;
-  border-radius: 8px;
-  list-style: none;
-}
-
-.skill_item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  
+  .heroSubtitle {
+    font-size: 1.4rem;
+  }
+  
+  .skillsGrid {
+    grid-template-columns: 1fr;
+  }
 }

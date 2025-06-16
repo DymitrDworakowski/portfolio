@@ -2,76 +2,118 @@
 title: "Bookshelf Project"
 date: "2023-05-25"
 slug: "bookshelf-project"
-role: "developer. Team project."
+role: "Developer (Team Project)"
 hero_image: "./bookshelf.png"
-hero_image_alt: "bookstore"
+hero_image_alt: "Bookshelf Project Preview"
 hero_image_credit_text: "Dymitr"
 hero_image_credit_link: "https://unsplash.com/photos/7rriIaBH6JY"
+technologies: ["JavaScript", "SCSS", "Responsive Design"]
+links:
+  live: "https://tatiana2016.github.io/final-js/index.html"
+  github: "https://github.com/Tatiana2016/final-js"
 ---
 
+<style>{`
+  .project-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+  }
+  .project-title {
+    color: #2d3748;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .project-section {
+    margin: 2rem 0;
+  }
+  .tech-stack {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+  }
+  .project-links a {
+    display: inline-block;
+    margin-right: 1rem;
+    padding: 0.5rem 1rem;
+    background: #f0f0f0;
+    border-radius: 4px;
+    color: #3182ce;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  .project-links a:hover {
+    background: #e2e8f0;
+  }
+  .gallery-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+`}</style>
 
+import { Trans } from "gatsby-plugin-react-i18next"
+import ProjectLayout from "../src/components/ProjectLayout"
+import TechBadge from "../src/components/TechBadge"
+import ImageGallery from "../src/components/ImageGallery.js"
 
-<div style={{
-  display: "flex",
-  alignItems: "center",
-  flexDirection: "column",  
-  backgroundColor: "#c8c9ce",
-  borderRadius: "10px",
-  padding: "30px",
-}}>
+<ProjectLayout>
 
-## <Trans i18nKey="opis">Project Description</Trans>
+## <Trans i18nKey="bookshelf.description">Project Description</Trans>
 
-**Bookshelf** — <Trans i18nKey="opis_2_1">This is a team project from the JavaScript block. Site for searching books, with links that direct to online stores. Adaptive layout for different devices is implemented, and there is a switch between dark and light themes, with the selected theme retained on the next load.</Trans>
+**Bookshelf** — <Trans i18nKey="bookshelf.description_text">Online bookstore with adaptive layout and theme switching functionality. Team project developed during JavaScript training.</Trans>
 
-### <Trans i18nKey="possibility">Key Features</Trans>
+### <Trans i18nKey="bookshelf.features">Key Features</Trans>
 
-- **<Trans i18nKey="possibility_1">Responsive design</Trans>**: <Trans i18nKey="possibility_1_desc">supports various devices.</Trans>
-- **<Trans i18nKey="possibility_2">Dark/Light mode</Trans>**: <Trans i18nKey="possibility_2_desc">retains the selected mode even after re-login.</Trans>
-- **<Trans i18nKey="possibility_4">Shopping carts</Trans>**: <Trans i18nKey="possibility_4_1">Adding and removing books from the shopping cart.</Trans>
+- **<Trans i18nKey="bookshelf.feature_responsive">Responsive Design</Trans>**  
+  <Trans i18nKey="bookshelf.feature_responsive_text">Fully responsive layout for all device sizes</Trans>
 
-## <Trans i18nKey="page_overview">Page Overview</Trans>
+- **<Trans i18nKey="bookshelf.feature_theming">Theme System</Trans>**  
+  <Trans i18nKey="bookshelf.feature_theming_text">Dark/light mode with persistent settings</Trans>
 
-### <Trans i18nKey="home_page_title">Home Page</Trans>
+- **<Trans i18nKey="bookshelf.feature_cart">Shopping Cart</Trans>**  
+  <Trans i18nKey="bookshelf.feature_cart_text">Add/remove books with cart persistence</Trans>
 
-<Trans i18nKey="home_page_1">
-  The "Home" page includes a selection of books by category.
-</Trans>
+## <Trans i18nKey="bookshelf.screenshots">Project Screenshots</Trans>
 
-<img
-  src="/images/bookshelf_homepage.png"
-  alt="Home Page"
-  width="600"
-  height="auto"
-  style={{ maxWidth: "100%" }}
-/>
+<ImageGallery>
+  <img
+    src="/images/bookshelf_homepage.png"
+    alt={<Trans i18nKey="bookshelf.screenshot_home">Home Page - Book Categories</Trans>}
+    caption={<Trans i18nKey="bookshelf.screenshot_home_text">Main page with featured book categories</Trans>}
+  />
 
-### <Trans i18nKey="shoopinglist">Shopping List</Trans>
+  <img
+    src="/images/bookshelf_shoppingList.png"
+    alt={<Trans i18nKey="bookshelf.screenshot_cart">Shopping Cart Page</Trans>}
+    caption={<Trans i18nKey="bookshelf.screenshot_cart_text">User's shopping cart with book management</Trans>}
+  />
+</ImageGallery>
 
-<Trans i18nKey="shoopinglist_1">
-  On the "Shopping List" page, you can adding and removing books.
-</Trans>
+## <Trans i18nKey="bookshelf.technologies">Technologies</Trans>
 
-<img
-  src="/images/bookshelf_shoppingList.png"
-  alt="Shooping list"
-  width="600"
-  height="auto"
-  style={{ maxWidth: "100%" }}
-/>
+<div className="tech-stack">
 
-## <Trans i18nKey="technologies">Technologies Used:</Trans>
-
-- **Frontend:** <Trans i18nKey="technologies_1_1"> JavaScript, SCSS for styling and responsive design.</Trans>
-
-## <Trans i18nKey="role_in_project">Role in the Project</Trans>
-
-<Trans i18nKey="role_1">
-  Responsible for the development of the shopping list section.
-</Trans>
-
-## <Trans i18nKey="link">Links</Trans>
-
-<a href="https://tatiana2016.github.io/final-js/index.html">Live Project</a>
-<a href="https://github.com/Tatiana2016/final-js">GitHub Repositories</a>
+- JavaScript
+- SCSS
 </div>
+
+## <Trans i18nKey="bookshelf.role">My Contribution</Trans>
+
+- <Trans i18nKey="bookshelf.role_1">Developed shopping cart functionality</Trans>
+- <Trans i18nKey="bookshelf.role_2">Implemented theme persistence</Trans>
+- <Trans i18nKey="bookshelf.role_3">Optimized responsive layouts</Trans>
+
+## <Trans i18nKey="bookshelf.links">Project Links</Trans>
+
+<div className="project-links">
+[Live Demo]({props.frontmatter.links.live})
+[GitHub Repository]({props.frontmatter.links.github})
+</div>
+
+</ProjectLayout>

@@ -1,72 +1,116 @@
 import * as React from "react"
 import Layout from "../components/layout"
-
-// import { StaticImage } from "gatsby-plugin-image"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { graphql } from "gatsby"
 import Seo from "../components/seo"
-import { custom, custom_bg,main_div, main, skills, skill, item,skill_item } from "./index.module.css"
+import { 
+  container,
+  hero,
+  heroContent,
+  heroTitle,
+  heroSubtitle,
+  heroText,
+  sections,
+  section,
+  sectionTitle,
+  skillsGrid,
+  skillCard,
+  skillCategory,
+  skillList,
+  skillItem,
+  about,
+  aboutText
+} from "./index.module.css"
 
 const IndexPage = () => {
   const { t } = useTranslation(["home"])
 
+  const hardSkills = [
+    { name: "React", level: 90 },
+    { name: "Gatsby", level: 85 },
+    { name: "Node.js", level: 80 },
+    { name: "CSS", level: 95 },
+    { name: "HTML", level: 98 },
+    { name: "JavaScript", level: 92 },
+    { name: "Python", level: 75 },
+    { name: "Django", level: 70 },
+    { name: "AWS", level: 65 },
+    { name: "Docker", level: 60 }
+  ]
+
+  const softSkills = [
+    "Критичне мислення",
+    "Комунікація",
+    "Командна робота",
+    "Тайм-менеджмент"
+  ]
+
   return (
-    <Layout pageTitle="Home Page">
-      <div className={custom}>
-      <div className={custom_bg}>
-        <div className={main_div}>
-        <h2>{t("home:title")}</h2>
-        <p className={main}>{t("home:main")}</p>
-        {/* <StaticImage
-            alt="Progman"
-            src="../images/ilya-pavlov-OqtafYT5kTw-unsplash.jpg"
-            className="img-fluid opacity-0 border rounded"
-          /> */}
+    <Layout pageTitle="Моє портфоліо">
+      <div className={container}>
+        {/* Hero Section */}
+        <section className={hero}>
+          <div className={heroContent}>
+            <h1 className={heroTitle}>Привіт, я Dymitr Dworakowski</h1>
+            <h2 className={heroSubtitle}>Full-Stack Developer</h2>
+            <p className={heroText}>
+              Спеціалізуюсь на створенні сучасних веб-додатків. 
+              Маю досвід як у frontend, так і backend розробці.
+            </p>
           </div>
-      </div>
-      <div className={skills}>
-        <div className={skill_item}>
-          <h3>Hard Skills</h3>
-          <ul className={skill}>
-            <li className={item}>React</li>
-            <li className={item}>Gatsby</li>
-            <li className={item}>Node.js</li>
-            <li className={item}>CSS</li>
-            <li className={item}>HTML</li>
-            <li className={item}>JavaScript</li>
-            <li className={item}>Python</li>
-            <li className={item}>Django</li>
-            <li className={item}>Git</li>
-            <li className={item}>AWS</li>
-            <li className={item}>Docker</li>
-            <li className={item}>Redux</li>
-            <li className={item}>MongoDB</li>
-            <li className={item}>Firebase</li>
-            <li className={item}>Google Cloud</li>
-            <li className={item}>SQL</li>
-            <li className={item}>NoSQL</li>
-            <li className={item}>Testing</li>
-            <li className={item}>CI/CD</li>
-            <li className={item}>Agile</li>
-            <li className={item}>Scrum</li>
-            <li className={item}>Jira</li>
-            <li className={item}>Kubernetes</li>
-          </ul>
-        </div>
-        <div className={skill_item}>
-        <h3>Soft Skills</h3>
-        <ul className={skill}>
-          <li className={item}>Attentive</li>
-          <li className={item}>Coordination</li>
-          <li className={item}>Cooperative</li>
-          <li className={item}>Critical thinking</li>
-        </ul>
-        </div>
-      </div>
+        </section>
+
+        {/* Skills Section */}
+        <section className={sections}>
+          <div className={section}>
+            <h2 className={sectionTitle}>Технічні Навички</h2>
+            <div className={skillsGrid}>
+              {hardSkills.map((skill) => (
+                <div key={skill.name} className={skillCard}>
+                  <div className={skillCategory}>
+                    <h3>{skill.name}</h3>
+                    <div className={skillList}>
+                      <div 
+                        className={skillItem} 
+                        style={{ width: `${skill.level}%` }}
+                      ></div>
+                    </div>
+                    <span>{skill.level}%</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className={section}>
+            <h2 className={sectionTitle}>Професійні Якості</h2>
+            <div className={skillsGrid}>
+              {softSkills.map((skill) => (
+                <div key={skill} className={skillCard}>
+                  <div className={skillCategory}>
+                    <h3>{skill}</h3>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* About Section */}
+        <section className={about}>
+          <h2 className={sectionTitle}>Про мене</h2>
+          <p className={aboutText}>
+            Я Junior Full-Stack Developer з досвідом роботи над різними проектами. 
+            Спеціалізуюсь на створенні повноцінних веб-додатків з використанням 
+            сучасних технологій. Постійно вдосконалюю свої навички та слідкую за 
+            новітніми тенденціями у сфері розробки.
+          </p>
+        </section>
       </div>
     </Layout>
   )
 }
+
 export const query = graphql`
   query ($language: String!) {
     locales: allLocale(filter: { language: { eq: $language } }) {
@@ -80,6 +124,7 @@ export const query = graphql`
     }
   }
 `
-export const Head = () => <Seo title="Home Page" />
+
+export const Head = () => <Seo title="Головна" />
 
 export default IndexPage
