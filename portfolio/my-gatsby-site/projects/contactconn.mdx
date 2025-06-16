@@ -2,78 +2,147 @@
 title: "Contactconn Project"
 date: "2023-07-25"
 slug: "contactconn-project"
-role: "developer. Individual project."
+role: "Developer (Individual Project)"
 hero_image: "./contactconn.png"
-hero_image_alt: "Restorans"
+hero_image_alt: "Contact Management App"
 hero_image_credit_text: "Dymitr"
 hero_image_credit_link: "https://unsplash.com/photos/7rriIaBH6JY"
+links:
+  live: "https://dymitrdworakowski.github.io/phonebook/"
+  github: "https://github.com/DymitrDworakowski/phonebook"
+  backend: "https://github.com/DymitrDworakowski/nodejs-hw-rest-api"
 ---
 
-<div style={{
-  display: "flex",
-  alignItems: "center",
-  flexDirection: "column",  
-  backgroundColor: "#c8c9ce",
-  borderRadius: "10px",
-  padding: "30px",
-}}>
-## <Trans i18nKey="opis">Project Description</Trans>
-**<Trans i18nKey="description">Contact Management Web Application</Trans>** - <Trans i18nKey="project_description">This web application is designed to help users efficiently manage and organize their contacts. Built using React for the frontend, it offers a user-friendly interface to add, edit, delete, and search for contacts. The backend is developed with Node.js and is connected to a MongoDB database for secure and efficient data storage. The backend is deployed on Render.com to ensure reliable performance.</Trans>
 
-## <Trans i18nKey="features">Key Features</Trans>
+<style>{`
+  .project-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+  }
+  .project-title {
+    color: #2d3748;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .project-section {
+    margin: 2rem 0;
+  }
+  .tech-stack {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+  }
+  .project-links a {
+    display: inline-block;
+    margin-right: 1rem;
+    padding: 0.5rem 1rem;
+    background: #f0f0f0;
+    border-radius: 4px;
+    color: #3182ce;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  .project-links a:hover {
+    background: #e2e8f0;
+  }
+  .image-gallery {
+    display: grid;
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+  .image-wrapper {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  .gallery-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+  .gallery-image:hover {
+    transform: scale(1.02);
+  }
+  .image-caption {
+    text-align: center;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #666;
+  }
+`}</style>
 
-- **<Trans i18nKey="features_1">Contact Management:</Trans>** <Trans i18nKey="features_1_1">Users can add, edit, delete, and view detailed information about their contacts, including name, phone number, and email.</Trans>
-- **<Trans i18nKey="features_2">Favorites Feature:</Trans>** <Trans i18nKey="features_1_2">Mark contacts as "favorites" to easily access frequently used contacts.</Trans>
-- **<Trans i18nKey="features_3">Responsive Design:</Trans>** <Trans i18nKey="features_1_3">The application is optimized for both desktop and mobile devices, allowing for seamless use across different screen sizes.</Trans>
-- **<Trans i18nKey="features_4">Real-Time Updates:</Trans>** <Trans i18nKey="features_1_4">Changes made to contacts are immediately reflected in the UI, providing a dynamic and responsive experience.</Trans>
-- **<Trans i18nKey="features_5">Authentication:</Trans>** <Trans i18nKey="features_1_5">User authentication is implemented to secure contact information, ensuring that only authorized users have access to their data.</Trans>
+import { Trans } from "gatsby-plugin-react-i18next"
 
-## <Trans i18nKey="page_overview">Page Overview</Trans>
+<div className="project-container">
 
-### <Trans i18nKey="home_page_title">Home Page</Trans>
+  <h1 className="project-title">Contactconn Project</h1>
 
-<Trans i18nKey="home_page_desc">
-  The "Home" page provides a general app overview with buttons for user
-  registration and login.
-</Trans>
-<img
-  src="/images/contact-home.png"
-  alt="Calendar Page"
-  width="600"
-  height="auto"
-  style={{ maxWidth: "100%" }}
-/>
+  ## <Trans i18nKey="contactconn.description">Project Description</Trans>
 
-### <Trans i18nKey="contacts_page_title">Contacts Page</Trans>
+  **<Trans i18nKey="contactconn.app_name">Contact Management Web Application</Trans>** — <Trans i18nKey="contactconn.description_text">Helps users efficiently manage and organize their contacts with React frontend and Node.js/MongoDB backend.</Trans>
 
-<Trans i18nKey="contacts_page_desc">
-  The "Contacts" page where the user's contacts are displayed with the
-  possibility of filtering and adding to favorites.
-</Trans>
-<img
-  src="/images/contact-contacts.png"
-  alt="Calendar Page"
-  width="600"
-  height="auto"
-  style={{ maxWidth: "100%" }}
-/>
-## <Trans i18nKey="technologies">Technologies Used:</Trans>
+  ### <Trans i18nKey="contactconn.features">Key Features</Trans>
 
-- **Frontend:** <Trans i18nKey="technologies_1"> React.js, CSS for styling and responsive design</Trans>
-- **Backend:** <Trans i18nKey="technologies_2"> Node.js, Express.js for API management</Trans>
-- **Database:** <Trans i18nKey="technologies_3"> MongoDB for scalable data storage</Trans>
-- **Hosting:** <Trans i18nKey="technologies_4"> Backend is hosted on Render.com, while the frontend can be deployed on GitHub Pages or another static hosting service.</Trans>
+  - **<Trans i18nKey="contactconn.feature_management">Contact Management</Trans>**  
+    <Trans i18nKey="contactconn.feature_management_text">Add, edit, delete contacts with detailed info</Trans>
+  
+  - **<Trans i18nKey="contactconn.feature_favorites">Favorites System</Trans>**  
+    <Trans i18nKey="contactconn.feature_favorites_text">Mark important contacts for quick access</Trans>
 
-## <Trans i18nKey="how_it_works">How It Works:</Trans>
+  - **<Trans i18nKey="contactconn.feature_auth">User Authentication</Trans>**  
+    <Trans i18nKey="contactconn.feature_auth_text">Secure access to personal contacts</Trans>
 
-<Trans i18nKey="how_it_works_1">Users log in to the application.
-They can add new contacts, view the list of existing contacts, mark important contacts as favorites, and delete or update contact details as needed.
-The application automatically saves all changes to MongoDB, ensuring that contact data is always up-to-date.
-This contact management application is ideal for individuals or small teams looking for a simple, reliable way to organize contact information.</Trans>
+  ## <Trans i18nKey="contactconn.screenshots">App Screenshots</Trans>
 
-## <Trans i18nKey="link">Links</Trans>
+  <div className="image-gallery">
+    <div className="image-wrapper">
+      <img
+        src="/images/contact-home.png"
+        alt={<Trans i18nKey="contactconn.screenshot_home">Home Page</Trans>}
+        className="gallery-image"
+      />
+      <p className="image-caption">
+        <Trans i18nKey="contactconn.screenshot_home_text">Welcome screen with auth options</Trans>
+      </p>
+    </div>
+    
+    <div className="image-wrapper">
+      <img
+        src="/images/contact-contacts.png"
+        alt={<Trans i18nKey="contactconn.screenshot_contacts">Contacts Page</Trans>}
+        className="gallery-image"
+      />
+      <p className="image-caption">
+        <Trans i18nKey="contactconn.screenshot_contacts_text">Contact management interface</Trans>
+      </p>
+    </div>
+  </div>
 
-<a href="https://dymitrdworakowski.github.io/phonebook/">Live Project</a>
-<a href="https://github.com/DymitrDworakowski/phonebook">GitHub Repository</a>
-<a href="https://github.com/DymitrDworakowski/nodejs-hw-rest-api">GitHub Backend</a>
+  ## <Trans i18nKey="contactconn.technologies">Technologies</Trans>
+
+
+<div className="tech-stack">
+
+- JavaScript
+- SCSS
+</div>
+
+  ## <Trans i18nKey="contactconn.workflow">How It Works</Trans>
+
+  <Trans i18nKey="contactconn.workflow_text">
+    Users authenticate to access their contact list. All changes sync in real-time with the MongoDB database via Node.js backend API. The responsive interface works seamlessly across devices.
+  </Trans>
+
+  ## <Trans i18nKey="contactconn.links">Project Links</Trans>
+
+<div className="project-links">
+[Live Demo]({props.frontmatter.links.live})
+[GitHub Repository]({props.frontmatter.links.github})
+[Backend Code]({props.frontmatter.links.backend})
+</div>
 </div>
