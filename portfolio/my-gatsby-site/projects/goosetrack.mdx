@@ -2,63 +2,149 @@
 title: "GooseTrack"
 date: "2023-09-23"
 slug: "goosetrack-project"
-role: "Developer. Team project."
+role: "Developer (Team Project)"
 hero_image: "./GooseTrack.png"
-hero_image_alt: "GooseTrack"
+hero_image_alt: "Task Scheduler App"
 hero_image_credit_text: "Dymitr Dworakowski"
 hero_image_credit_link: "https://unsplash.com/photos/ocZ-_Y7-Ptg"
 ---
 
-<div style={{
-  display: "flex",
-  alignItems: "center",
-  flexDirection: "column",  
-  backgroundColor: "#c8c9ce",
-  borderRadius: "10px",
-  padding: "30px",
-}}>
+<style>{`
+  .project-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+  }
+  .project-title {
+    color: #2d3748;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .project-section {
+    margin: 2rem 0;
+  }
+  .tech-stack {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+  }
+  .project-links a {
+    display: inline-block;
+    margin-right: 1rem;
+    padding: 0.5rem 1rem;
+    background: #f0f0f0;
+    border-radius: 4px;
+    color: #3182ce;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  .project-links a:hover {
+    background: #e2e8f0;
+  }
+  .image-gallery {
+    display: grid;
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+  .image-wrapper {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  .gallery-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+  .gallery-image:hover {
+    transform: scale(1.02);
+  }
+  .image-caption {
+    text-align: center;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #666;
+  }
+`}</style>
 
-## <Trans i18nKey="opis">Project Description</Trans>
+<div className="project-container">
 
-**GooseTrack** — <Trans i18nKey="opis_2">This is a team diploma project, designed as a task scheduler with user registration and backend integration. The app helps efficiently organize time and plan work tasks. Adaptive layout for different devices is implemented, and there is a switch between dark and light themes, with the selected theme retained on the next load.</Trans>
+  <h1 className="project-title">GooseTrack Project</h1>
 
-### <Trans i18nKey="possibility">Key Features</Trans>
-- **<Trans i18nKey="possibility_1">Responsive design</Trans>**: <Trans i18nKey="possibility_1_desc">supports various devices.</Trans>
-- **<Trans i18nKey="possibility_2">Dark/Light mode</Trans>**: <Trans i18nKey="possibility_2_desc">retains the selected mode even after re-login.</Trans>
-- **<Trans i18nKey="possibility_3">Convenient task management</Trans>**: <Trans i18nKey="possibility_3_desc">add and edit tasks by category.</Trans>
+  ## Project Description
 
-## <Trans i18nKey="page_overview">Page Overview</Trans>
+  **Task Scheduler Web Application** — Team diploma project with user registration and backend integration. Helps efficiently organize time and plan work tasks with adaptive layout and theme switching.
 
-### <Trans i18nKey="home_page_title">Home Page</Trans>
-<Trans i18nKey="home_page_desc">The "Home" page provides a general app overview with buttons for user registration and login.</Trans>
+  ### Key Features
 
-<img src="/images/goosetrack-homepage.png" alt="Home Page" width="600" height="auto" style={{ maxWidth: '100%' }} />
+  - **Responsive Design**  
+    Supports various devices and screen sizes
+  
+  - **Dark/Light Mode**  
+    Remembers user's theme preference
 
-### <Trans i18nKey="calendar_page_title">Calendar</Trans>
-<Trans i18nKey="calendar_page_desc">The "Calendar" page shows all tasks for the current month.</Trans>
+  - **Task Management**  
+    Add and edit tasks by category and priority
 
-<img src="/images/goosetrack-calendar.png" alt="Calendar Page" width="600" height="auto" style={{ maxWidth: '100%' }} />
+  ## App Screenshots
 
-### <Trans i18nKey="day_calendar_page_title">Daily Calendar</Trans>
-<Trans i18nKey="day_calendar_page_desc">On the "Daily Calendar" page, you can add tasks by category for a selected date, and adjust their categories and priority.</Trans>
+  <div className="image-gallery">
+    <div className="image-wrapper">
+      <img
+        src="/images/goosetrack-homepage.png"
+        alt="Home Page"
+        className="gallery-image"
+      />
+      <p className="image-caption">
+        Welcome screen with auth options
+      </p>
+    </div>
+    
+    <div className="image-wrapper">
+      <img
+        src="/images/goosetrack-calendar.png"
+        alt="Calendar Page"
+        className="gallery-image"
+      />
+      <p className="image-caption">
+        Monthly calendar view
+      </p>
+    </div>
 
-<img src="/images/goosetrack-calendar-day.png" alt="Calendar Day Page" width="600" height="auto" style={{ maxWidth: '100%' }} />
+    <div className="image-wrapper">
+      <img
+        src="/images/goosetrack-calendar-day.png"
+        alt="Daily View"
+        className="gallery-image"
+      />
+      <p className="image-caption">
+        Daily task management
+      </p>
+    </div>
+  </div>
 
-### <Trans i18nKey="account_page_title">My Account</Trans>
-<Trans i18nKey="account_page_desc">The "My Account" page allows viewing and updating user personal data.</Trans>
+  ## Technologies
 
-<img src="/images/goosetrack-account.png" alt="My Account Page" width="600" height="auto" style={{ maxWidth: '100%' }} />
+<div className="tech-stack">
+- JavaScript
+- React
+- Node.js
+- MongoDB
+</div>
 
-### <Trans i18nKey="statistics_page_title">Statistics</Trans>
-<Trans i18nKey="statistics_page_desc">The "Statistics" page displays task statistics by month and day.</Trans>
+  ## How It Works
 
-<img src="/images/goosetrack-statistics.png" alt="Statistics Page" width="600" height="auto" style={{ maxWidth: '100%' }} />
+  Users can register, log in, and manage their tasks across different views. The app features theme persistence and responsive design for all devices. Tasks are synchronized with the backend database in real-time.
 
-## <Trans i18nKey="role_in_project">Role in the Project</Trans>
-<Trans i18nKey="role_desc">Developer responsible for functionality and backend integration, responsive design, and implementation of dark/light modes.</Trans>
+  ## Project Links
 
-## <Trans i18nKey="link">Links</Trans>
-
-<a href="https://tatiana-kashcha.github.io/project-smart-coders-frontend/">Live Project</a>
-<a href="https://github.com/Tatiana-Kashcha/project-smart-coders-frontend">GitHub Repository</a>
+<div className="project-links">
+  [Live Demo](https://tatiana-kashcha.github.io/project-smart-coders-frontend/)
+  [GitHub Repo](https://github.com/Tatiana-Kashcha/project-smart-coders-frontend)
+  [Backend Code](https://github.com/Tatiana-Kashcha/project-smart-coders-backend)
+</div>
 </div>
