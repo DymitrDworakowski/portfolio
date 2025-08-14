@@ -8,8 +8,8 @@ import { MDXProvider } from "@mdx-js/react"
 import { Trans } from "gatsby-plugin-react-i18next"
 
 const Project = ({ data, children }) => {
-  const image = getImage(data.mdx.frontmatter.hero_image)
-  
+  // const image = getImage(data.mdx.frontmatter.hero_image)
+
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
       <ProjectWrapper>
@@ -53,7 +53,6 @@ export const query = graphql`
 
 // Styled components
 
-
 const ProjectWrapper = styled.div`
   max-width: 1200px;
   margin: 0 auto;
@@ -67,7 +66,7 @@ const PostDate = styled.p`
 `
 
 const HeroImage = styled(GatsbyImage)`
- margin:100px;
+  margin: 100px;
   border-radius: 8px;
   margin-bottom: 2rem;
   width: 50%;

@@ -6,7 +6,6 @@ import Seo from "../components/seo"
 
 const Certificates = () => {
   const { t } = useTranslation(["certificates"])
-  console.log(t("certificates:title")); // Має повернути значення
   return(
   <Layout>
     <div>
