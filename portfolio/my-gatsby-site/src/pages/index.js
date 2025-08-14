@@ -39,23 +39,22 @@ const IndexPage = () => {
   ]
 
   const softSkills = [
-    "Критичне мислення",
-    "Комунікація",
-    "Командна робота",
-    "Тайм-менеджмент"
+    t("home:skills.thinking"),
+    t("home:skills.communication"),
+    t("home:skills.teamwork"),
+    t("home:skills.timeManagement")
   ]
 
   return (
-    <Layout pageTitle="Моє портфоліо">
+    <Layout pageTitle={t("home:pageTitle")}>
       <div className={container}>
         {/* Hero Section */}
         <section className={hero}>
           <div className={heroContent}>
-            <h1 className={heroTitle}>Привіт, я Dymitr Dworakowski</h1>
-            <h2 className={heroSubtitle}>Full-Stack Developer</h2>
+            <h1 className={heroTitle}>{t("home:hero.title")}</h1>
+            <h2 className={heroSubtitle}>{t("home:hero.subtitle")}</h2>
             <p className={heroText}>
-              Спеціалізуюсь на створенні сучасних веб-додатків. 
-              Маю досвід як у frontend, так і backend розробці.
+              {t("home:hero.description")}
             </p>
           </div>
         </section>
@@ -63,7 +62,7 @@ const IndexPage = () => {
         {/* Skills Section */}
         <section className={sections}>
           <div className={section}>
-            <h2 className={sectionTitle}>Технічні Навички</h2>
+            <h2 className={sectionTitle}>{t("home:skills.technical")}</h2>
             <div className={skillsGrid}>
               {hardSkills.map((skill) => (
                 <div key={skill.name} className={skillCard}>
@@ -83,7 +82,7 @@ const IndexPage = () => {
           </div>
 
           <div className={section}>
-            <h2 className={sectionTitle}>Професійні Якості</h2>
+            <h2 className={sectionTitle}>{t("home:skills.soft")}</h2>
             <div className={skillsGrid}>
               {softSkills.map((skill) => (
                 <div key={skill} className={skillCard}>
@@ -98,12 +97,9 @@ const IndexPage = () => {
 
         {/* About Section */}
         <section className={about}>
-          <h2 className={sectionTitle}>Про мене</h2>
+          <h2 className={sectionTitle}>{t("home:about.title")}</h2>
           <p className={aboutText}>
-            Я Junior Full-Stack Developer з досвідом роботи над різними проектами. 
-            Спеціалізуюсь на створенні повноцінних веб-додатків з використанням 
-            сучасних технологій. Постійно вдосконалюю свої навички та слідкую за 
-            новітніми тенденціями у сфері розробки.
+            {t("home:about.description")}
           </p>
         </section>
       </div>
@@ -125,6 +121,9 @@ export const query = graphql`
   }
 `
 
-export const Head = () => <Seo title="Головна" />
+// Fixed Head component - either use static title or pass pageContext
+export const Head = ({ pageContext }) => (
+  <Seo title={pageContext?.language === 'en' ? "Home" : "Головна"} />
+)
 
 export default IndexPage

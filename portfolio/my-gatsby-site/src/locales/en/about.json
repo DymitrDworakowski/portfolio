@@ -1,7 +1,73 @@
 {
-  "journey": "Hi! I'm Dymitr Dworakowski, Junior Full-Stack Developer. I've always been passionate about technology and design, and I knew from my firstprojects that I wanted to create beautiful and functional web applications.",
-  "focus": "I like to work on projects that combine a user-friendly interface and powerful functionality. I believe that good design is not only about aesthetics, but also about ease of use.",
-  "tools": "I use HTML5, CSS3, JavaScript and React to create efficient and modern interfaces. I also work with Node.js and MongoDB, which allows me to work on the full application stack.",
-  "inspires": "I draw inspiration from design and user feedback. Every new project is a chance to learn something new and improve my skills.",
-  "connect": "I am always open to new ideas and cooperation. If you have an interesting project or a question, I would be happy to chat!"
+  "pageTitle": "About Me",
+  "sections": {
+    "journey": {
+      "title": "My Journey",
+      "content": "Hi! I'm Dymitr Dworakowski, Junior Full-Stack Developer. I've always been passionate about technology and design, and I knew from my first projects that I wanted to create beautiful and functional web applications."
+    },
+    "focus": {
+      "title": "What I Focus On",
+      "content": "I like to work on projects that combine a user-friendly interface and powerful functionality. I believe that good design is not only about aesthetics, but also about ease of use."
+    },
+    "skills": {
+      "title": "Skills & Tools",
+      "content": "I use HTML5, CSS3, JavaScript and React to create efficient and modern interfaces. I also work with Node.js and MongoDB, which allows me to work on the full application stack."
+    },
+    "inspiration": {
+      "title": "What Inspires Me",
+      "content": "I draw inspiration from design and user feedback. Every new project is a chance to learn something new and improve my skills."
+    },
+    "connect": {
+      "title": "Let's Connect!",
+      "content": "I am always open to new ideas and cooperation. If you have an interesting project or a question, I would be happy to chat!"
+    },
+    "experience": {
+      "title": "Professional Experience"
+    },
+    "education": {
+      "title": "Education"
+    },
+    "hobbies": {
+      "title": "Hobbies & Interests"
+    }
+  },
+  "experience": {
+    "intersport": {
+      "position": "System and Network Administrator",
+      "company": "Intersport Poland, Krakow",
+      "duration": "July 2021 - Current",
+      "responsibilities": {
+        "1": "Contributing to the development and maintenance of internal systems",
+        "2": "Maintaining and upgrading computer networks and hardware",
+        "3": "Troubleshooting software and hardware issues",
+        "4": "Network security management and performance optimization",
+        "5": "System installation and configuration"
+      }
+    },
+    "ensalta": {
+      "position": "Technical Support Engineer",
+      "company": "Ensalta, Krakow",
+      "duration": "October 2017 - July 2021",
+      "responsibilities": {
+        "1": "Handled initial client inquiries and support tickets",
+        "2": "Troubleshot software, hardware and network issues",
+        "3": "Managed help desk systems and documentation",
+        "4": "Provided product support and training"
+      }
+    }
+  },
+  "education": {
+    "university": {
+      "name": "University of Wrocław, Poland",
+      "duration": "2015 - 2019",
+      "degree": "Bachelor's & Master's in Computer Science",
+      "specialization": "Specialization: Software Engineering and Information Technology",
+      "coursework": "Coursework: Software Development, Advanced Programming, Network Programming, Database Management"
+    }
+  },
+  "hobbies": {
+    "1": "Airsoft",
+    "2": "Computer Gaming",
+    "3": "Web Development"
+  }
 }

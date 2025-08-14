@@ -1,4 +1,29 @@
 {
-    "title": "Welcome to My Portfolio",
-    "main": "Hi! My name is Dymitr Dworakowski. I'm a Junior Full-Stack Developer with a passion for design and creating user-friendly web applications. With a foundation in both front-end and back-end development, I focus on building efficient and engaging digital experiences. Constantly striving to expand my skills, I enjoy working on projects that challenge me to grow and contribute to impactful solutions. Let's create something amazing together!"
+  "pageTitle": "My Portfolio",
+  "hero": {
+    "title": "Hello, I'm Dymitr Dworakowski",
+    "subtitle": "Full-Stack Developer",
+    "description": "I specialize in creating modern web applications with experience in both frontend and backend development."
+  },
+  "skills": {
+    "technical": "Technical Skills",
+    "soft": "Professional Skills",
+    "thinking": "Critical Thinking",
+    "communication": "Communication",
+    "teamwork": "Teamwork",
+    "timeManagement": "Time Management"
+  },
+  "about": {
+    "title": "About Me",
+    "description": "Hi! My name is Dymitr Dworakowski. I'm a Junior Full-Stack Developer with a passion for design and creating user-friendly web applications. With a foundation in both front-end and back-end development, I focus on building efficient and engaging digital experiences. Constantly striving to expand my skills, I enjoy working on projects that challenge me to grow and contribute to impactful solutions. Let's create something amazing together!"
+  },
+  "seoTitle": "Home | Dymitr Dworakowski - Full-Stack Developer",
+  "projects": {
+    "title": "My Projects",
+    "viewAll": "View All Projects"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "cta": "Let's work together!"
+  }
 }

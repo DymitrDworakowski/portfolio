@@ -1,113 +1,106 @@
 import * as React from "react"
-import { Trans } from "gatsby-plugin-react-i18next"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { graphql } from "gatsby"
-import {projectContainer,projectTitle,projectSection,experienceItem,experienceMeta,experienceList} from "./about.module.css"
+import {
+  projectContainer,
+  projectTitle,
+  projectSection,
+  experienceItem,
+  experienceMeta,
+  experienceList,
+  educationItem,
+  educationMeta,
+  hobbiesList,
+} from "./about.module.css"
 
 const AboutPage = () => {
+  const { t } = useTranslation(["about"])
+
   return (
-    <Layout pageTitle="About Me">
+    <Layout pageTitle={t("about:pageTitle")}>
       <div className={projectContainer}>
-        <h1 className={projectTitle}>About Me</h1>
+        <h1 className={projectTitle}>{t("about:pageTitle")}</h1>
 
         <section className={projectSection}>
-          <h2>My Journey</h2>
-          <p>
-            <Trans i18nKey="journey">
-              Hi! I'm Dymitr Dworakowski, Junior Full-Stack Developer. I've
-              always been passionate about technology and design, and I knew
-              from my first projects that I wanted to create beautiful and
-              functional web applications.
-            </Trans>
-          </p>
+          <h2>{t("about:sections.journey.title")}</h2>
+          <p>{t("about:sections.journey.content")}</p>
         </section>
 
         <section className={projectSection}>
-          <h2>What I Focus On</h2>
-          <p>
-            <Trans i18nKey="focus">
-              I like to work on projects that combine a user-friendly interface
-              and powerful functionality. I believe that good design is not only
-              about aesthetics, but also about ease of use.
-            </Trans>
-          </p>
+          <h2>{t("about:sections.focus.title")}</h2>
+          <p>{t("about:sections.focus.content")}</p>
         </section>
 
         <section className={projectSection}>
-          <h2>Skills & Tools</h2>
-          <p>
-            <Trans i18nKey="tools">
-              I use HTML5, CSS3, JavaScript and React to create efficient and
-              modern interfaces. I also work with Node.js and MongoDB, which
-              allows me to work on the full application stack.
-            </Trans>
-          </p>
+          <h2>{t("about:sections.skills.title")}</h2>
+          <p>{t("about:sections.skills.content")}</p>
         </section>
 
         <section className={projectSection}>
-          <h2>What Inspires Me</h2>
-          <p>
-            <Trans i18nKey="inspires">
-              I draw inspiration from design and user feedback. Every new
-              project is a chance to learn something new and improve my skills.
-            </Trans>
-          </p>
+          <h2>{t("about:sections.inspiration.title")}</h2>
+          <p>{t("about:sections.inspiration.content")}</p>
         </section>
 
         <section className={projectSection}>
-          <h2>Let's Connect!</h2>
-          <p>
-            <Trans i18nKey="connect">
-              I am always open to new ideas and cooperation. If you have an
-              interesting project or a question, I would be happy to chat!
-            </Trans>
-          </p>
+          <h2>{t("about:sections.connect.title")}</h2>
+          <p>{t("about:sections.connect.content")}</p>
         </section>
 
         <section className={projectSection}>
-          <h2>Professional Experience</h2>
-          
+          <h2>{t("about:sections.experience.title")}</h2>
+
           <div className={experienceItem}>
-            <h3>System and Network Administrator</h3>
-            <p className={experienceMeta}>Intersport Poland, Krakow | July 2021 - Current</p>
+            <h3>{t("about:experience.intersport.position")}</h3>
+            <p className={experienceMeta}>
+              {t("about:experience.intersport.company")} |{" "}
+              {t("about:experience.intersport.duration")}
+            </p>
             <ul className={experienceList}>
-              <li>Contributing to the development and maintenance of internal systems</li>
-              <li>Maintaining and upgrading computer networks and hardware</li>
-              <li>Troubleshooting software and hardware issues</li>
-              <li>Network security management and performance optimization</li>
-              <li>System installation and configuration</li>
+              {[1, 2, 3, 4, 5].map(item => (
+                <li key={item}>
+                  {t(`about:experience.intersport.responsibilities.${item}`)}
+                </li>
+              ))}
             </ul>
           </div>
 
           <div className={experienceItem}>
-            <h3>Technical Support Engineer</h3>
-            <p className={experienceMeta}>Ensalta, Krakow | October 2017 - July 2021</p>
+            <h3>{t("about:experience.ensalta.position")}</h3>
+            <p className={experienceMeta}>
+              {t("about:experience.ensalta.company")} |{" "}
+              {t("about:experience.ensalta.duration")}
+            </p>
             <ul className={experienceList}>
-              <li>Handled initial client inquiries and support tickets</li>
-              <li>Troubleshot software, hardware and network issues</li>
-              <li>Managed help desk systems and documentation</li>
-              <li>Provided product support and training</li>
+              {[1, 2, 3, 4].map(item => (
+                <li key={item}>
+                  {t(`about:experience.ensalta.responsibilities.${item}`)}
+                </li>
+              ))}
             </ul>
           </div>
         </section>
 
-        <section className="project-section">
-          <h2>Education</h2>
-          <div className="education-item">
-            <h3>University of Wrocław, Poland</h3>
-            <p className="education-meta">2015 - 2019 | Bachelor's & Master's in Computer Science</p>
-            <p>Specialization: Software Engineering and Information Technology</p>
-            <p>Coursework: Software Development, Advanced Programming, Network Programming, Database Management</p>
+        <section className={projectSection}>
+          <h2>{t("about:sections.education.title")}</h2>
+          <div className={educationItem}>
+            <h3>{t("about:education.university.name")}</h3>
+            <p className={educationMeta}>
+              {t("about:education.university.duration")} |{" "}
+              {t("about:education.university.degree")}
+            </p>
+            <p>{t("about:education.university.specialization")}</p>
+            <p>{t("about:education.university.coursework")}</p>
           </div>
         </section>
 
-        <section className="project-section">
-          <h2>Hobbies & Interests</h2>
-          <ul className="hobbies-list">
-            <li>Airsoft</li>
-            <li>Computer Gaming</li>
-            <li>Web Development</li>
+        <section className={projectSection}>
+          <h2>{t("about:sections.hobbies.title")}</h2>
+          <ul className={hobbiesList}>
+            {[1, 2, 3].map(item => (
+              <li key={item}>{t(`about:hobbies.${item}`)}</li>
+            ))}
           </ul>
         </section>
       </div>
@@ -129,6 +122,16 @@ export const query = graphql`
   }
 `
 
-export const Head = () => <Seo title="About Me" />
+export const Head = ({ pageContext }) => (
+  <Seo
+    title={
+      pageContext.language === "en"
+        ? "About Me"
+        : pageContext.language === "pl"
+        ? "O Mnie"
+        : "Про мене"
+    }
+  />
+)
 
 export default AboutPage

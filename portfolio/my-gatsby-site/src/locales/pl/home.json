@@ -1,4 +1,29 @@
 {
-    "title": "Witam w moim Portfolio",
-    "main": "Cześć! Nazywam się Dymitr Dworakowski. Jestem Junior Full-Stack Developerem z pasją do projektowania i tworzenia przyjaznych dla użytkownika aplikacji internetowych. Mając podstawy zarówno w zakresie front-end, jak i back-end development, skupiam się na budowaniu wydajnych i angażujących doświadczeń cyfrowych. Ciągle dążąc do rozwijania swoich umiejętności, lubię pracować nad projektami, które rzucają mi wyzwanie, aby się rozwijać i przyczyniać się do znaczących rozwiązań. Stwórzmy razem coś niesamowitego!"
+  "pageTitle": "Moje Portfolio",
+  "hero": {
+    "title": "Cześć, jestem Dymitr Dworakowski",
+    "subtitle": "Full-Stack Developer",
+    "description": "Specjalizuję się w tworzeniu nowoczesnych aplikacji internetowych z doświadczeniem zarówno w frontend, jak i backend development."
+  },
+  "skills": {
+    "technical": "Umiejętności Techniczne",
+    "soft": "Umiejętności Miękkie",
+    "thinking": "Myślenie Krytyczne",
+    "communication": "Komunikacja",
+    "teamwork": "Praca Zespołowa",
+    "timeManagement": "Zarządzanie Czasem"
+  },
+  "about": {
+    "title": "O Mnie",
+    "description": "Cześć! Nazywam się Dymitr Dworakowski. Jestem Junior Full-Stack Developerem z pasją do projektowania i tworzenia przyjaznych aplikacji internetowych. Mając podstawy zarówno w front-end, jak i back-end development, skupiam się na budowaniu efektywnych i angażujących doświadczeń cyfrowych. Nieustannie dążę do poszerzania swoich umiejętności, ciesząc się pracą nad projektami, które zmuszają mnie do rozwoju i przyczyniają się do znaczących rozwiązań. Stwórzmy razem coś niesamowitego!"
+  },
+  "seoTitle": "Strona Główna | Dymitr Dworakowski - Full-Stack Developer",
+  "projects": {
+    "title": "Moje Projekty",
+    "viewAll": "Zobacz Wszystkie Projekty"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "cta": "Zacznijmy współpracę!"
+  }
 }

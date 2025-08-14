@@ -1,0 +1,57 @@
+.certificatesContainer {
+  padding: 100px 20px 40px; /* Великий верхній відступ для хедера */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.certificatesTitle {
+  margin-bottom: 30px;
+  color: var(--heading-color);
+  text-align: center;
+}
+
+.certificatesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.certificateFrame {
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background: white;
+}
+
+.backLink {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 10px 20px;
+  background: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.backLink:hover {
+  background: var(--primary-dark);
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+  .certificatesContainer {
+    padding: 80px 15px 30px;
+  }
+
+  .certificatesGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .certificateFrame {
+    height: 400px;
+  }
+}

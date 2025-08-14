@@ -1,7 +1,73 @@
 {
-  "journey": "Cześć! Nazywam się Dymitr Dworakowski, jestem Junior Full-Stack Developer. Zawsze pasjonowałem się technologią i projektowaniem, a po moich pierwszych projektach wiedziałem, że chcę tworzyć piękne i funkcjonalne aplikacje internetowe.",
-  "focus": "Lubię pracować nad projektami, które łączą przyjazny użytkownikowi interfejs i potężną funkcjonalność. Wierzę, że dobry design to nie tylko estetyka, ale także łatwość użytkowania.",
-  "tools": "Używam HTML5, CSS3, JavaScript i React, aby tworzyć wydajne i nowoczesne interfejsy. Pracuję również z Node.js i MongoDB, co pozwala mi pracować nad całym stosem aplikacji.",
-  "inspires": "Czerpię inspirację z designu i opinii użytkowników. Każdy nowy projekt to szansa na nauczenie się czegoś nowego i doskonalenie swoich umiejętności.",
-  "connect": "Zawsze jestem otwarty na nowe pomysły i współpracę. Jeśli masz ciekawy projekt lub pytanie, chętnie porozmawiam!"
+  "pageTitle": "O Mnie",
+  "sections": {
+    "journey": {
+      "title": "Moja Podróż",
+      "content": "Cześć! Jestem Dymitr Dworakowski, Junior Full-Stack Developer. Zawsze pasjonowałem się technologią i designem, a po moich pierwszych projektach wiedziałem, że chcę tworzyć piękne i funkcjonalne aplikacje internetowe."
+    },
+    "focus": {
+      "title": "Na czym się skupiam",
+      "content": "Lubię pracować nad projektami, które łączą przyjazny interfejs użytkownika z potężną funkcjonalnością. Wierzę, że dobry design to nie tylko estetyka, ale także łatwość użytkowania."
+    },
+    "skills": {
+      "title": "Umiejętności i Narzędzia",
+      "content": "Używam HTML5, CSS3, JavaScript i React do tworzenia wydajnych i nowoczesnych interfejsów. Pracuję także z Node.js i MongoDB, co pozwala mi pracować nad pełnym stosem aplikacji."
+    },
+    "inspiration": {
+      "title": "Co mnie inspiruje",
+      "content": "Czerpię inspirację z designu i opinii użytkowników. Każdy nowy projekt to szansa, aby nauczyć się czegoś nowego i poprawić swoje umiejętności."
+    },
+    "connect": {
+      "title": "Skontaktujmy się!",
+      "content": "Jestem zawsze otwarty na nowe pomysły i współpracę. Jeśli masz interesujący projekt lub pytanie, chętnie porozmawiam!"
+    },
+    "experience": {
+      "title": "Doświadczenie Zawodowe"
+    },
+    "education": {
+      "title": "Wykształcenie"
+    },
+    "hobbies": {
+      "title": "Zainteresowania"
+    }
+  },
+  "experience": {
+    "intersport": {
+      "position": "Administrator Systemów i Sieci",
+      "company": "Intersport Polska, Kraków",
+      "duration": "Lipiec 2021 - Obecnie",
+      "responsibilities": {
+        "1": "Udział w rozwoju i utrzymaniu systemów wewnętrznych",
+        "2": "Konserwacja i modernizacja sieci komputerowych i sprzętu",
+        "3": "Rozwiązywanie problemów z oprogramowaniem i sprzętem",
+        "4": "Zarządzanie bezpieczeństwem sieci i optymalizacja wydajności",
+        "5": "Instalacja i konfiguracja systemów"
+      }
+    },
+    "ensalta": {
+      "position": "Inżynier Wsparcia Technicznego",
+      "company": "Ensalta, Kraków",
+      "duration": "Październik 2017 - Lipiec 2021",
+      "responsibilities": {
+        "1": "Obsługa wstępnych zapytań klientów i zgłoszeń serwisowych",
+        "2": "Rozwiązywanie problemów z oprogramowaniem, sprzętem i siecią",
+        "3": "Zarządzanie systemami help desk i dokumentacją",
+        "4": "Wsparcie produktowe i szkolenia"
+      }
+    }
+  },
+  "education": {
+    "university": {
+      "name": "Uniwersytet Wrocławski, Polska",
+      "duration": "2015 - 2019",
+      "degree": "Licencjat i Magister Informatyki",
+      "specialization": "Specjalizacja: Inżynieria Oprogramowania i Technologie Informacyjne",
+      "coursework": "Przedmioty: Rozwój Oprogramowania, Programowanie Zaawansowane, Programowanie Sieciowe, Zarządzanie Bazami Danych"
+    }
+  },
+  "hobbies": {
+    "1": "Airsoft",
+    "2": "Gry Komputerowe",
+    "3": "Tworzenie Stron Internetowych"
+  }
 }
