@@ -9,132 +9,86 @@ hero_image_credit_text: "Dymitr"
 hero_image_credit_link: "https://unsplash.com/photos/7rriIaBH6JY"
 ---
 
-<style>{`
-  .project-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem;
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    background-color: #f8f9fa;
-    border-radius: 10px;
-  }
-  .project-title {
-    color: #2d3748;
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-    text-align: center;
-  }
-  .project-section {
-    margin: 2rem 0;
-  }
-  .tech-stack {
-    display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-    margin: 1rem 0;
-  }
-  .project-links a {
-    display: inline-block;
-    margin-right: 1rem;
-    padding: 0.5rem 1rem;
-    background: #f0f0f0;
-    border-radius: 4px;
-    color: #3182ce;
-    text-decoration: none;
-    transition: all 0.3s ease;
-  }
-  .project-links a:hover {
-    background: #e2e8f0;
-  }
-  .image-gallery {
-    display: grid;
-    gap: 1.5rem;
-    margin: 2rem 0;
-  }
-  .image-wrapper {
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  }
-  .gallery-image {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.3s ease;
-  }
-  .gallery-image:hover {
-    transform: scale(1.02);
-  }
-  .image-caption {
-    text-align: center;
-    margin-top: 0.5rem;
-    font-size: 0.9rem;
-    color: #666;
-  }
-`}</style>
+import { Trans } from "gatsby-plugin-react-i18next"
 
-<div className="project-container">
+<div className="project-page project-page--restaurant">
 
-  <h1 className="project-title">Mimiho Project</h1>
+  <h1 className="project-page__title"><Trans>Mimiho Project</Trans></h1>
 
-  ## Project Description
+  ## <Trans>Project Description</Trans>
 
-  **Mimiho** — This is a team project from the HTML/CSS block. This website was created for restaurants and features responsive design, a modal window, and an elegant user interface. The project demonstrates modern web development techniques and collaboration within a team.
+  **<Trans>Mimiho</Trans>** — <Trans>This is a team project from the HTML/CSS block. This website was created for restaurants and features responsive design, a modal window, and an elegant user interface. The project demonstrates modern web development techniques and collaboration within a team.</Trans>
 
-  ### Key Features
+  ### <Trans>Key Features</Trans>
 
-  - **Responsive Design**  
-    Optimized for different devices, ensuring a seamless user experience on mobile, tablet, and desktop.
+  - **<Trans>Responsive Design</Trans>**  
+    <Trans>Optimized for different devices, ensuring a seamless user experience on mobile, tablet, and desktop.</Trans>
   
-  - **Modal Window**  
-    Interactive modal windows for user interactions.
+  - **<Trans>Modal Window</Trans>**  
+    <Trans>Interactive modal windows for user interactions.</Trans>
 
-  - **Modern Aesthetics**  
-    Clean and visually appealing design with attention to detail.
+  - **<Trans>Modern Aesthetics</Trans>**  
+    <Trans>Clean and visually appealing design with attention to detail.</Trans>
 
-  ## Page Overview
+  ## <Trans>Page Overview</Trans>
 
-  <div className="image-gallery">
-    <div className="image-wrapper">
+  <div className="project-gallery">
+    <figure className="project-gallery__item">
       <img
         src="/images/mimiho-home.png"
-        alt="Home Page"
-        className="gallery-image"
+        alt={<Trans>Home Page</Trans>}
+        className="project-gallery__image"
+        loading="lazy"
       />
-      <p className="image-caption">
-        The "Home" page serves as an entry point, showcasing key restaurant offerings
-      </p>
-    </div>
+      <figcaption className="project-gallery__caption">
+        <Trans>The "Home" page serves as an entry point, showcasing key restaurant offerings</Trans>
+      </figcaption>
+    </figure>
     
-    <div className="image-wrapper">
+    <figure className="project-gallery__item">
       <img
         src="/images/mimiho-footer.png"
-        alt="Footer Section"
-        className="gallery-image"
+        alt={<Trans>Footer Section</Trans>}
+        className="project-gallery__image"
+        loading="lazy"
       />
-      <p className="image-caption">
-        Footer includes essential links and contact information
-      </p>
-    </div>
+      <figcaption className="project-gallery__caption">
+        <Trans>Footer includes essential links and contact information</Trans>
+      </figcaption>
+    </figure>
   </div>
 
-  ## Technologies Used
+  ## <Trans>Technologies Used</Trans>
 
-<div className="tech-stack">
-- HTML5
-- CSS3
-- JavaScript
-- SCSS
-</div>
+  <div className="tech-stack">
+    <span className="tech-stack__item">HTML5</span>
+    <span className="tech-stack__item">CSS3</span>
+    <span className="tech-stack__item">JavaScript</span>
+    <span className="tech-stack__item">SCSS</span>
+  </div>
 
-  ## Role in the Project
-  Responsible for the development of the footer section, including layout, styling, and ensuring responsiveness across devices.
+  ## <Trans>Role in the Project</Trans>
+  
+  <p><Trans>Responsible for the development of the footer section, including layout, styling, and ensuring responsiveness across devices.</Trans></p>
 
-  ## Project Links
+  ## <Trans>Project Links</Trans>
 
-<div className="project-links">
-  [Live Project](https://kilativ54.github.io/parcel-6-team-project/)
-  [GitHub Repository](https://github.com/kilativ54/parcel-6-team-project)
-</div>
+  <div className="project-links">
+    <a 
+      href="https://kilativ54.github.io/parcel-6-team-project/" 
+      className="project-links__link"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Trans>Live Project</Trans>
+    </a>
+    <a 
+      href="https://github.com/kilativ54/parcel-6-team-project" 
+      className="project-links__link"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Trans>GitHub Repository</Trans>
+    </a>
+  </div>
 </div>
