@@ -1,0 +1,39 @@
+{
+  "contactconn_title": "Projekt Contactconn",
+  "contactconn_description_title": "Opis projektu",
+  "contactconn_description": "Aplikacja do zarządzania kontaktami",
+  "contactconn_description_text": "Pomaga użytkownikom efektywnie zarządzać kontaktami z wykorzystaniem Reacta po stronie frontendu oraz Node.js/MongoDB po stronie backendu.",
+  
+  "contactconn_features": {
+    "title": "Kluczowe funkcje",
+    "management": "Zarządzanie kontaktami",
+    "management_text": "Dodawaj, edytuj, usuwaj kontakty ze szczegółowymi informacjami",
+    "favorites": "System ulubionych",
+    "favorites_text": "Oznacz ważne kontakty dla szybkiego dostępu",
+    "auth": "Uwierzytelnianie użytkowników",
+    "auth_text": "Bezpieczny dostęp do osobistych kontaktów"
+  },
+
+  "contactconn_screenshots": {
+    "home": "Strona główna",
+    "home_text": "Ekran powitalny z opcjami logowania",
+    "contacts": "Strona kontaktów",
+    "contacts_text": "Interfejs zarządzania kontaktami"
+  },
+
+  "contactconn_technologies": "Wykorzystane technologie",
+  
+  "contactconn_workflow": "Jak to działa",
+  "contactconn_workflow_text": "Użytkownicy logują się, aby uzyskać dostęp do swojej listy kontaktów. Wszystkie zmiany są synchronizowane w czasie rzeczywistym z bazą danych MongoDB poprzez API backendowe Node.js. Responsywny interfejs działa płynnie na różnych urządzeniach.",
+
+  "contactconn_links": {
+    "demo": "Demo",
+    "frontend": "Kod frontendu",
+    "backend": "Kod backendu"
+  },
+
+  "contactconn_additional": {
+    "details": "Aplikacja została zbudowana z wykorzystaniem nowoczesnych technologii webowych. Frontend wykorzystuje React.js do tworzenia interaktywnego interfejsu użytkownika, podczas gdy backend oparty jest na Node.js z Express.js, zapewniając wydajne API. Dane są przechowywane w skalowalnej bazie MongoDB.",
+    "hosting": "Backend jest hostowany na Render.com, gwarantując wysoką dostępność i niezawodność."
+  }
+}
