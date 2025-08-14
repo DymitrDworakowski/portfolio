@@ -18,19 +18,21 @@ import {
 const ProjectPage = ({ data }) => {
   return (
     <Layout>
+      <Seo title="Projects" />
       <div className={projectsGrid}>
-        {data.allMdx.nodes.map((node, index) => (
+        {data.allMdx.nodes.map((node) => (
           <Link
             className={projectCard}
             to={`/projects/${node.frontmatter.slug}`}
             key={node.id}
+            aria-label={`View ${node.frontmatter.title} project`}
           >
             <div className={projectImageContainer}>
               <GatsbyImage
                 className={projectImage}
                 image={getImage(node.frontmatter.hero_image)}
                 alt={node.frontmatter.hero_image_alt}
-                objectFit="cover"
+                loading="lazy"
               />
             </div>
             <div className={projectContent}>
@@ -49,10 +51,13 @@ const ProjectPage = ({ data }) => {
 
 export const query = graphql`
   query ($language: String!) {
-    allMdx(sort: { frontmatter: { date: DESC } }) {
+    allMdx(
+      sort: { frontmatter: { date: DESC } }
+      
+    ) {
       nodes {
         frontmatter {
-          date(formatString: "MMMM D, YYYY")
+          date(formatString: "MMMM YYYY")
           title
           slug
           role
@@ -60,8 +65,10 @@ export const query = graphql`
           hero_image {
             childImageSharp {
               gatsbyImageData(
-                aspectRatio: 1.77 # 16:9 співвідношення
+                width: 600
+                aspectRatio: 1.77
                 transformOptions: { cropFocus: ATTENTION }
+                formats: [AUTO, WEBP, AVIF]
               )
             }
           }
@@ -80,4 +87,5 @@ export const query = graphql`
     }
   }
 `
+
 export default ProjectPage

@@ -1,42 +1,18 @@
-/* Теми */
-@import "./variables.module.css"; /* Імпортуй змінні */
+/* Глобальні стилі з новою палітрою */
+@import "./variables.module.css";
 
-
-.light-mode {
-  background-color: var(--background);
-  color: var(--text);
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.dark-mode {
-  background-color: var(--background);
-  color: var(--text);
-  transition: background-color 0.3s, color 0.3s;
-}
-.dark-mode h1,
-.dark-mode h2,
-.dark-mode h3,
-.dark-mode h4,
-.dark-mode h5,
-.dark-mode h6,
-.dark-mode p,
-.dark-mode ul {
-  color: var(--text);
-}
-
-/* Підключення Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Montserrat:wght@700&display=swap");
-
-/* Налаштування базових стилів */
+/* Базові налаштування теми */
 body {
   font-size: 16px;
   font-family: "Roboto", sans-serif;
-  color: var(--primary);
   margin: 0;
   padding: 0;
   background-color: var(--background);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Типографія */
 h1,
 h2,
 h3,
@@ -44,42 +20,196 @@ h4,
 h5,
 h6 {
   font-family: "Montserrat", sans-serif;
-  color: #222;
-  line-height: 1.2;
+  color: var(--text-primary);
+  line-height: 1.3;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
 }
-/* Посилання */
-a {
-  color: #000000;
-  text-decoration: none;
-  transition: color 0.3s;
+
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.75rem;
+}
+h4 {
+  font-size: 1.5rem;
+}
+h5 {
+  font-size: 1.25rem;
+}
+h6 {
+  font-size: 1rem;
 }
 
 p {
   margin-bottom: 1.5rem;
   line-height: 1.6;
+  color: var(--text-secondary);
 }
 
-/* Контейнер з відступами */
+/* Посилання */
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--primary-dark);
+}
+
+/* Лейаут */
 .container {
-  /* max-width: 100vw;  */
-  /* padding: 0 20px; */
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
-  box-sizing: border-box; /* Включає відступи у ширину контейнера */
+  padding: 0 var(--spacing-unit);
+  box-sizing: border-box;
 }
 
-/* Базова сітка з Flexbox */
 .row {
   display: flex;
-  gap: 5px;
   flex-wrap: wrap;
-  justify-content: center;
-  min-height: 100vh;
-
-  padding: 0;
+  gap: var(--spacing-unit);
+  margin: 0 calc(var(--spacing-unit) * -0.5);
+  padding: var(--spacing-unit) 0;
 }
 
 .column {
-  flex: 1 1 100%;
-  padding: 5px 0;
-  box-sizing: border-box; /* Забезпечує правильні відступи */
+  flex: 1 0 100%;
+  padding: 0 calc(var(--spacing-unit) * 0.5);
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .column {
+    flex: 1 0 calc(50% - var(--spacing-unit));
+  }
+}
+
+@media (min-width: 992px) {
+  .column {
+    flex: 1 0 calc(33.333% - var(--spacing-unit));
+  }
+}
+
+/* Темна тема - специфічні налаштування */
+.dark-mode {
+  --text-primary: var(--gray-100);
+  --text-secondary: var(--gray-400);
+}
+
+.dark-mode a {
+  color: var(--primary-light);
+}
+
+.dark-mode a:hover {
+  color: var(--primary);
+}
+
+/* Project Page Styles */
+.project-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+.project-page__title {
+  color: var(--heading-color);
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.project-gallery {
+  display: grid;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.project-gallery__item {
+  margin: 0;
+}
+
+.project-gallery__image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.project-gallery__image:hover {
+  transform: scale(1.02);
+}
+
+.project-gallery__caption {
+  text-align: center;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.tech-stack {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+
+.tech-stack__item {
+  background: var(--tag-bg);
+  color: var(--tag-text);
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 1.5rem 0;
+}
+
+.project-links__link {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: var(--link-bg);
+  border-radius: 4px;
+  color: var(--link-text);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.project-links__link:hover {
+  background: var(--link-hover-bg);
+  transform: translateY(-2px);
+}
+
+/* Markdown content styles */
+.project-page h2 {
+  color: var(--heading-color);
+  font-size: 1.8rem;
+  margin: 2.5rem 0 1rem;
+}
+
+.project-page h3 {
+  color: var(--heading-color);
+  font-size: 1.4rem;
+  margin: 2rem 0 0.8rem;
+}
+
+.project-page ul {
+  margin-bottom: 1.5rem;
+}
+
+.project-page li {
+  margin-bottom: 0.5rem;
 }

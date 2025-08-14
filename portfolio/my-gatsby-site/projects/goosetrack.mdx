@@ -9,142 +9,108 @@ hero_image_credit_text: "Dymitr Dworakowski"
 hero_image_credit_link: "https://unsplash.com/photos/ocZ-_Y7-Ptg"
 ---
 
-<style>{`
-  .project-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem;
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-  }
-  .project-title {
-    color: #2d3748;
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-  }
-  .project-section {
-    margin: 2rem 0;
-  }
-  .tech-stack {
-    display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-    margin: 1rem 0;
-  }
-  .project-links a {
-    display: inline-block;
-    margin-right: 1rem;
-    padding: 0.5rem 1rem;
-    background: #f0f0f0;
-    border-radius: 4px;
-    color: #3182ce;
-    text-decoration: none;
-    transition: all 0.3s ease;
-  }
-  .project-links a:hover {
-    background: #e2e8f0;
-  }
-  .image-gallery {
-    display: grid;
-    gap: 1.5rem;
-    margin: 2rem 0;
-  }
-  .image-wrapper {
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  }
-  .gallery-image {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.3s ease;
-  }
-  .gallery-image:hover {
-    transform: scale(1.02);
-  }
-  .image-caption {
-    text-align: center;
-    margin-top: 0.5rem;
-    font-size: 0.9rem;
-    color: #666;
-  }
-`}</style>
+import { Trans } from "gatsby-plugin-react-i18next"
 
-<div className="project-container">
+<div className="project-page">
 
-  <h1 className="project-title">GooseTrack Project</h1>
+  <h1 className="project-page__title"><Trans>GooseTrack</Trans></h1>
 
-  ## Project Description
+  ## <Trans>Project Description</Trans>
 
-  **Task Scheduler Web Application** — Team diploma project with user registration and backend integration. Helps efficiently organize time and plan work tasks with adaptive layout and theme switching.
+  **<Trans>Task Scheduler Web Application</Trans>** — <Trans>Team diploma project with user registration and backend integration. Helps efficiently organize time and plan work tasks with adaptive layout and theme switching.</Trans>
 
-  ### Key Features
+  ### <Trans>Key Features</Trans>
 
-  - **Responsive Design**  
-    Supports various devices and screen sizes
+  - **<Trans>Responsive Design</Trans>**  
+    <Trans>Supports various devices and screen sizes</Trans>
   
-  - **Dark/Light Mode**  
-    Remembers user's theme preference
+  - **<Trans>Dark/Light Mode</Trans>**  
+    <Trans>Remembers user's theme preference</Trans>
 
-  - **Task Management**  
-    Add and edit tasks by category and priority
+  - **<Trans>Task Management</Trans>**  
+    <Trans>Add and edit tasks by category and priority</Trans>
 
-  ## App Screenshots
+  ## <Trans>App Screenshots</Trans>
 
-  <div className="image-gallery">
-    <div className="image-wrapper">
+  <div className="project-gallery">
+    <figure className="project-gallery__item">
       <img
         src="/images/goosetrack-homepage.png"
-        alt="Home Page"
-        className="gallery-image"
+        alt={<Trans>Home Page</Trans>}
+        className="project-gallery__image"
+        loading="lazy"
       />
-      <p className="image-caption">
-        Welcome screen with auth options
-      </p>
-    </div>
+      <figcaption className="project-gallery__caption">
+        <Trans>Welcome screen with auth options</Trans>
+      </figcaption>
+    </figure>
     
-    <div className="image-wrapper">
+    <figure className="project-gallery__item">
       <img
         src="/images/goosetrack-calendar.png"
-        alt="Calendar Page"
-        className="gallery-image"
+        alt={<Trans>Calendar Page</Trans>}
+        className="project-gallery__image"
+        loading="lazy"
       />
-      <p className="image-caption">
-        Monthly calendar view
-      </p>
-    </div>
+      <figcaption className="project-gallery__caption">
+        <Trans>Monthly calendar view</Trans>
+      </figcaption>
+    </figure>
 
-    <div className="image-wrapper">
+    <figure className="project-gallery__item">
       <img
         src="/images/goosetrack-calendar-day.png"
-        alt="Daily View"
-        className="gallery-image"
+        alt={<Trans>Daily View</Trans>}
+        className="project-gallery__image"
+        loading="lazy"
       />
-      <p className="image-caption">
-        Daily task management
-      </p>
-    </div>
+      <figcaption className="project-gallery__caption">
+        <Trans>Daily task management</Trans>
+      </figcaption>
+    </figure>
   </div>
 
-  ## Technologies
+  ## <Trans>Technologies</Trans>
 
-<div className="tech-stack">
-- JavaScript
-- React
-- Node.js
-- MongoDB
-</div>
+  <div className="tech-stack">
+    <span className="tech-stack__item">JavaScript</span>
+    <span className="tech-stack__item">React</span>
+    <span className="tech-stack__item">Node.js</span>
+    <span className="tech-stack__item">MongoDB</span>
+  </div>
 
-  ## How It Works
+  ## <Trans>How It Works</Trans>
 
-  Users can register, log in, and manage their tasks across different views. The app features theme persistence and responsive design for all devices. Tasks are synchronized with the backend database in real-time.
+  <Trans>
+    Users can register, log in, and manage their tasks across different views. The app features theme persistence and responsive design for all devices. Tasks are synchronized with the backend database in real-time.
+  </Trans>
 
-  ## Project Links
+  ## <Trans>Project Links</Trans>
 
-<div className="project-links">
-  [Live Demo](https://tatiana-kashcha.github.io/project-smart-coders-frontend/)
-  [GitHub Repo](https://github.com/Tatiana-Kashcha/project-smart-coders-frontend)
-  [Backend Code](https://github.com/Tatiana-Kashcha/project-smart-coders-backend)
-</div>
+  <div className="project-links">
+    <a 
+      href="https://tatiana-kashcha.github.io/project-smart-coders-frontend/" 
+      className="project-links__link"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Trans>Live Demo</Trans>
+    </a>
+    <a 
+      href="https://github.com/Tatiana-Kashcha/project-smart-coders-frontend" 
+      className="project-links__link"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Trans>GitHub Repo</Trans>
+    </a>
+    <a 
+      href="https://github.com/Tatiana-Kashcha/project-smart-coders-backend" 
+      className="project-links__link"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Trans>Backend Code</Trans>
+    </a>
+  </div>
 </div>

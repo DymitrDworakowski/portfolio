@@ -1,23 +1,12 @@
-/* Base variables */
-:root {
-  --primary-color: #6e8efb;
-  --secondary-color: #a777e3;
-  --text-dark: #333;
-  --text-light: #fff;
-  --bg-light: #fff;
-  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  --transition: all 0.3s ease;
-}
-
-/* Navbar */
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
-  background: var(--bg-light);
-  box-shadow: var(--shadow);
+  background: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem 0;
 }
 
 .navbarWrapper {
@@ -26,44 +15,33 @@
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1.5rem 2rem;
+  padding: 0 2rem;
 }
 
-/* Logo */
 .logo a {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 700;
-  color: var(--primary-color);
+  color: #6e8efb;
   text-decoration: none;
-  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  background: linear-gradient(to right, #6e8efb, #a777e3);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  transition: var(--transition);
 }
 
-.logo a:hover {
-  opacity: 0.9;
-}
-
-/* Navigation items */
 .navItems {
   display: flex;
   gap: 2rem;
-  align-items: center;
 }
 
 .navItem {
-  color: var(--text-dark);
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 1.1rem;
-  transition: var(--transition);
-  padding: 0.5rem 0;
+  color: #333;
+  text-decoration: none; /* Вимкнути стандартне підкреслення */
   position: relative;
+  padding-bottom: 5px; /* Відступ для власного підкреслення */
 }
 
 .navItem:hover {
-  color: var(--primary-color);
+  color: #6e8efb;
 }
 
 .navItem::after {
@@ -73,22 +51,19 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
-  transition: var(--transition);
+  background: #6e8efb;
+  transition: width 0.3s ease;
 }
 
 .navItem:hover::after {
   width: 100%;
 }
-
-/* Controls */
 .controlsWrapper {
   display: flex;
   align-items: center;
   gap: 1.5rem;
 }
 
-/* Mobile menu */
 .hamburgerButton {
   display: none;
   background: none;
@@ -102,36 +77,25 @@
   display: block;
   width: 25px;
   height: 2px;
-  background: var(--text-dark);
-  position: relative;
-  transition: var(--transition);
+  background: #333333;
+  margin: 5px 0;
+  transition: all 0.3s ease;
 }
 
-.lines::before,
-.lines::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background: var(--text-dark);
-  left: 0;
-  transition: var(--transition);
+.firstLine {
+  transform: rotate(45deg) translate(5px, 5px);
 }
 
-.lines::before {
-  top: -8px;
+.secondLine {
+  opacity: 0;
 }
 
-.lines::after {
-  top: 8px;
+.thirdLine {
+  transform: rotate(-45deg) translate(7px, -7px);
 }
 
-/* Responsive */
+/* Mobile styles */
 @media (max-width: 768px) {
-  .controlsWrapper {
-    order: 1;
-  }
-
   .navItems {
     position: fixed;
     top: 0;
@@ -139,13 +103,14 @@
     width: 80%;
     max-width: 300px;
     height: 100vh;
-    background: var(--bg-light);
+    background: #ffffff;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-    transition: var(--transition);
-    gap: 2.5rem;
+    transition: right 0.3s ease;
+    gap: 2rem;
+    padding: 2rem;
   }
 
   .mobileMenu {
@@ -154,21 +119,10 @@
 
   .hamburgerButton {
     display: block;
-    order: 2;
   }
 
-  /* Animated hamburger icon */
-  .mobileMenu + .hamburgerButton .lines {
-    background: transparent;
-  }
-
-  .mobileMenu + .hamburgerButton .lines::before {
-    transform: rotate(45deg);
-    top: 0;
-  }
-
-  .mobileMenu + .hamburgerButton .lines::after {
-    transform: rotate(-45deg);
-    top: 0;
+  .controlsWrapper {
+    margin-left: auto;
+    margin-right: 1rem;
   }
 }

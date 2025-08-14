@@ -1,46 +1,12 @@
-/* Base variables */
-:root {
-  --primary-color: #6e8efb;
-  --secondary-color: #a777e3;
-  --text-dark: #333;
-  --text-light: #fff;
-  --text-muted: #666;
-  --bg-light: #f8f9fa;
-  --border-radius: 12px;
-  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  --shadow-hover: 0 10px 15px rgba(0, 0, 0, 0.15);
-  --transition: all 0.3s ease;
-}
-
-/* Projects grid */
 .projectsGrid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1rem;
-  padding: 10rem;
+  gap: 2rem;
+  padding: 2rem;
   max-width: 1400px;
   margin: 0 auto;
 }
 
-/* Project image container with fixed aspect ratio */
-.projectImageContainer {
-  position: relative;
-  width: 100%;
-  padding-top: 56.25%; /* 16:9 Aspect Ratio */
-  overflow: hidden;
-  border-radius: var(--border-radius) var(--border-radius) 0 0;
-}
-
-.projectImage {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.4s ease;
-}
-
-/* Rest of the styles remain the same as previous example */
 .projectCard {
   display: flex;
   flex-direction: column;
@@ -51,11 +17,26 @@
   transition: var(--transition);
   text-decoration: none;
   color: var(--text-dark);
+  height: 100%;
 }
 
 .projectCard:hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow-hover);
+}
+
+.projectImageContainer {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.projectImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
 }
 
 .projectCard:hover .projectImage {
@@ -64,21 +45,13 @@
 
 .projectContent {
   padding: 1.5rem;
-  flex-grow: 1;
   display: flex;
   flex-direction: column;
-}
-
-/* Project content */
-.projectContent {
-  padding: 1.5rem;
   flex-grow: 1;
-  display: flex;
-  flex-direction: column;
 }
 
 .projectTitle {
-  font-size: 1.4rem;
+  font-size: 1.25rem;
   margin: 0 0 0.5rem 0;
   color: var(--text-dark);
   transition: var(--transition);
@@ -88,12 +61,12 @@
   color: var(--primary-color);
 }
 
-/* Project meta */
 .projectMeta {
   margin-top: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 1rem;
 }
 
 .projectRole {
@@ -104,12 +77,13 @@
 }
 
 .projectDate {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: var(--text-muted);
   margin: 0;
+  white-space: nowrap;
 }
 
-/* Responsive */
+/* Responsive adjustments */
 @media (max-width: 768px) {
   .projectsGrid {
     grid-template-columns: 1fr;
@@ -117,11 +91,15 @@
     gap: 1.5rem;
   }
   
-  .projectImage {
-    height: 180px;
-  }
-  
   .projectContent {
-    padding: 1rem;
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .projectMeta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
   }
 }

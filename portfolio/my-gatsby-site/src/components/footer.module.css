@@ -1,26 +1,15 @@
-/* Base variables */
-:root {
-  --primary-color: #6e8efb;
-  --secondary-color: #a777e3;
-  --text-light: #f8f9fa;
-  --text-muted: #adb5bd;
-  --bg-dark: #1a1a1a;
-  --bg-darker: #121212;
-  --transition: all 0.3s ease;
-}
-
-/* Footer */
 .footer {
-  background: var(--bg-darker);
+  background: var(--gray-900);
   color: var(--text-light);
-  padding: 2.5rem 1rem;
-  text-align: center;
+  padding: 2rem 1rem;
   position: relative;
   z-index: 100;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
 }
 
 .footerContent {
-  max-width: 1200px;
+  max-width: 600px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -38,13 +27,14 @@
   margin: 0;
   font-size: 1rem;
   line-height: 1.5;
+  color: var(--gray-400);
 }
 
-/* Social links */
 .socialLinks {
   display: flex;
+  justify-content: center;
   gap: 1.5rem;
-  margin: 1rem 0;
+  margin: 0;
 }
 
 .socialLink {
@@ -55,33 +45,45 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: var(--transition);
-  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .socialLink:hover {
-  background: var(--primary-color);
+  background: var(--primary);
   transform: translateY(-3px);
   color: white;
+  border-color: transparent;
+  box-shadow: 0 4px 12px rgba(var(--primary-rgb), 0.2);
 }
 
 .socialIcon {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
 }
 
 .emailLink:hover {
-  background: var(--secondary-color);
+  background: var(--secondary);
 }
 
-/* Copyright */
 .copyright {
-  margin-top: 2rem;
-  font-size: 0.875rem;
-  color: var(--text-muted);
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
 }
 
-/* Responsive */
+.copyright p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--gray-600);
+}
+
 @media (max-width: 768px) {
+  .footer {
+    padding: 1.5rem 1rem;
+  }
+  
   .footerContent {
     gap: 1rem;
   }
@@ -97,5 +99,9 @@
   
   .socialIcon {
     font-size: 1rem;
+  }
+  
+  .copyright p {
+    font-size: 0.8rem;
   }
 }

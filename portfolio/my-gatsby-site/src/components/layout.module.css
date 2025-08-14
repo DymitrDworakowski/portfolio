@@ -1,57 +1,24 @@
-.buttons{
+/* layout.module.css */
+
+/* Контейнер для основного контенту */
+.container {
+  margin: 0 auto;
+  max-width: 900px;
+  padding: 0 1.5rem;
+  min-height: 100vh; /* Забезпечуємо мінімальну висоту */
+}
+
+/* Кнопки (якщо потрібно) */
+.buttons {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   gap: 10px;
+  margin: 1rem 0;
 }
 
-
-.container {
-  margin: 0 auto;
-  max-width: 900px; /* трішки більше простору для контенту */
-  padding: 0 1.5rem;
-  font-family: "Roboto", sans-serif; /* додаємо стильний шрифт */
-}
-
-.heading {
-  color: #3d5afe; /* темно-синій відтінок для заголовка */
-  font-size: 2.5rem;
-  margin-top: 2rem;
-  font-weight: bold;
-  text-align: center;
-}
-
-.navLinks {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  list-style: none;
-  padding: 1rem 0;
-  margin: 0;
-  background-color: #f5f5f5;
-  border-radius: 8px;
-}
-
-.navLinkItem {
-  transition: transform 0.2s;
-}
-
-.navLinkItem:hover {
-  transform: scale(1.05); /* трохи збільшує при наведенні */
-}
-
-.navLinkText {
-  color: #1a1a1a;
-  text-decoration: none;
-  font-size: 1.1rem;
-  font-weight: 600;
-  transition: color 0.3s;
-}
-
-.navLinkText:hover {
-  color: #3d5afe; /* синій відтінок при наведенні */
-}
-
-.siteTitle {
-  width: 100%;
+/* Основний контент */
+.main-content {
+  padding: 2rem 0;
+  flex: 1; /* Займає весь доступний простір */
 }

@@ -2,8 +2,8 @@
 :root {
   --primary-color: #6e8efb;
   --secondary-color: #a777e3;
-  --text-dark: #333;
-  --text-light: #fff;
+  --text-dark: #f11313;
+  --text-light: #1188ff;
   --bg-light: #fff;
   --bg-dark: #1a1a1a;
   --border-radius: 50%;
@@ -38,7 +38,7 @@
 /* Theme icon */
 .themeIcon {
   fill: none;
-  stroke: currentColor;
+  stroke: var(--text-dark); /* Початковий колір для світлої теми */
   stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
@@ -69,8 +69,16 @@
 }
 
 /* Dark mode styles */
+[data-theme="dark"] .themeButton {
+  color: var(--text-light);
+}
+
 [data-theme="dark"] .themeButton:hover {
   background: rgba(167, 119, 227, 0.1);
+}
+
+[data-theme="dark"] .themeIcon {
+  stroke: var(--text-light);
 }
 
 [data-theme="dark"] .sunIcon {

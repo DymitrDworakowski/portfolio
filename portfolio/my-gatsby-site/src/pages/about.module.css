@@ -1,13 +1,17 @@
+/* Використовуємо ваші CSS-змінні */
 .project-container {
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem;
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
+  color: var(--text);
+  background: var(--background);
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .project-title {
-  color: #2d3748;
+  color: var(--primary);
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
   text-align: center;
@@ -16,9 +20,10 @@
 .project-section {
   margin: 2rem 0;
   padding: 1.5rem;
-  background: white;
+  background: var(--background);
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border: 1px solid rgba(var(--primary), 0.1);
 }
 
 .experience-item, .education-item {
@@ -26,29 +31,46 @@
 }
 
 .experience-meta, .education-meta {
-  color: #4a5568;
+  color: var(--secondary);
   font-style: italic;
   margin: 0.5rem 0;
+  opacity: 0.8;
 }
 
 .experience-list, .hobbies-list {
   padding-left: 1.5rem;
+  color: var(--text);
 }
 
 .experience-list li, .hobbies-list li {
   margin-bottom: 0.5rem;
+  color: var(--text);
 }
 
 h2 {
-  color: #2d3748;
+  color: var(--primary);
   font-size: 1.8rem;
   margin-bottom: 1rem;
-  border-bottom: 2px solid #e2e8f0;
+  border-bottom: 2px solid rgba(var(--primary), 0.2);
   padding-bottom: 0.5rem;
 }
 
 h3 {
-  color: #4a5568;
+  color: var(--secondary);
   font-size: 1.4rem;
   margin: 1rem 0 0.5rem;
+}
+
+/* Додаткові покращення для темного режиму */
+.dark-mode .project-section {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.dark-mode h2 {
+  border-bottom-color: rgba(var(--primary), 0.3);
+}
+
+.dark-mode .experience-meta,
+.dark-mode .education-meta {
+  opacity: 0.9;
 }

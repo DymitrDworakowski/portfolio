@@ -1,21 +1,112 @@
+/* Основна палітра кольорів */
 :root {
-  --primary: #3498db; 
-  --secondary: #2ecc71; 
-  --background: #ffffff; 
-  --text: #333333; 
-  --button: #3498db; 
+  /* Основні кольори */
+  --gray-400: #ced4da;
+  --gray-600: #6c757d;
+  --gray-900: #212529;
+  --primary-rgb: 110, 142, 251;
+  --primary: #3498db;
+  --primary-light: #5faee3;
+  --primary-dark: #217dbb;
+  --secondary: #2ecc71;
+  --secondary-light: #54d98c;
+  --secondary-dark: #25a25a;
+
+  /* Додаткові кольори */
+  --accent: #e74c3c;
+  --accent-light: #ee8277;
+  --accent-dark: #c0392b;
+  --warning: #f39c12;
+  --success: #27ae60;
+  --info: #3498db;
+  --danger: #e74c3c;
+
+  /* Відтінки сірого */
+  --gray-100: #f8f9fa;
+  --gray-200: #e9ecef;
+  --gray-300: #dee2e6;
+  --gray-400: #ced4da;
+  --gray-500: #adb5bd;
+  --gray-600: #6c757d;
+  --gray-700: #495057;
+  --gray-800: #343a40;
+  --gray-900: #212529;
+
+  /* Текст */
+  --text-color: #2d3748;
+  --heading-color: #1a365d;
+  --text-muted: #666;
+  --tag-bg: #e2e8f0;
+  --tag-text: #2d3748;
+  --link-bg: #f0f0f0;
+  --link-text: #3182ce;
+  --link-hover-bg: #e2e8f0;
+  --text-secondary: #7f8c8d;
+
+  /* Фони */
+  --background: #ffffff;
+  --background-secondary: #f8f9fa;
+  --background-alt: #e9ecef;
+
+  /* Границі */
+  --border-color: #dee2e6;
+  --border-radius: 0.5rem;
+
+  /* Тіні */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+  /* Відступи */
+  --spacing-unit: 1rem;
 }
 
+/* Темна тема */
 .dark-mode {
-  --primary: #1abc9c; 
-  --secondary: #27ae60; 
-  --background: #121212; 
-  --text: #f9f9f9; 
-  --button: #2ecc71; 
+  /* Основні кольори */
+  --gray-400: #8a8a8a;
+  --gray-600: #5a5a5a;
+  --gray-900: #121212;
+  --primary: #1abc9c;
+  --primary-light: #28e1bd;
+  --primary-dark: #16a085;
+  --secondary: #3498db;
+  --secondary-light: #5faee3;
+  --secondary-dark: #217dbb;
+
+  /* Додаткові кольори */
+  --accent: #e74c3c;
+  --warning: #f39c12;
+  --success: #2ecc71;
+  --info: #3498db;
+  --danger: #e74c3c;
+
+  /* Текст */
+  --text-primary: #ecf0f1;
+  --text-secondary: #bdc3c7;
+
+  /* Фони */
+  --background: #121212;
+  --background-secondary: #1e1e1e;
+  --background-alt: #2d2d2d;
+
+  /* Границі */
+  --border-color: #444;
+
+  /* Тіні */
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.3),
+    0 4px 6px -2px rgba(0, 0, 0, 0.25);
 }
 
+/* Світла тема */
 .light-mode {
-  --background: #f9f9f9; 
-  --text: #000000; 
-  --button: #3498db; 
+  --background: #ffffff;
+  --background-secondary: #f8f9fa;
+  --text-primary: #2c3e50;
+  --text-secondary: #7f8c8d;
+  --border-color: #dee2e6;
 }

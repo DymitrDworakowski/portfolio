@@ -7,78 +7,13 @@ hero_image: "./contactconn.png"
 hero_image_alt: "Contact Management App"
 hero_image_credit_text: "Dymitr"
 hero_image_credit_link: "https://unsplash.com/photos/7rriIaBH6JY"
-
 ---
-
-
-
-<style>{`
-  .project-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem;
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-  }
-  .project-title {
-    color: #2d3748;
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-  }
-  .project-section {
-    margin: 2rem 0;
-  }
-  .tech-stack {
-    display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-    margin: 1rem 0;
-  }
-  .project-links a {
-    display: inline-block;
-    margin-right: 1rem;
-    padding: 0.5rem 1rem;
-    background: #f0f0f0;
-    border-radius: 4px;
-    color: #3182ce;
-    text-decoration: none;
-    transition: all 0.3s ease;
-  }
-  .project-links a:hover {
-    background: #e2e8f0;
-  }
-  .image-gallery {
-    display: grid;
-    gap: 1.5rem;
-    margin: 2rem 0;
-  }
-  .image-wrapper {
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  }
-  .gallery-image {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.3s ease;
-  }
-  .gallery-image:hover {
-    transform: scale(1.02);
-  }
-  .image-caption {
-    text-align: center;
-    margin-top: 0.5rem;
-    font-size: 0.9rem;
-    color: #666;
-  }
-`}</style>
 
 import { Trans } from "gatsby-plugin-react-i18next"
 
-<div className="project-container">
+<div className="project-page">
 
-  <h1 className="project-title">Contactconn Project</h1>
+  <h1 className="project-page__title"><Trans>Contactconn Project</Trans></h1>
 
   ## <Trans i18nKey="contactconn.description">Project Description</Trans>
 
@@ -97,38 +32,39 @@ import { Trans } from "gatsby-plugin-react-i18next"
 
   ## <Trans i18nKey="contactconn.screenshots">App Screenshots</Trans>
 
-  <div className="image-gallery">
-    <div className="image-wrapper">
+  <div className="project-gallery">
+    <figure className="project-gallery__item">
       <img
         src="/images/contact-home.png"
         alt={<Trans i18nKey="contactconn.screenshot_home">Home Page</Trans>}
-        className="gallery-image"
+        className="project-gallery__image"
       />
-      <p className="image-caption">
+      <figcaption className="project-gallery__caption">
         <Trans i18nKey="contactconn.screenshot_home_text">Welcome screen with auth options</Trans>
-      </p>
-    </div>
+      </figcaption>
+    </figure>
     
-    <div className="image-wrapper">
+    <figure className="project-gallery__item">
       <img
         src="/images/contact-contacts.png"
         alt={<Trans i18nKey="contactconn.screenshot_contacts">Contacts Page</Trans>}
-        className="gallery-image"
+        className="project-gallery__image"
       />
-      <p className="image-caption">
+      <figcaption className="project-gallery__caption">
         <Trans i18nKey="contactconn.screenshot_contacts_text">Contact management interface</Trans>
-      </p>
-    </div>
+      </figcaption>
+    </figure>
   </div>
 
   ## <Trans i18nKey="contactconn.technologies">Technologies</Trans>
 
-
-<div className="tech-stack">
-
-- JavaScript
-- SCSS
-</div>
+  <div className="tech-stack">
+    <span className="tech-stack__item">JavaScript</span>
+    <span className="tech-stack__item">SCSS</span>
+    <span className="tech-stack__item">React</span>
+    <span className="tech-stack__item">Node.js</span>
+    <span className="tech-stack__item">MongoDB</span>
+  </div>
 
   ## <Trans i18nKey="contactconn.workflow">How It Works</Trans>
 
@@ -138,10 +74,15 @@ import { Trans } from "gatsby-plugin-react-i18next"
 
   ## <Trans i18nKey="contactconn.links">Project Links</Trans>
 
-
-<div className="project-links">
-  [Live Demo](https://dymitrdworakowski.github.io/phonebook/)
-  [GitHub Repo](https://github.com/DymitrDworakowski/phonebook)
-  [Backend Code](https://github.com/DymitrDworakowski/nodejs-hw-rest-api)
-</div>
+  <div className="project-links">
+    <a href="https://dymitrdworakowski.github.io/phonebook/" className="project-links__link">
+      <Trans>Live Demo</Trans>
+    </a>
+    <a href="https://github.com/DymitrDworakowski/phonebook" className="project-links__link">
+      <Trans>GitHub Repo</Trans>
+    </a>
+    <a href="https://github.com/DymitrDworakowski/nodejs-hw-rest-api" className="project-links__link">
+      <Trans>Backend Code</Trans>
+    </a>
+  </div>
 </div>
