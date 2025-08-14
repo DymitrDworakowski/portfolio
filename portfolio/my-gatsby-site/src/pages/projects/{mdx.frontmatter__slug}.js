@@ -1,15 +1,15 @@
-import React from "react";
-import { graphql } from "gatsby";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import styled from "styled-components";
-import Layout from "../../components/layout";
-import Seo from "../../components/seo";
-import { MDXProvider } from "@mdx-js/react";
-import { Trans } from "gatsby-plugin-react-i18next";
+import React from "react"
+import { graphql } from "gatsby"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import styled from "styled-components"
+import Layout from "../../components/layout"
+import Seo from "../../components/seo"
+import { MDXProvider } from "@mdx-js/react"
+import { Trans } from "gatsby-plugin-react-i18next"
 
 const Project = ({ data, children }) => {
-  const image = getImage(data.mdx.frontmatter.hero_image);
-  const frontmatter = data.mdx.frontmatter;
+  const image = getImage(data.mdx.frontmatter.hero_image)
+  const frontmatter = data.mdx.frontmatter
 
   return (
     <Layout pageTitle={frontmatter.title}>
@@ -25,7 +25,6 @@ const Project = ({ data, children }) => {
               loading="eager"
             />
           )}
-         
         </ProjectHeader>
 
         <MDXProvider components={{ Trans }}>
@@ -33,8 +32,8 @@ const Project = ({ data, children }) => {
         </MDXProvider>
       </ProjectWrapper>
     </Layout>
-  );
-};
+  )
+}
 
 export const query = graphql`
   query ProjectAndLocales($id: String, $language: String!) {
@@ -66,7 +65,7 @@ export const query = graphql`
       }
     }
   }
-`;
+`
 
 // Styled components
 const ProjectWrapper = styled.div`
@@ -77,18 +76,18 @@ const ProjectWrapper = styled.div`
   @media (max-width: 768px) {
     padding: 0 1rem;
   }
-`;
+`
 
 const ProjectHeader = styled.header`
   margin-bottom: 3rem;
   text-align: center;
-`;
+`
 
 const PostDate = styled.p`
   font-size: 1rem;
   color: #6b7280;
   margin-bottom: 1.5rem;
-`;
+`
 
 const HeroImage = styled(GatsbyImage)`
   border-radius: 12px;
@@ -99,7 +98,7 @@ const HeroImage = styled(GatsbyImage)`
   @media (min-width: 768px) {
     max-width: 80%;
   }
-`;
+`
 
 const ImageCredit = styled.p`
   font-size: 0.9rem;
@@ -114,7 +113,7 @@ const ImageCredit = styled.p`
       text-decoration: underline;
     }
   }
-`;
+`
 
 const Content = styled.article`
   line-height: 1.7;
@@ -151,13 +150,13 @@ const Content = styled.article`
   @media (min-width: 768px) {
     font-size: 1.2rem;
   }
-`;
+`
 
 export const Head = ({ data }) => (
-  <Seo 
+  <Seo
     title={data.mdx.frontmatter.title}
     description={`Project details: ${data.mdx.frontmatter.title}`}
   />
-);
+)
 
-export default Project;
+export default Project
