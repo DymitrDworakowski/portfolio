@@ -7,55 +7,70 @@ hero_image: "./bookshelf.png"
 hero_image_alt: "Bookshelf Project Preview"
 hero_image_credit_text: "Dymitr"
 hero_image_credit_link: "https://unsplash.com/photos/7rriIaBH6JY"
-
 ---
 
 import { Trans } from "gatsby-plugin-react-i18next"
 
 <div className="project-page">
 
-  <h1 className="project-page__title"><Trans>Bookshelf Project</Trans></h1>
+{" "}
 
-  ## <Trans i18nKey="bookshelf.description">Project Description</Trans>
+<h1 className="project-page__title">
+  <Trans>Bookshelf Project</Trans>
+</h1>
 
-  **<Trans>Online Bookstore</Trans>** — <Trans i18nKey="bookshelf.description_text">Online bookstore with adaptive layout and theme switching functionality. Team project developed during JavaScript training.</Trans>
+## <Trans i18nKey="bookshelf.description">Project Description</Trans>
 
-  ### <Trans i18nKey="bookshelf.features">Key Features</Trans>
+**<Trans>Online Bookstore</Trans>** — <Trans i18nKey="bookshelf.description_text">Online bookstore with adaptive layout and theme switching functionality. Team project developed during JavaScript training.</Trans>
 
-  - **<Trans i18nKey="bookshelf.feature_responsive">Responsive Design</Trans>**  
-    <Trans i18nKey="bookshelf.feature_responsive_1">Fully responsive layout for all device sizes</Trans>
+### <Trans i18nKey="bookshelf.features">Key Features</Trans>
 
-  - **<Trans i18nKey="bookshelf.feature_theming">Theme System</Trans>**  
-    <Trans i18nKey="bookshelf.feature_theming_text">Dark/light mode with persistent settings</Trans>
+- **<Trans i18nKey="bookshelf.feature_responsive">Responsive Design</Trans>**
 
-  - **<Trans i18nKey="bookshelf.feature_cart">Shopping Cart</Trans>**  
-    <Trans i18nKey="bookshelf.feature_cart_text">Add/remove books with cart persistence</Trans>
+  <Trans i18nKey="bookshelf.feature_responsive_1">
+    Fully responsive layout for all device sizes
+  </Trans>
 
-  ## <Trans i18nKey="bookshelf.screenshots">Project Screenshots</Trans>
+- **<Trans i18nKey="bookshelf.feature_theming">Theme System</Trans>**
 
-  <div className="project-gallery">
-    <figure className="project-gallery__item">
-      <img
-        src="/images/bookshelf_homepage.png"
-        alt={<Trans i18nKey="bookshelf.screenshot_home">Home Page</Trans>}
-        className="project-gallery__image"
-      />
-      <figcaption className="project-gallery__caption">
-        <Trans i18nKey="bookshelf.screenshot_home_text">Main page with categories</Trans>
-      </figcaption>
-    </figure>
-    
-    <figure className="project-gallery__item">
-      <img
-        src="/images/bookshelf_shoppingList.png"
-        alt={<Trans i18nKey="bookshelf.screenshot_cart">Shopping Cart</Trans>}
-        className="project-gallery__image"
-      />
-      <figcaption className="project-gallery__caption">
-        <Trans i18nKey="bookshelf.screenshot_cart_text">Cart management</Trans>
-      </figcaption>
-    </figure>
-  </div>
+  <Trans i18nKey="bookshelf.feature_theming_text">
+    Dark/light mode with persistent settings
+  </Trans>
+
+- **<Trans i18nKey="bookshelf.feature_cart">Shopping Cart</Trans>**
+  <Trans i18nKey="bookshelf.feature_cart_text">
+    Add/remove books with cart persistence
+  </Trans>
+
+## <Trans i18nKey="bookshelf.screenshots">Project Screenshots</Trans>
+
+{" "}
+
+<div className="project-gallery">
+  <figure className="project-gallery__item">
+    <img
+      src="/images/bookshelf_homepage.png"
+      alt={<Trans i18nKey="bookshelf.screenshot_home">Home Page</Trans>}
+      className="project-gallery__image"
+    />
+    <figcaption className="project-gallery__caption">
+      <Trans i18nKey="bookshelf.screenshot_home_text">
+        Main page with categories
+      </Trans>
+    </figcaption>
+  </figure>
+
+  <figure className="project-gallery__item">
+    <img
+      src="/images/bookshelf_shoppingList.png"
+      alt={<Trans i18nKey="bookshelf.screenshot_cart">Shopping Cart</Trans>}
+      className="project-gallery__image"
+    />
+    <figcaption className="project-gallery__caption">
+      <Trans i18nKey="bookshelf.screenshot_cart_text">Cart management</Trans>
+    </figcaption>
+  </figure>
+</div>
 
 ## <Trans i18nKey="bookshelf.technologies">Technologies</Trans>
 
@@ -65,17 +80,37 @@ import { Trans } from "gatsby-plugin-react-i18next"
   <span className="tech-stack__item">Responsive Design</span>
 </div>
 
-  ## <Trans i18nKey="bookshelf.role">My Contribution</Trans>
+## <Trans i18nKey="bookshelf.role">My Contribution</Trans>
 
-  <ul className="contribution-list">
-    <li><Trans i18nKey="bookshelf.role_1">Developed shopping cart functionality</Trans></li>
-    <li><Trans i18nKey="bookshelf.role_2">Implemented theme persistence</Trans></li>
-    <li><Trans i18nKey="bookshelf.role_3">Optimized responsive layouts</Trans></li>
-  </ul>
+{" "}
+
+<ul className="contribution-list">
+  <li>
+    <Trans i18nKey="bookshelf.role_1">
+      Developed shopping cart functionality
+    </Trans>
+  </li>
+  <li>
+    <Trans i18nKey="bookshelf.role_2">Implemented theme persistence</Trans>
+  </li>
+  <li>
+    <Trans i18nKey="bookshelf.role_3">Optimized responsive layouts</Trans>
+  </li>
+</ul>
 
 <div className="project-links">
-  [Live Demo](https://tatiana2016.github.io/final-js/index.html)
-  [GitHub Repo](https://github.com/Tatiana2016/final-js)
+  <a
+    href="https://tatiana2016.github.io/final-js/index.html"
+    className="project-links__link"
+  >
+    <Trans>Live Demo</Trans>
+  </a>
+  <a
+    href="https://github.com/Tatiana2016/final-js"
+    className="project-links__link"
+  >
+    <Trans>Backend Code</Trans>
+  </a>
 </div>
 
 </div>
