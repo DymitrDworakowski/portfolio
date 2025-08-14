@@ -25,18 +25,7 @@ const Project = ({ data, children }) => {
               loading="eager"
             />
           )}
-          {frontmatter.hero_image_credit_text && (
-            <ImageCredit>
-              <Trans>Photo by</Trans>{" "}
-              <a
-                href={frontmatter.hero_image_credit_link}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {frontmatter.hero_image_credit_text}
-              </a>
-            </ImageCredit>
-          )}
+         
         </ProjectHeader>
 
         <MDXProvider components={{ Trans }}>

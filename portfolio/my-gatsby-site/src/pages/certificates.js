@@ -14,7 +14,7 @@ const Certificates = () => {
         <div className={styles.certificatesGrid}>
           <iframe
             src="/certificates/Dymitr Dworakowski.pdf"
-            title={t("certificates:certificate1")}
+            title={t("certificates:cer_title")}
             width="100%"
             height="500px"
             className={styles.certificateFrame}
@@ -22,7 +22,7 @@ const Certificates = () => {
         </div>
 
         <Link to="/" className={styles.backLink}>
-          {t("certificates:back")}
+          {t("certificates:cer_back")}
         </Link>
       </div>
     </Layout>
