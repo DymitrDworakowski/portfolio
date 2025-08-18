@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link, Trans } from "gatsby-plugin-react-i18next";
 import ThemeToggle from "./ThemeToggle";
-import LanguageSwitcher from "./LanguageSwitcher";
+import LanguageSwitcher from "./languageSwitcher.js";
 import { 
   navbar,
   navbarWrapper,
