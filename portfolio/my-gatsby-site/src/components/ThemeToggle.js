@@ -1,6 +1,6 @@
 import React from "react"
-import useDarkMode from "use-dark-mode"
-import { 
+import { useTheme } from "../hooks/useTheme.ts"
+import {
   themeButton,
   themeIcon,
   sunIcon,
@@ -8,27 +8,22 @@ import {
 } from './ThemeToggle.module.css'
 
 const ThemeToggle = () => {
-  const storedDarkMode = localStorage.getItem('darkMode')
-  const darkMode = useDarkMode(storedDarkMode === 'true' ? true : false)
-
-  React.useEffect(() => {
-    localStorage.setItem('darkMode', darkMode.value ? 'true' : 'false')
-  }, [darkMode.value])
+  const { theme, toggleTheme } = useTheme()
 
   return (
     <button 
       type="button" 
-      onClick={darkMode.toggle} 
+      onClick={toggleTheme} 
       className={themeButton}
-      aria-label={darkMode.value ? "Switch to light mode" : "Switch to dark mode"}
+      aria-label={theme === 'dark' ? "Switch to light mode" : "Switch to dark mode"}
     >
       <svg
-        className={`${themeIcon} ${darkMode.value ? moonIcon : sunIcon}`}
+        className={`${themeIcon} ${theme === 'dark' ? moonIcon : sunIcon}`}
         viewBox="0 0 24 24"
         width="20"
         height="20"
       >
-        {darkMode.value ? (
+        {theme === 'dark' ? (
           <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1-8.313-12.454z" />
         ) : (
           <>
