@@ -123,7 +123,7 @@ export const query = graphql`
 
 // Fixed Head component - either use static title or pass pageContext
 export const Head = ({ pageContext }) => (
-  <Seo title={pageContext?.language === 'en' ? "Home" : "Головна"} />
+  <Seo title={pageContext?.language === 'en' ? "Home" : "Strona główna"} />
 )
 
 export default IndexPage
