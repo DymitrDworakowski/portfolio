@@ -97,20 +97,15 @@ a:hover {
   }
 }
 
-/* Темна тема - специфічні налаштування */
-.dark-mode {
-  --text-primary: var(--gray-100);
-  --text-secondary: var(--gray-400);
+/* Темна тема */
+[data-theme="dark"] {
+  --background: #1a1a1a;
+  --text-primary: #f5f5f5;
+  --text-secondary: #bdbdbd;
+  --primary: #8fa3ff;
+  --primary-dark: #6e8efb;
+  --primary-light: #a8b8ff;
 }
-
-.dark-mode a {
-  color: var(--primary-light);
-}
-
-.dark-mode a:hover {
-  color: var(--primary);
-}
-
 /* Project Page Styles */
 .project-page {
   max-width: 800px;

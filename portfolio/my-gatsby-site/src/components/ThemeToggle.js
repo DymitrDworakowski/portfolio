@@ -1,5 +1,5 @@
 import React from "react"
-import { useTheme } from "../hooks/useTheme.ts"
+import { useTheme } from "../hooks/useTheme"
 import {
   themeButton,
   themeIcon,

@@ -11,7 +11,7 @@
   --secondary: #2ecc71;
   --secondary-light: #54d98c;
   --secondary-dark: #25a25a;
-
+    
   /* Додаткові кольори */
   --accent: #e74c3c;
   --accent-light: #ee8277;
@@ -64,7 +64,7 @@
 }
 
 /* Темна тема */
-.dark-mode {
+[data-theme="dark"] {
   /* Основні кольори */
   --gray-400: #8a8a8a;
   --gray-600: #5a5a5a;
@@ -84,7 +84,14 @@
   --danger: #e74c3c;
 
   /* Текст */
-  --text-primary: #ecf0f1;
+  --text-color: #ecf0f1;
+  --heading-color: #ffffff;
+  --text-muted: #bdc3c7;
+  --tag-bg: #2d2d2d;
+  --tag-text: #ffffff;
+  --link-bg: #2d2d2d;
+  --link-text: #5faee3;
+  --link-hover-bg: #3d3d3d;
   --text-secondary: #bdc3c7;
 
   /* Фони */
@@ -97,16 +104,8 @@
 
   /* Тіні */
   --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
-  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 
+    0 2px 4px -1px rgba(0, 0, 0, 0.2);
   --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.3),
     0 4px 6px -2px rgba(0, 0, 0, 0.25);
-}
-
-/* Світла тема */
-.light-mode {
-  --background: #ffffff;
-  --background-secondary: #f8f9fa;
-  --text-primary: #2c3e50;
-  --text-secondary: #7f8c8d;
-  --border-color: #dee2e6;
 }
