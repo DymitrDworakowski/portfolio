@@ -24,5 +24,31 @@
     "statistics_page_desc": "Strona \"Statystyki\" pokazuje miesięczne i dzienne statystyki zadań.",
     
     "role_in_project": "Rola w projekcie",
-    "role_desc": "Programista odpowiedzialny za funkcjonalność i integrację z backendem, responsywne projektowanie, realizację trybów ciemnego/jasnego."
+    "role_desc": "Programista odpowiedzialny za funkcjonalność i integrację z backendem, responsywne projektowanie, realizację trybów ciemnego/jasnego.",
+
+    "GooseTrack": "GooseTrack",
+    "Project Description": "Opis projektu",
+    "Task Scheduler Web Application": "Aplikacja do planowania zadań",
+    "Team diploma project with user registration and backend integration. Helps efficiently organize time and plan work tasks with adaptive layout and theme switching.": "Projekt dyplomowy zespołowy z rejestracją użytkowników i integracją backendu. Pomaga efektywnie organizować czas i planować zadania, posiada układ responsywny i przełączanie motywów.",
+    "Key Features": "Kluczowe funkcje",
+    "Responsive Design": "Responsywny design",
+    "Supports various devices and screen sizes": "Obsługa różnych urządzeń i rozdzielczości ekranów",
+    "Dark/Light Mode": "Tryb ciemny/jasny",
+    "Remembers user's theme preference": "Zapamiętuje preferencję motywu użytkownika",
+    "Task Management": "Zarządzanie zadaniami",
+    "Add and edit tasks by category and priority": "Dodawanie i edytowanie zadań według kategorii i priorytetu",
+    "App Screenshots": "Zrzuty ekranu aplikacji",
+    "Home Page": "Strona główna",
+    "Welcome screen with auth options": "Ekran powitalny z opcjami logowania i rejestracji",
+    "Calendar Page": "Kalendarz",
+    "Monthly calendar view": "Widok miesięczny kalendarza",
+    "Daily View": "Widok dzienny",
+    "Daily task management": "Zarządzanie zadaniami dziennymi",
+    "Technologies": "Technologie",
+    "How It Works": "Jak to działa",
+    "Users can register, log in, and manage their tasks across different views. The app features theme persistence and responsive design for all devices. Tasks are synchronized with the backend database in real-time.": "Użytkownicy mogą się rejestrować, logować i zarządzać zadaniami w różnych widokach. Aplikacja posiada trwałość motywu i responsywny design. Zadania są synchronizowane z bazą danych w czasie rzeczywistym.",
+    "Project Links": "Linki do projektu",
+    "Live Demo": "Działający demo",
+    "GitHub Repo": "Repozytorium GitHub",
+    "Backend Code": "Kod backendu"
 }
