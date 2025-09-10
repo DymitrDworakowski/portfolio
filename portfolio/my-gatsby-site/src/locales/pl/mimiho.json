@@ -1,10 +1,14 @@
 {
   "title": "Projekt Mimiho",
+  "mimiho.title": "Projekt Mimiho",
   "description": {
     "title": "Opis projektu",
     "name": "Mimiho",
     "text": "To projekt zespołowy z bloku HTML/CSS. Ta strona internetowa została stworzona dla restauracji i charakteryzuje się responsywnym designem, oknem modalnym i eleganckim interfejsem użytkownika. Projekt demonstruje nowoczesne techniki tworzenia stron internetowych i współpracę w zespole."
   },
+  "mimiho.description.title": "Opis projektu",
+  "mimiho.description.name": "Mimiho",
+  "mimiho.description.text": "To projekt zespołowy z bloku HTML/CSS. Ta strona internetowa została stworzona dla restauracji i charakteryzuje się responsywnym designem, oknem modalnym i eleganckim interfejsem użytkownika. Projekt demonstruje nowoczesne techniki tworzenia stron internetowych i współpracę w zespole.",
   "features": {
     "title": "Kluczowe funkcje",
     "responsive": "Responsywny design",
@@ -14,6 +18,13 @@
     "design": "Nowoczesna estetyka",
     "design_text": "Czysty i atrakcyjny wizualnie design, z dbałością o szczegóły."
   },
+  "mimiho.features.title": "Kluczowe funkcje",
+  "mimiho.features.responsive": "Responsywny design",
+  "mimiho.features.responsive_text": "Zoptymalizowany pod kątem różnych urządzeń, gwarantujący bezproblemową obsługę na urządzeniach mobilnych, tabletach i komputerach stacjonarnych.",
+  "mimiho.features.modal": "Okno modalne",
+  "mimiho.features.modal_text": "Interaktywne okna modalne umożliwiające interakcję użytkownika.",
+  "mimiho.features.design": "Nowoczesna estetyka",
+  "mimiho.features.design_text": "Czysty i atrakcyjny wizualnie design, z dbałością o szczegóły.",
   "overview": {
     "title": "Przegląd stron",
     "home": "Strona główna",
@@ -21,16 +32,28 @@
     "footer": "Sekcja footer",
     "footer_text": "Stopka zawiera niezbędne linki i dane kontaktowe."
   },
+  "mimiho.overview.title": "Przegląd stron",
+  "mimiho.overview.home": "Strona główna",
+  "mimiho.overview.home_text": "Strona główna stanowi punkt wejścia, prezentuje najważniejsze oferty restauracji.",
+  "mimiho.overview.footer": "Sekcja footer",
+  "mimiho.overview.footer_text": "Stopka zawiera niezbędne linki i dane kontaktowe.",
   "technologies": {
     "title": "Zastosowane technologie"
   },
+  "mimiho.technologies.title": "Zastosowane technologie",
   "role": {
     "title": "Rola w projekcie",
     "text": "Odpowiedzialny za opracowanie sekcji footer, w tym za układ, styl i zapewnienie responsywności na różnych urządzeniach."
   },
+  "mimiho.role.title": "Rola w projekcie",
+  "mimiho.role.text": "Odpowiedzialny za opracowanie sekcji footer, w tym za układ, styl i zapewnienie responsywności na różnych urządzeniach.",
   "links": {
     "title": "Linki do projektu",
     "demo": "Podgląd projektu",
     "repo": "Repozytorium GitHub"
   }
+  ,
+  "mimiho.links.title": "Linki do projektu",
+  "mimiho.links.demo": "Podgląd projektu",
+  "mimiho.links.repo": "Repozytorium GitHub"
 }
