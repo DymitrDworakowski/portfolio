@@ -1,4 +1,7 @@
 {
     "title": "Certyfikaty",
-    "cer_back": "Powrót do strony głównej"
+    "cer_back": "Powrót do strony głównej",
+    "cer_fallback_text": "Jeśli nie możesz zobaczyć certyfikatu, kliknij tutaj, aby go otworzyć:",
+    "cer_open": "Otwórz certyfikat",
+    "cer_open_new": "Otwórz w nowej karcie"
 }

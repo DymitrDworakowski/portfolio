@@ -1,4 +1,7 @@
 {
     "title": "My certificates",
-    "cer_back": "Return to the main page"
+    "cer_back": "Return to the main page",
+    "cer_fallback_text": "If you can't see the certificate, click here to open it:",
+    "cer_open": "Open certificate",
+    "cer_open_new": "Open in new tab"
 }
