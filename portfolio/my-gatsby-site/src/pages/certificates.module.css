@@ -1,45 +1,64 @@
 .certificatesContainer {
-  padding: 100px 20px 40px; /* Великий верхній відступ для хедера */
+  padding: 100px 20px 40px;
   max-width: 1200px;
   margin: 0 auto;
+  color: var(--text);
+  background: var(--background);
 }
 
 .certificatesTitle {
-  margin-bottom: 30px;
-  color: var(--heading-color);
+  margin-bottom: 40px;
+  color: var(--primary);
   text-align: center;
+  font-size: 2.5rem;
 }
 
 .certificatesGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 30px;
-  margin-bottom: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+  margin-bottom: 40px;
 }
 
 .certificateFrame {
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background: white;
+  border: 1px solid var(--border-color, #ddd);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  background: var(--background);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .backLink {
-  display: inline-block;
-  margin-top: 30px;
-  padding: 10px 20px;
-  background: var(--primary-color);
-  color: white;
+  display: block;
+  width: fit-content;
+  margin: 40px auto 0;
+  padding: 12px 24px;
+  background: var(--primary);
+  color: var(--background);
+  font-weight: bold;
   text-decoration: none;
-  border-radius: 4px;
-  transition: background 0.3s ease;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .backLink:hover {
-  background: var(--primary-dark);
+  background: var(--primary-dark, #5a7ee0);
+  transform: translateY(-2px);
+  color: var(--background);
 }
 
-/* Адаптивність */
+/* Dark Mode Adjustments */
+.dark-mode .certificateFrame {
+  border-color: #444;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .certificateFrame:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsiveness */
 @media (max-width: 768px) {
   .certificatesContainer {
     padding: 80px 15px 30px;
@@ -47,11 +66,16 @@
 
   .certificatesGrid {
     grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .certificatesTitle {
+    font-size: 2rem;
   }
 }
 
 @media (max-width: 480px) {
-  .certificateFrame {
-    height: 400px;
+  .certificatesGrid {
+    grid-template-columns: 1fr;
   }
 }

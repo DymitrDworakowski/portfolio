@@ -3,7 +3,8 @@ import { graphql, Link } from "gatsby"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import * as styles from "./certificates.module.css" // Імпорт CSS модуля
+import * as styles from "./certificates.module.css"
+import Cer from "../../static/data/Dymitr Dworakowski.pdf"
 
 const Certificates = () => {
   const { t } = useTranslation(["certificates"])
@@ -13,7 +14,7 @@ const Certificates = () => {
         <h1 className={styles.certificatesTitle}>{t("certificates:title")}</h1>
         <div className={styles.certificatesGrid}>
           <iframe
-            src="/certificates/Dymitr Dworakowski.pdf"
+            src={Cer}
             title={t("certificates:cer_title")}
             width="100%"
             height="500px"

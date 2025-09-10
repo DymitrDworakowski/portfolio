@@ -14,11 +14,12 @@
   justify-content: space-between;
   align-items: center;
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
+  margin: auto;
 }
 
-.logo a {
+.logo {
+  display: flex;
+  align-items: center;
   font-size: 1.5rem;
   font-weight: 700;
   color: #6e8efb;
@@ -35,9 +36,10 @@
 
 .navItem {
   color: #333;
-  text-decoration: none; /* Вимкнути стандартне підкреслення */
+  text-decoration: none;
   position: relative;
-  padding-bottom: 5px; /* Відступ для власного підкреслення */
+  padding-bottom: 5px;
+  text-transform: uppercase;
 }
 
 .navItem:hover {
@@ -45,7 +47,7 @@
 }
 
 .navItem::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;

@@ -1,4 +1,13 @@
 import * as React from "react"
+import {
+  User,
+  Target,
+  Star,
+  Users,
+  Briefcase,
+  GraduationCap,
+  Heart,
+} from "lucide-react"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -24,35 +33,72 @@ const AboutPage = () => {
         <h1 className={projectTitle}>{t("about:pageTitle")}</h1>
 
         <section className={projectSection}>
-          <h2>{t("about:sections.journey.title")}</h2>
+          <h2>
+            <User
+              size={20}
+              style={{ verticalAlign: "middle", marginRight: 6 }}
+            />
+            {t("about:sections.journey.title")}
+          </h2>
           <p>{t("about:sections.journey.content")}</p>
         </section>
 
         <section className={projectSection}>
-          <h2>{t("about:sections.focus.title")}</h2>
+          <h2>
+            <Target
+              size={20}
+              style={{ verticalAlign: "middle", marginRight: 6 }}
+            />
+            {t("about:sections.focus.title")}
+          </h2>
           <p>{t("about:sections.focus.content")}</p>
         </section>
 
         <section className={projectSection}>
-          <h2>{t("about:sections.skills.title")}</h2>
+          <h2>
+            <Star
+              size={20}
+              style={{ verticalAlign: "middle", marginRight: 6 }}
+            />
+            {t("about:sections.skills.title")}
+          </h2>
           <p>{t("about:sections.skills.content")}</p>
         </section>
 
         <section className={projectSection}>
-          <h2>{t("about:sections.inspiration.title")}</h2>
+          <h2>
+            <Users
+              size={20}
+              style={{ verticalAlign: "middle", marginRight: 6 }}
+            />
+            {t("about:sections.inspiration.title")}
+          </h2>
           <p>{t("about:sections.inspiration.content")}</p>
         </section>
 
         <section className={projectSection}>
-          <h2>{t("about:sections.connect.title")}</h2>
+          <h2>
+            <Briefcase
+              size={20}
+              style={{ verticalAlign: "middle", marginRight: 6 }}
+            />
+            {t("about:sections.connect.title")}
+          </h2>
           <p>{t("about:sections.connect.content")}</p>
         </section>
 
         <section className={projectSection}>
-          <h2>{t("about:sections.experience.title")}</h2>
+          <h2>
+            <Briefcase
+              size={20}
+              style={{ verticalAlign: "middle", marginRight: 6 }}
+            />
+            {t("about:sections.experience.title")}
+          </h2>
 
           <div className={experienceItem}>
             <h3>{t("about:experience.intersport.position")}</h3>
+
             <p className={experienceMeta}>
               {t("about:experience.intersport.company")} |{" "}
               {t("about:experience.intersport.duration")}
@@ -68,6 +114,7 @@ const AboutPage = () => {
 
           <div className={experienceItem}>
             <h3>{t("about:experience.ensalta.position")}</h3>
+
             <p className={experienceMeta}>
               {t("about:experience.ensalta.company")} |{" "}
               {t("about:experience.ensalta.duration")}
@@ -83,7 +130,13 @@ const AboutPage = () => {
         </section>
 
         <section className={projectSection}>
-          <h2>{t("about:sections.education.title")}</h2>
+          <h2>
+            <GraduationCap
+              size={20}
+              style={{ verticalAlign: "middle", marginRight: 6 }}
+            />
+            {t("about:sections.education.title")}
+          </h2>
           <div className={educationItem}>
             <h3>{t("about:education.university.name")}</h3>
             <p className={educationMeta}>
@@ -96,7 +149,13 @@ const AboutPage = () => {
         </section>
 
         <section className={projectSection}>
-          <h2>{t("about:sections.hobbies.title")}</h2>
+          <h2>
+            <Heart
+              size={20}
+              style={{ verticalAlign: "middle", marginRight: 6 }}
+            />
+            {t("about:sections.hobbies.title")}
+          </h2>
           <ul className={hobbiesList}>
             {[1, 2, 3].map(item => (
               <li key={item}>{t(`about:hobbies.${item}`)}</li>

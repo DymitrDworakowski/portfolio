@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useRef } from "react";
-import { Link, Trans } from "gatsby-plugin-react-i18next";
-import ThemeToggle from "./ThemeToggle";
-import LanguageSwitcher from "./languageSwitcher.js";
-import { 
+import React, { useState, useEffect, useRef } from "react"
+import { Link, Trans } from "gatsby-plugin-react-i18next"
+import ThemeToggle from "./ThemeToggle"
+import LanguageSwitcher from "./languageSwitcher.js"
+import {
   navbar,
   navbarWrapper,
   logo,
@@ -11,47 +11,48 @@ import {
   hamburgerButton,
   lines,
   mobileMenu,
-  controlsWrapper
-} from "./navbar.module.css";
+  controlsWrapper,
+} from "./navbar.module.css"
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const menuRef = useRef(null);
-  const buttonRef = useRef(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const menuRef = useRef(null)
+  const buttonRef = useRef(null)
 
   useEffect(() => {
-    const handleClickOutside = (event) => {
+    const handleClickOutside = event => {
       if (
-        menuRef.current && 
+        menuRef.current &&
         !menuRef.current.contains(event.target) &&
         buttonRef.current &&
         !buttonRef.current.contains(event.target)
-      ) {  // Видалено зайву закриваючу дужку тут
-        setIsMenuOpen(false);
+      ) {
+        // Видалено зайву закриваючу дужку тут
+        setIsMenuOpen(false)
       }
-    };
+    }
 
-    const handleEscapeKey = (event) => {
+    const handleEscapeKey = event => {
       if (event.key === "Escape") {
-        setIsMenuOpen(false);
+        setIsMenuOpen(false)
       }
-    };
+    }
 
-    document.addEventListener("mousedown", handleClickOutside);
-    document.addEventListener("keydown", handleEscapeKey);
-    
+    document.addEventListener("mousedown", handleClickOutside)
+    document.addEventListener("keydown", handleEscapeKey)
+
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-      document.removeEventListener("keydown", handleEscapeKey);
-    };
-  }, []);
+      document.removeEventListener("mousedown", handleClickOutside)
+      document.removeEventListener("keydown", handleEscapeKey)
+    }
+  }, [])
 
   useEffect(() => {
-    document.body.style.overflow = isMenuOpen ? "hidden" : "auto";
+    document.body.style.overflow = isMenuOpen ? "hidden" : "auto"
     return () => {
-      document.body.style.overflow = "auto";
-    };
-  }, [isMenuOpen]);
+      document.body.style.overflow = "auto"
+    }
+  }, [isMenuOpen])
 
   return (
     <header className={navbar}>
@@ -62,17 +63,32 @@ const Navbar = () => {
           </Link>
         </h1>
 
-        <div className={`${navItems} ${isMenuOpen ? mobileMenu : ''}`} ref={menuRef}>
+        <div
+          className={`${navItems} ${isMenuOpen ? mobileMenu : ""}`}
+          ref={menuRef}
+        >
           <Link className={navItem} to="/" onClick={() => setIsMenuOpen(false)}>
             <Trans>Home</Trans>
           </Link>
-          <Link className={navItem} to="/about" onClick={() => setIsMenuOpen(false)}>
+          <Link
+            className={navItem}
+            to="/about"
+            onClick={() => setIsMenuOpen(false)}
+          >
             <Trans>About Me</Trans>
           </Link>
-          <Link className={navItem} to="/projects" onClick={() => setIsMenuOpen(false)}>
+          <Link
+            className={navItem}
+            to="/projects"
+            onClick={() => setIsMenuOpen(false)}
+          >
             <Trans>Projects</Trans>
           </Link>
-          <Link className={navItem} to="/certificates" onClick={() => setIsMenuOpen(false)}>
+          <Link
+            className={navItem}
+            to="/certificates"
+            onClick={() => setIsMenuOpen(false)}
+          >
             <Trans>Certificates</Trans>
           </Link>
         </div>
@@ -82,20 +98,20 @@ const Navbar = () => {
           <ThemeToggle />
         </div>
 
-        <button 
+        <button
           ref={buttonRef}
-          className={hamburgerButton} 
+          className={hamburgerButton}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           aria-expanded={isMenuOpen}
         >
-          <span className={`${lines} ${isMenuOpen ? 'first-line' : ''}`} />
-          <span className={`${lines} ${isMenuOpen ? 'second-line' : ''}`} />
-          <span className={`${lines} ${isMenuOpen ? 'third-line' : ''}`} />
+          <span className={`${lines} ${isMenuOpen ? "first-line" : ""}`} />
+          <span className={`${lines} ${isMenuOpen ? "second-line" : ""}`} />
+          <span className={`${lines} ${isMenuOpen ? "third-line" : ""}`} />
         </button>
       </nav>
     </header>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar
