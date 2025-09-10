@@ -4,7 +4,9 @@ import { useTranslation } from "gatsby-plugin-react-i18next"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import * as styles from "./certificates.module.css"
-import Cer from "../../static/data/Dymitr Dworakowski.pdf"
+
+// Use absolute path to static file (Gatsby copies `static/` to site root)
+const Cer = "/data/Dymitr%20Dworakowski.pdf"
 
 const Certificates = () => {
   const { t } = useTranslation(["certificates"])
