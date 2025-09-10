@@ -5,8 +5,9 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import * as styles from "./certificates.module.css"
 
-// Use absolute path to static file (Gatsby copies `static/` to site root)
-const Cer = "/data/Dymitr%20Dworakowski.pdf"
+// Static file path (in `static/data`) — keep human-readable path and encode at runtime
+const CerPath = "/data/Dymitr Dworakowski.pdf"
+const Cer = encodeURI(CerPath)
 
 const Certificates = () => {
   const { t } = useTranslation(["certificates"])
@@ -15,18 +16,31 @@ const Certificates = () => {
       <div className={styles.certificatesContainer}>
         <h1 className={styles.certificatesTitle}>{t("certificates:title")}</h1>
         <div className={styles.certificatesGrid}>
-          <iframe
-            src={Cer}
-            title={t("certificates:cer_title")}
+          {/* Primary embed: object (better fallback handling) */}
+          <object
+            data={Cer}
+            type="application/pdf"
             width="100%"
             height="500px"
             className={styles.certificateFrame}
-          ></iframe>
+            aria-label={t("certificates:cer_title")}
+          >
+            {/* Fallback content: link to open/download if embed fails */}
+            <p>
+              {t("certificates:cer_fallback_text")} 
+              <a href={Cer} target="_blank" rel="noopener noreferrer">{t("certificates:cer_open")}</a>
+            </p>
+          </object>
         </div>
 
-        <Link to="/" className={styles.backLink}>
-          {t("certificates:cer_back")}
-        </Link>
+        <div style={{ textAlign: "center" }}>
+          <a href={Cer} target="_blank" rel="noopener noreferrer" className={styles.backLink} style={{ marginRight: 12 }}>
+            {t("certificates:cer_open_new")}
+          </a>
+          <Link to="/" className={styles.backLink}>
+            {t("certificates:cer_back")}
+          </Link>
+        </div>
       </div>
     </Layout>
   )
