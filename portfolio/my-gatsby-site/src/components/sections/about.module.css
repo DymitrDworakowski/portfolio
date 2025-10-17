@@ -1,6 +1,6 @@
 /* Використовуємо ваші CSS-змінні */
 .project-container {
-  margin-top: 30px;
+  margin-top: 50px;
   font-family: "Roboto", sans-serif;
   line-height: 1.6;
 
@@ -20,6 +20,7 @@
 }
 
 .project-section {
+  margin-top: 10px;
   max-width: 600px;
 }
 .project-skills {
@@ -50,14 +51,50 @@
   font-size: 0.8rem;
   color: white;
 }
+
+.workTitle {
+  margin-top: 10rem;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  color: gold;
+}
+.workSpan{
+  width: 5px;
+  height: 5px;
+  background: gold;
+  border-radius: 50%;
+  border: 2px solid gold;
+  display: inline-block;
+  margin-right: 1.6rem;
+  vertical-align: middle;
+  
+}
+
+.workLine {
+  /* Make the line stretch to the height of the sibling content (no fixed height) */
+  width: 1px;
+  background: rgb(119, 119, 116);
+  display: block;
+  align-self: stretch; /* when inside a flex container, stretch to container height */
+  height: auto; /* allow stretching instead of fixed px */
+  margin: 0;
+}
+.divWorkLine {
+  display: flex;
+  align-items: stretch; /* ensure children stretch to the same height */
+  gap: 1rem;
+  margin-left: 4px;
+}
 .experience-item,
 .education-item {
   margin-bottom: 2rem;
+  list-style: none;
 }
 
 .experience-meta,
 .education-meta {
-  color: var(--secondary);
+  padding-left: 1rem;
+  color: gold;
   font-style: italic;
   margin: 0.5rem 0;
   opacity: 0.8;
@@ -65,8 +102,10 @@
 
 .experience-list,
 .hobbies-list {
-  padding-left: 1.5rem;
-  color: var(--text);
+  padding-top: 2rem;
+  list-style: none;
+  padding-left: 1rem;
+  color: white;
 }
 
 .experience-list li,

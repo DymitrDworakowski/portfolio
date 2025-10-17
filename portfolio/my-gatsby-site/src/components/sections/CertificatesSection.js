@@ -8,7 +8,40 @@ const Cer = encodeURI(CerPath)
 const CertificatesSection = () => {
   const { t } = useTranslation(["certificates"])
   return (
+    
     <div className={styles.certificatesContainer}>
+       {/* <section className={projectSection}>
+        <h2>
+          <GraduationCap
+            size={20}
+            style={{ verticalAlign: "middle", marginRight: 6 }}
+          />
+          {t("about:sections.education.title")}
+        </h2>
+        <div className={educationItem}>
+          <h3>{t("about:education.university.name")}</h3>
+          <p className={educationMeta}>
+            {t("about:education.university.duration")} |{" "}
+            {t("about:education.university.degree")}
+          </p>
+          <p>{t("about:education.university.specialization")}</p>
+          <p>{t("about:education.university.coursework")}</p>
+        </div>
+      </section>
+      <section className={projectSection}>
+        <h2>
+          <Heart
+            size={20}
+            style={{ verticalAlign: "middle", marginRight: 6 }}
+          />
+          {t("about:sections.hobbies.title")}
+        </h2>
+        <ul className={hobbiesList}>
+          {[1, 2, 3].map(item => (
+            <li key={item}>{t(`about:hobbies.${item}`)}</li>
+          ))}
+        </ul>
+      </section> */}
       <h1 className={styles.certificatesTitle}>{t("certificates:title")}</h1>
       <div className={styles.certificatesGrid}>
         <object

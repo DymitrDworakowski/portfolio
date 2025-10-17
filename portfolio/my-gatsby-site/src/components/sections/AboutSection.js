@@ -40,6 +40,10 @@ import {
   skillLogo,
   skillName,
   projectItems,
+  workTitle,
+  workSpan,
+  workLine,
+  divWorkLine,
 } from "./about.module.css"
 
 const logoStyle = {
@@ -181,10 +185,12 @@ const AboutSection = () => {
             className={projectItems}
           >
             {hardSkills.map(skill => (
-              <motion.li key={skill.name} variants={itemVariants} className={skillItem}>
-                <p className={skillLogo}>
-                  {skill.logo} 
-                </p>
+              <motion.li
+                key={skill.name}
+                variants={itemVariants}
+                className={skillItem}
+              >
+                <p className={skillLogo}>{skill.logo}</p>
                 <span className={skillName}>{skill.name}</span>
               </motion.li>
             ))}
@@ -201,21 +207,28 @@ const AboutSection = () => {
         </h3>
         <p className={experienceMeta}>{t("about:sections.connect.content")}</p>
       </section> */}
-      <section className={projectSection}>
-        <h3>
-          <Briefcase
-            size={20}
-            style={{ verticalAlign: "middle", marginRight: 6 }}
-          />
-          {t("about:sections.experience.title")}
-        </h3>
 
+      {/* Work Experience */}
+
+      <section className={projectSection}>
+        
+          <h2 className={workTitle}>{t("about:sections.experience.title")}</h2>
+        
         <div className={experienceItem}>
-          <h3>{t("about:experience.intersport.position")}</h3>
+          
+          <h3>
+            <span className={workSpan}></span>
+            {t("about:experience.intersport.position")}
+          </h3>
+          <div className={divWorkLine}>
+            <span className={workLine}></span>
+            <div>
           <p className={experienceMeta}>
             {t("about:experience.intersport.company")} |{" "}
             {t("about:experience.intersport.duration")}
           </p>
+          
+          
           <ul className={experienceList}>
             {[1, 2, 3, 4, 5].map(item => (
               <li key={item}>
@@ -223,10 +236,15 @@ const AboutSection = () => {
               </li>
             ))}
           </ul>
+          </div>
+          </div>
         </div>
 
         <div className={experienceItem}>
-          <h3>{t("about:experience.ensalta.position")}</h3>
+          <h3>
+            <span className={workSpan}></span>
+            {t("about:experience.ensalta.position")}
+          </h3>
           <p className={experienceMeta}>
             {t("about:experience.ensalta.company")} |{" "}
             {t("about:experience.ensalta.duration")}
@@ -239,38 +257,6 @@ const AboutSection = () => {
             ))}
           </ul>
         </div>
-      </section>
-      <section className={projectSection}>
-        <h2>
-          <GraduationCap
-            size={20}
-            style={{ verticalAlign: "middle", marginRight: 6 }}
-          />
-          {t("about:sections.education.title")}
-        </h2>
-        <div className={educationItem}>
-          <h3>{t("about:education.university.name")}</h3>
-          <p className={educationMeta}>
-            {t("about:education.university.duration")} |{" "}
-            {t("about:education.university.degree")}
-          </p>
-          <p>{t("about:education.university.specialization")}</p>
-          <p>{t("about:education.university.coursework")}</p>
-        </div>
-      </section>
-      <section className={projectSection}>
-        <h2>
-          <Heart
-            size={20}
-            style={{ verticalAlign: "middle", marginRight: 6 }}
-          />
-          {t("about:sections.hobbies.title")}
-        </h2>
-        <ul className={hobbiesList}>
-          {[1, 2, 3].map(item => (
-            <li key={item}>{t(`about:hobbies.${item}`)}</li>
-          ))}
-        </ul>
       </section>
     </div>
   )
