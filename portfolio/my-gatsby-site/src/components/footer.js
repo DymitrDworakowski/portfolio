@@ -48,7 +48,6 @@ const Footer = () => {
           </a>
         </div>
         <div className={footerInfo}>
-          {/* <p>Junior Full-Stack Developer</p> */}
           <p> <Mail style={{ color: "rgb(250,150,0)" }} /> dymitr.dworakowski@gmail.com</p>
           <p> <Phone style={{ color: "rgb(250,150,0)" }} /> +48 577 177 636</p>
         </div>

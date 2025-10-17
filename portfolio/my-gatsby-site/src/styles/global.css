@@ -229,3 +229,51 @@ html {
 [id] {
   scroll-margin-top: 90px; /* match navbar height */
 }
+
+/* Project MDX page tweaks to match site style */
+.project-page {
+  max-width: 900px;
+  margin: 2.5rem auto;
+  padding: 1.5rem;
+  background: transparent;
+}
+
+.project-page__title {
+  color: var(--primary);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.25rem;
+  margin-bottom: 1rem;
+}
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.project-gallery__image {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  transition: transform 0.25s ease;
+}
+
+.project-gallery__image:hover {
+  transform: translateY(-4px);
+}
+
+.tech-stack__item {
+  background: rgba(var(--primary-rgb), 0.08);
+  color: var(--primary);
+  padding: 0.35rem 0.8rem;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.project-links__link {
+  background: var(--primary);
+  color: white;
+  border-radius: 8px;
+}
+
