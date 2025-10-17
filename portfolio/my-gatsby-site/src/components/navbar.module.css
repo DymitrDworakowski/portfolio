@@ -39,6 +39,7 @@
 .navItems {
   display: flex;
   gap: 2rem;
+  align-items: center;
 }
 
 .navItem {
@@ -49,7 +50,7 @@
   font-weight: bold;
 }
 
-/* underline default — схований */
+/* underline default — hidden */
 .navItem::after {
   content: "";
   position: absolute;
@@ -62,12 +63,10 @@
   transform-origin: left;
 }
 
-/* hover розкриває підкреслення */
 .navItem:hover::after {
   width: 100%;
 }
 
-/* active class (CSS module .active) — показує підкреслення та змінює колір тексту */
 .active {
   color: var(--primary);
 }
@@ -88,7 +87,7 @@
   border: none;
   cursor: pointer;
   padding: 0.5rem;
-  z-index: 1001;
+  z-index: 1003; /* above overlay and nav panel */
 }
 
 .lines {
@@ -101,15 +100,15 @@
 }
 
 .firstLine {
-  transform: rotate(45deg) translate(5px, 5px);
+  transform-origin: center;
 }
 
 .secondLine {
-  opacity: 0;
+  transition: opacity 0.2s ease;
 }
 
 .thirdLine {
-  transform: rotate(-45deg) translate(7px, -7px);
+  transform-origin: center;
 }
 
 /* Mobile styles */
@@ -117,7 +116,7 @@
   .navItems {
     position: fixed;
     top: 8px;
-    right: -100%;
+    right: -110%; /* ensure fully off-canvas when closed */
     width: 86%;
     max-width: 360px;
     height: calc(100vh - 16px);
@@ -129,13 +128,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: right 0.36s cubic-bezier(.2,.9,.2,1);
+    transition: right 0.36s cubic-bezier(.2,.9,.2,1), opacity 0.2s ease;
     gap: 1.75rem;
     padding: 2.25rem 1.5rem;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1002; /* above overlay */
   }
 
   .mobileMenu {
     right: 0;
+    opacity: 1;
+    pointer-events: auto;
   }
 
   .hamburgerButton {
@@ -153,9 +157,10 @@
     inset: 0;
     background: rgba(0,0,0,0.45);
     backdrop-filter: blur(2px);
-    z-index: 1000;
+    z-index: 1000; /* below navItems (1002) and hamburger (1003) */
     opacity: 0;
-    transition: opacity 0.25s ease;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+    pointer-events: none;
   }
 
   .overlayOpen {
