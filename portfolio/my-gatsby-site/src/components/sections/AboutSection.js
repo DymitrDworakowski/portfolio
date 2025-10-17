@@ -41,6 +41,7 @@ import {
   skillName,
   projectItems,
   workTitle,
+  divWorkTitle,
   workSpan,
   workLine,
   divWorkLine,
@@ -211,51 +212,58 @@ const AboutSection = () => {
       {/* Work Experience */}
 
       <section className={projectSection}>
-        
-          <h2 className={workTitle}>{t("about:sections.experience.title")}</h2>
-        
+        <h2 className={workTitle}>{t("about:sections.experience.title")}</h2>
+
         <div className={experienceItem}>
-          
-          <h3>
-            <span className={workSpan}></span>
-            {t("about:experience.intersport.position")}
-          </h3>
+          <div className={divWorkTitle}>
+            <h3>
+              <span className={workSpan}></span>
+              {t("about:experience.intersport.position")}
+            </h3>
+            <p>{t("about:experience.intersport.duration")}</p>
+          </div>
           <div className={divWorkLine}>
             <span className={workLine}></span>
             <div>
-          <p className={experienceMeta}>
-            {t("about:experience.intersport.company")} |{" "}
-            {t("about:experience.intersport.duration")}
-          </p>
-          
-          
-          <ul className={experienceList}>
-            {[1, 2, 3, 4, 5].map(item => (
-              <li key={item}>
-                {t(`about:experience.intersport.responsibilities.${item}`)}
-              </li>
-            ))}
-          </ul>
-          </div>
+              <p className={experienceMeta}>{t("about:experience.intersport.company")}</p>
+
+              <ul className={experienceList}>
+                {[1, 2, 3, 4, 5].map(item => (
+                  <li key={item}>
+                    {t(`about:experience.intersport.responsibilities.${item}`)}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
 
+        {/* Ensalta Experience */}
+
         <div className={experienceItem}>
-          <h3>
-            <span className={workSpan}></span>
-            {t("about:experience.ensalta.position")}
-          </h3>
-          <p className={experienceMeta}>
-            {t("about:experience.ensalta.company")} |{" "}
-            {t("about:experience.ensalta.duration")}
-          </p>
-          <ul className={experienceList}>
-            {[1, 2, 3, 4].map(item => (
-              <li key={item}>
-                {t(`about:experience.ensalta.responsibilities.${item}`)}
-              </li>
-            ))}
-          </ul>
+          <div className={divWorkTitle}>
+            <h3>
+              <span className={workSpan}></span>
+              {t("about:experience.ensalta.position")}
+            </h3>
+            <p>{t("about:experience.ensalta.duration")}</p>
+          </div>
+          <div className={divWorkLine}>
+            <span className={workLine}></span>
+            <div>
+              <p className={experienceMeta}>
+                {t("about:experience.ensalta.company")}
+              </p>
+
+              <ul className={experienceList}>
+                {[1, 2, 3, 4].map(item => (
+                  <li key={item}>
+                    {t(`about:experience.ensalta.responsibilities.${item}`)}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
     </div>

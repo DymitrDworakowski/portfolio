@@ -54,11 +54,15 @@
 
 .workTitle {
   margin-top: 10rem;
-  margin-bottom: 1rem;
   font-size: 2.5rem;
   color: gold;
 }
-.workSpan{
+.divWorkTitle {
+  display: flex;
+  justify-content: space-between;
+  
+}
+.workSpan {
   width: 5px;
   height: 5px;
   background: gold;
@@ -67,7 +71,6 @@
   display: inline-block;
   margin-right: 1.6rem;
   vertical-align: middle;
-  
 }
 
 .workLine {
@@ -87,7 +90,6 @@
 }
 .experience-item,
 .education-item {
-  margin-bottom: 2rem;
   list-style: none;
 }
 

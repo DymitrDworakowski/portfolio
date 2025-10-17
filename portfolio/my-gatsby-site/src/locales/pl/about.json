@@ -35,24 +35,24 @@
     "intersport": {
       "position": "Administrator Systemów i Sieci",
       "company": "Intersport Polska, Kraków",
-      "duration": "Lipiec 2021 - Obecnie",
+      "duration": "2021 - Obecnie",
       "responsibilities": {
-        "1": "Udział w rozwoju i utrzymaniu systemów wewnętrznych",
-        "2": "Konserwacja i modernizacja sieci komputerowych i sprzętu",
-        "3": "Rozwiązywanie problemów z oprogramowaniem i sprzętem",
-        "4": "Zarządzanie bezpieczeństwem sieci i optymalizacja wydajności",
-        "5": "Instalacja i konfiguracja systemów"
+        "1": "- Udział w rozwoju i utrzymaniu systemów wewnętrznych",
+        "2": "- Konserwacja i modernizacja sieci komputerowych i sprzętu",
+        "3": "- Rozwiązywanie problemów z oprogramowaniem i sprzętem",
+        "4": "- Zarządzanie bezpieczeństwem sieci i optymalizacja wydajności",
+        "5": "- Instalacja i konfiguracja systemów"
       }
     },
     "ensalta": {
       "position": "Inżynier Wsparcia Technicznego",
       "company": "Ensalta, Kraków",
-      "duration": "Październik 2017 - Lipiec 2021",
+      "duration": "2017 - 2021",
       "responsibilities": {
-        "1": "Obsługa wstępnych zapytań klientów i zgłoszeń serwisowych",
-        "2": "Rozwiązywanie problemów z oprogramowaniem, sprzętem i siecią",
-        "3": "Zarządzanie systemami help desk i dokumentacją",
-        "4": "Wsparcie produktowe i szkolenia"
+        "1": "- Obsługa wstępnych zapytań klientów i zgłoszeń serwisowych",
+        "2": "- Rozwiązywanie problemów z oprogramowaniem, sprzętem i siecią",
+        "3": "- Zarządzanie systemami help desk i dokumentacją",
+        "4": "- Wsparcie produktowe i szkolenia"
       }
     }
   },
