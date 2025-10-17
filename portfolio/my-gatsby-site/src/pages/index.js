@@ -79,12 +79,12 @@ const IndexPage = () => {
               <p className={contactItem}>
                 <Mail style={{ color: "gold" }} /> dymitr.dworakowski@gmail.com
               </p>
-              <p className={contactItem}>
-                <Github style={{ color: "gold" }} /> GitHub: example
-              </p>
-              <p className={contactItem}>
-                <Linkedin style={{ color: "gold" }} /> LinkedIn: example
-              </p>
+              <a className={contactItem} href="https://github.com/DymitrDworakowski">
+                <Github style={{ color: "gold" }} />  https://github.com/DymitrDworakowski
+              </a>
+              <a className={contactItem} href="https://www.linkedin.com/in/dymitr-dworakowski/" >
+                <Linkedin style={{ color: "gold" }} />  https://www.linkedin.com/in/dymitr-dworakowski/
+              </a>
             </div>
           </motion.div>
         </section>
