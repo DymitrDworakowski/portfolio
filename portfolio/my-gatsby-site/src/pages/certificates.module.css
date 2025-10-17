@@ -1,16 +1,14 @@
 .certificatesContainer {
   padding: 100px 20px 40px;
-  
-  
+
   max-width: 1200px;
   margin: 0 auto;
-  
 }
 
 .certificatesTitle {
   margin-bottom: 40px;
   color: gold;
-  
+
   font-size: 2.5rem;
 }
 
@@ -47,7 +45,7 @@
 .backLink:hover {
   background: gold;
   transform: translateY(-2px);
-  color:black;
+  color: black;
 }
 
 /* Dark Mode Adjustments */

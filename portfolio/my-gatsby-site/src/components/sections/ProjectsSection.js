@@ -11,6 +11,7 @@ import {
   projectMeta,
   projectRole,
   projectDate,
+  projectsTitle,
 } from "../../pages/projects/index.module.css"
 
 const ProjectsSection = () => {
@@ -48,7 +49,9 @@ const ProjectsSection = () => {
   }
 
   return (
-    <div className={projectsGrid}>
+    <div>
+      <h2 className={projectsTitle}>Projects</h2>
+    <ul className={projectsGrid}>
       {nodes.map(node => (
         <Link
           className={projectCard}
@@ -73,6 +76,7 @@ const ProjectsSection = () => {
           </div>
         </Link>
       ))}
+    </ul>
     </div>
   )
 }
