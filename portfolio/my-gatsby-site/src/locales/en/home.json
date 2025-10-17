@@ -1,7 +1,8 @@
 {
   "pageTitle": "My Portfolio",
   "hero": {
-    "title": "Dymitr Dworakowski",
+    "title": "Dymitr",
+    "title_2": "Dworakowski",
     "subtitle": "Full-Stack Developer",
     "description": "I specialize in creating modern web applications with experience in both frontend and backend development."
   },
