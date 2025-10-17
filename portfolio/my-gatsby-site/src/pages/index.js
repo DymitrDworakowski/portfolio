@@ -74,16 +74,16 @@ const IndexPage = () => {
 
             <div className={contactItems}>
               <p className={contactItem}>
-                <Phone style={{ color: "gold" }} /> +48 577 177 636
+                <Phone style={{ color: "rgb(250,150,0)" }} /> +48 577 177 636
               </p>
               <p className={contactItem}>
-                <Mail style={{ color: "gold" }} /> dymitr.dworakowski@gmail.com
+                <Mail style={{ color: "rgb(250,150,0)" }} /> dymitr.dworakowski@gmail.com
               </p>
               <a className={contactItem} href="https://github.com/DymitrDworakowski">
-                <Github style={{ color: "gold" }} />  https://github.com/DymitrDworakowski
+                <Github style={{ color: "rgb(250,150,0)" }} />  GitHub
               </a>
               <a className={contactItem} href="https://www.linkedin.com/in/dymitr-dworakowski/" >
-                <Linkedin style={{ color: "gold" }} />  https://www.linkedin.com/in/dymitr-dworakowski/
+                <Linkedin style={{ color: "rgb(250,150,0)" }} />  LinkedIn
               </a>
             </div>
           </motion.div>

@@ -1,12 +1,13 @@
 // src/components/navbar.js
 import React, { useState, useEffect, useRef } from "react"
 import { Link, Trans } from "gatsby-plugin-react-i18next"
+import { House, UserRound, FolderDot, GraduationCap, Link as LinkIcon } from "lucide-react"
 import { useLocation } from "@reach/router"
 // import ThemeToggle from "./ThemeToggle"
 import LanguageSwitcher from "./languageSwitcher.js"
-import * as styles from "./navbar.module.css";
+import * as styles from "./navbar.module.css"
 
-const NAV_SECTIONS = ["#hero", "#about", "#projects", "#certificates"]
+const NAV_SECTIONS = ["#hero", "#about", "#projects", "#certificates", "#contacts"]
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -71,12 +72,10 @@ const Navbar = () => {
     // працюємо лише в браузері
     if (typeof window === "undefined") return
 
-    const sections = NAV_SECTIONS
-      .map(h => {
-        const id = h.replace("#", "")
-        return document.getElementById(id)
-      })
-      .filter(Boolean)
+    const sections = NAV_SECTIONS.map(h => {
+      const id = h.replace("#", "")
+      return document.getElementById(id)
+    }).filter(Boolean)
 
     if (!sections.length) return
 
@@ -103,52 +102,103 @@ const Navbar = () => {
     return () => observer.disconnect()
   }, [])
 
-  const linkClass = (hash) =>
+  const linkClass = hash =>
     `${styles.navItem} ${activeHash === hash ? styles.active : ""}`
 
   return (
     <header className={styles.navbar}>
       <nav className={styles.navbarWrapper}>
         <h1 className={styles.logo}>
-          <Link to="/" onClick={() => { setIsMenuOpen(false); setActiveHash("#hero") }}>
+          <Link
+            to="/"
+            onClick={() => {
+              setIsMenuOpen(false)
+              setActiveHash("#hero")
+            }}
+          >
             <Trans>My Portfolio</Trans>
           </Link>
         </h1>
 
+        {/** overlay for mobile menu */}
+        <div
+          className={`${styles.overlay} ${isMenuOpen ? styles.overlayOpen : ""}`}
+          onClick={() => setIsMenuOpen(false)}
+          aria-hidden={!isMenuOpen}
+        />
+
         <div
           className={`${styles.navItems} ${isMenuOpen ? styles.mobileMenu : ""}`}
           ref={menuRef}
+          aria-hidden={!isMenuOpen}
         >
           <Link
             className={linkClass("#hero")}
             to="/#hero"
-            onClick={() => { setIsMenuOpen(false); setActiveHash("#hero") }}
+            onClick={() => {
+              setIsMenuOpen(false)
+              setActiveHash("#hero")
+            }}
           >
-            <Trans>Home</Trans>
+            <Trans>
+              {" "}
+              <House /> Home
+            </Trans>
           </Link>
 
           <Link
             className={linkClass("#about")}
             to="/#about"
-            onClick={() => { setIsMenuOpen(false); setActiveHash("#about") }}
+            onClick={() => {
+              setIsMenuOpen(false)
+              setActiveHash("#about")
+            }}
           >
-            <Trans>About Me</Trans>
+            <Trans>
+              {" "}
+              <UserRound /> About Me
+            </Trans>
           </Link>
 
           <Link
             className={linkClass("#projects")}
             to="/#projects"
-            onClick={() => { setIsMenuOpen(false); setActiveHash("#projects") }}
+            onClick={() => {
+              setIsMenuOpen(false)
+              setActiveHash("#projects")
+            }}
           >
-            <Trans>Projects</Trans>
+            <Trans>
+              {" "}
+              <FolderDot /> Projects
+            </Trans>
           </Link>
 
           <Link
             className={linkClass("#certificates")}
             to="/#certificates"
-            onClick={() => { setIsMenuOpen(false); setActiveHash("#certificates") }}
+            onClick={() => {
+              setIsMenuOpen(false)
+              setActiveHash("#certificates")
+            }}
           >
-            <Trans>Certificates</Trans>
+            <Trans>
+              {" "}
+              <GraduationCap /> Education
+            </Trans>
+          </Link>
+          <Link
+            className={linkClass("#contact")}
+            to="/#contact"
+            onClick={() => {
+              setIsMenuOpen(false)
+              setActiveHash("#contact")
+            }}
+          >
+            <Trans>
+              {" "}
+              <LinkIcon /> Links
+            </Trans>
           </Link>
         </div>
 
@@ -164,9 +214,15 @@ const Navbar = () => {
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           aria-expanded={isMenuOpen}
         >
-          <span className={`${styles.lines} ${isMenuOpen ? styles.firstLine : ""}`} />
-          <span className={`${styles.lines} ${isMenuOpen ? styles.secondLine : ""}`} />
-          <span className={`${styles.lines} ${isMenuOpen ? styles.thirdLine : ""}`} />
+          <span
+            className={`${styles.lines} ${isMenuOpen ? styles.firstLine : ""}`}
+          />
+          <span
+            className={`${styles.lines} ${isMenuOpen ? styles.secondLine : ""}`}
+          />
+          <span
+            className={`${styles.lines} ${isMenuOpen ? styles.thirdLine : ""}`}
+          />
         </button>
       </nav>
     </header>

@@ -4,10 +4,11 @@
   --gray-400: #ced4da;
   --gray-600: #6c757d;
   --gray-900: #212529;
-  --primary-rgb: 110, 142, 251;
-  --primary: #3498db;
-  --primary-light: #5faee3;
-  --primary-dark: #217dbb;
+  /* new gold-like primary requested: rgb(250,150,0) */
+  --primary-rgb: 250, 150, 0;
+  --primary: rgb(var(--primary-rgb));
+  --primary-light: rgba(250,150,0,0.85);
+  --primary-dark: rgba(200,120,0,0.95);
   --secondary: #2ecc71;
   --secondary-light: #54d98c;
   --secondary-dark: #25a25a;

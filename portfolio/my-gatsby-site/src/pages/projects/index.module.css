@@ -26,13 +26,13 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
 }
 .projectCard:focus-visible {
-  color: gold;
-  outline: 3px solid rgba(var(--primary), 0.15);
+  color: var(--primary);
+  outline: 3px solid rgba(var(--primary-rgb), 0.15);
   outline-offset: 4px;
 }
 .projectsTitle {
   font-size: 2.5rem;
-  color: gold;
+  color: var(--primary);
 }
 .projectImageContainer {
   position: relative;
@@ -85,7 +85,7 @@
 }
 
 .projectCard:hover .projectTitle {
-  color: gold;
+  color: var(--primary);
 }
 
 .projectMeta {

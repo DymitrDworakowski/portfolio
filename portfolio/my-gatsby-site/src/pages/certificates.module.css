@@ -7,7 +7,7 @@
 
 .certificatesTitle {
   margin-bottom: 40px;
-  color: gold;
+  color: var(--primary);
 
   font-size: 2.5rem;
 }
@@ -24,7 +24,7 @@
   border: 1px solid var(--border-color, #ddd);
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  background-color: gold;
+  background-color: var(--primary);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -34,7 +34,7 @@
   width: fit-content;
   margin: 40px auto 0;
   padding: 12px 24px;
-  background-color: darkgoldenrod;
+  background-color: rgb(var(--primary-rgb));
   color: black;
   font-weight: bold;
   text-decoration: none;
@@ -43,7 +43,7 @@
 }
 
 .backLink:hover {
-  background: gold;
+  background: var(--primary);
   transform: translateY(-2px);
   color: black;
 }

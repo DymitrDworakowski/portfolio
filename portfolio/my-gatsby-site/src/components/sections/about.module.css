@@ -10,12 +10,12 @@
   display: block;
 
   height: 4px;
-  background: gold;
+  background: var(--primary);
 
   border-radius: 2px;
 }
 .project-title {
-  color: gold;
+  color: var(--primary);
   font-size: 2.5rem;
 }
 
@@ -55,7 +55,7 @@
 .workTitle {
   margin-top: 10rem;
   font-size: 2.5rem;
-  color: gold;
+  color: var(--primary);
 }
 .divWorkTitle {
   display: flex;
@@ -65,9 +65,9 @@
 .workSpan {
   width: 5px;
   height: 5px;
-  background: gold;
+  background: var(--primary);
   border-radius: 50%;
-  border: 2px solid gold;
+  border: 2px solid rgb(var(--primary-rgb));
   display: inline-block;
   margin-right: 1.6rem;
   vertical-align: middle;
@@ -96,7 +96,7 @@
 .experience-meta,
 .education-meta {
   padding-left: 1rem;
-  color: gold;
+  color: var(--primary);
   font-style: italic;
   margin: 0.5rem 0;
   opacity: 0.8;

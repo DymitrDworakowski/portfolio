@@ -35,7 +35,7 @@
   margin-bottom: 10px;
 }
 .cvButton {
-  background: gold;
+  background: var(--primary);
   color: #000000;
   border: none;
   padding: 1rem 1.5rem;
@@ -45,7 +45,7 @@
   transition: background 0.3s ease;
 }
 .cvButton:hover {
-  background: darkorange;
+  background: rgb(var(--primary-rgb));
 }
 .cvInfo {
   display: flex;
@@ -78,7 +78,7 @@
   font-size: 2rem;
   margin: 0;
   font-weight: 200;
-  color: gold;
+  color: var(--primary);
   opacity: 0.9;
   text-align: start;
 }

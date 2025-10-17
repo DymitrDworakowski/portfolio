@@ -67,7 +67,7 @@
 .copyright {
   margin-top: 1.5rem;
   padding-top: 1.5rem;
-  border-top: 1px solid gold;
+  border-top: 1px solid rgb(var(--primary-rgb));
   width: 100%;
 }
 
