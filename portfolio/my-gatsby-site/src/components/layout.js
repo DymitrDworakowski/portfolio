@@ -1,7 +1,7 @@
 // src/components/Layout.js
 import React from "react";
 import Navbar from "./navbar.js";
-import Footer from "./footer.js";
+
 import { buttons } from "./layout.module.css";
 
 const Layout = ({ children }) => {
@@ -14,7 +14,7 @@ const Layout = ({ children }) => {
           {children}
         </main>
       </div>
-      <Footer /> {/* Футер тепер винесено за контейнер */}
+      
     </>
   );
 };

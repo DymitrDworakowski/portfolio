@@ -1,9 +1,9 @@
 import React, { useEffect } from "react"
 import { navigate } from "gatsby"
 
-export default function AboutRedirect() {
+export default function ContactRedirect() {
   useEffect(() => {
-    navigate("/#about")
+    navigate("/#contact")
   }, [])
   return null
 }

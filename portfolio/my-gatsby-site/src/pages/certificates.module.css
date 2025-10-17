@@ -1,19 +1,20 @@
 .certificatesContainer {
   padding: 100px 20px 40px;
-  max-width: 1200px;
-  margin: 0 auto;
-  color: var(--text);
-  background: var(--background);
+  
+  
+  color: gold;
+  
 }
 
 .certificatesTitle {
   margin-bottom: 40px;
-  color: var(--primary);
-  text-align: center;
+  color: gold;
+  
   font-size: 2.5rem;
 }
 
 .certificatesGrid {
+  max-width: 1200px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 40px;
@@ -24,7 +25,7 @@
   border: 1px solid var(--border-color, #ddd);
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  background: var(--background);
+  background-color: gold;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -34,8 +35,8 @@
   width: fit-content;
   margin: 40px auto 0;
   padding: 12px 24px;
-  background: var(--primary);
-  color: var(--background);
+  background-color: darkgoldenrod;
+  color: black;
   font-weight: bold;
   text-decoration: none;
   border-radius: 8px;
@@ -43,9 +44,9 @@
 }
 
 .backLink:hover {
-  background: var(--primary-dark, #5a7ee0);
+  background: gold;
   transform: translateY(-2px);
-  color: var(--background);
+  color:black;
 }
 
 /* Dark Mode Adjustments */

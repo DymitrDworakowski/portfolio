@@ -1,5 +1,6 @@
 import React from "react"
-import { 
+import { Phone, Mail, Github, Linkedin } from "lucide-react"
+import {
   footer,
   footerContent,
   footerInfo,
@@ -7,7 +8,7 @@ import {
   socialLink,
   socialIcon,
   copyright,
-  emailLink
+  emailLink,
 } from "./footer.module.css"
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa"
 
@@ -17,11 +18,6 @@ const Footer = () => {
   return (
     <footer className={footer}>
       <div className={footerContent}>
-        <div className={footerInfo}>
-          <p>© {currentYear} Dymitr Dworakowski</p>
-          <p>Junior Full-Stack Developer</p>
-        </div>
-
         <div className={socialLinks}>
           <a
             href="https://www.linkedin.com/in/dymitr-dworakowski/"
@@ -32,7 +28,7 @@ const Footer = () => {
           >
             <FaLinkedin className={socialIcon} />
           </a>
-          
+
           <a
             href="https://github.com/DymitrDworakowski"
             target="_blank"
@@ -42,19 +38,24 @@ const Footer = () => {
           >
             <FaGithub className={socialIcon} />
           </a>
-          
-          <a 
-            href="mailto:dymitr.dworakowski@gmail.com" 
+
+          <a
+            href="mailto:dymitr.dworakowski@gmail.com"
             className={`${socialLink} ${emailLink}`}
             aria-label="Email"
           >
             <FaEnvelope className={socialIcon} />
           </a>
         </div>
+        <div className={footerInfo}>
+          {/* <p>Junior Full-Stack Developer</p> */}
+          <p> <Mail style={{ color: "gold" }} /> dymitr.dworakowski@gmail.com</p>
+          <p> <Phone style={{ color: "gold" }} /> +48 577 177 636</p>
+        </div>
       </div>
-      
+
       <div className={copyright}>
-        <p>Designed & Built by Dymitr Dworakowski</p>
+        <p> © {currentYear} Designed & Built by Dymitr Dworakowski</p>
       </div>
     </footer>
   )

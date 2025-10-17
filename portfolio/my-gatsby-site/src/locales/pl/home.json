@@ -1,7 +1,8 @@
 {
   "pageTitle": "Moje Portfolio",
   "hero": {
-    "title": "Dymitr Dworakowski",
+    "title": "Dymitr",
+    "title_2": "Dworakowski",
     "subtitle": "Full-Stack Developer",
     "description": "Specjalizuję się w tworzeniu nowoczesnych aplikacji internetowych z doświadczeniem zarówno w frontend, jak i backend development."
   },

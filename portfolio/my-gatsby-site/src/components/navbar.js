@@ -1,24 +1,21 @@
+// src/components/navbar.js
 import React, { useState, useEffect, useRef } from "react"
 import { Link, Trans } from "gatsby-plugin-react-i18next"
-import ThemeToggle from "./ThemeToggle"
+import { useLocation } from "@reach/router"
+// import ThemeToggle from "./ThemeToggle"
 import LanguageSwitcher from "./languageSwitcher.js"
-import {
-  navbar,
-  navbarWrapper,
-  logo,
-  navItems,
-  navItem,
-  hamburgerButton,
-  lines,
-  mobileMenu,
-  controlsWrapper,
-} from "./navbar.module.css"
+import * as styles from "./navbar.module.css";
+
+const NAV_SECTIONS = ["#hero", "#about", "#projects", "#certificates"]
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [activeHash, setActiveHash] = useState("")
   const menuRef = useRef(null)
   const buttonRef = useRef(null)
+  const location = useLocation()
 
+  // Закриваємо меню при кліку поза ним або Esc
   useEffect(() => {
     const handleClickOutside = event => {
       if (
@@ -27,7 +24,6 @@ const Navbar = () => {
         buttonRef.current &&
         !buttonRef.current.contains(event.target)
       ) {
-        // Видалено зайву закриваючу дужку тут
         setIsMenuOpen(false)
       }
     }
@@ -47,6 +43,7 @@ const Navbar = () => {
     }
   }, [])
 
+  // Блокуємо скрол при відкритому мобільному меню
   useEffect(() => {
     document.body.style.overflow = isMenuOpen ? "hidden" : "auto"
     return () => {
@@ -54,60 +51,122 @@ const Navbar = () => {
     }
   }, [isMenuOpen])
 
+  // Ініціалізація активного пункту на основі location.hash / pathname (перший рендер)
+  useEffect(() => {
+    // якщо є hash - використовуємо його
+    if (location && location.hash) {
+      setActiveHash(location.hash)
+    } else {
+      // на головній сторінці можем поставити #hero
+      if (location && (location.pathname === "/" || location.pathname === "")) {
+        setActiveHash("#hero")
+      } else {
+        setActiveHash("") // або інша логіка для інших сторінок
+      }
+    }
+  }, [location])
+
+  // Scroll-spy: слідкуємо за секціями і оновлюємо activeHash під час скролу
+  useEffect(() => {
+    // працюємо лише в браузері
+    if (typeof window === "undefined") return
+
+    const sections = NAV_SECTIONS
+      .map(h => {
+        const id = h.replace("#", "")
+        return document.getElementById(id)
+      })
+      .filter(Boolean)
+
+    if (!sections.length) return
+
+    const observer = new IntersectionObserver(
+      entries => {
+        // вибираємо entry з найбільшим intersectionRatio > 0
+        const visible = entries
+          .filter(e => e.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0]
+
+        if (visible) {
+          setActiveHash(`#${visible.target.id}`)
+        }
+      },
+      {
+        root: null,
+        rootMargin: "0px",
+        threshold: [0.25, 0.5, 0.75], // налаштуй за бажанням
+      }
+    )
+
+    sections.forEach(s => observer.observe(s))
+
+    return () => observer.disconnect()
+  }, [])
+
+  const linkClass = (hash) =>
+    `${styles.navItem} ${activeHash === hash ? styles.active : ""}`
+
   return (
-    <header className={navbar}>
-      <nav className={navbarWrapper}>
-        <h1 className={logo}>
-          <Link to="/" onClick={() => setIsMenuOpen(false)}>
+    <header className={styles.navbar}>
+      <nav className={styles.navbarWrapper}>
+        <h1 className={styles.logo}>
+          <Link to="/" onClick={() => { setIsMenuOpen(false); setActiveHash("#hero") }}>
             <Trans>My Portfolio</Trans>
           </Link>
         </h1>
 
         <div
-          className={`${navItems} ${isMenuOpen ? mobileMenu : ""}`}
+          className={`${styles.navItems} ${isMenuOpen ? styles.mobileMenu : ""}`}
           ref={menuRef}
         >
-          <Link className={navItem} to="/" onClick={() => setIsMenuOpen(false)}>
+          <Link
+            className={linkClass("#hero")}
+            to="/#hero"
+            onClick={() => { setIsMenuOpen(false); setActiveHash("#hero") }}
+          >
             <Trans>Home</Trans>
           </Link>
+
           <Link
-            className={navItem}
-            to="/about"
-            onClick={() => setIsMenuOpen(false)}
+            className={linkClass("#about")}
+            to="/#about"
+            onClick={() => { setIsMenuOpen(false); setActiveHash("#about") }}
           >
             <Trans>About Me</Trans>
           </Link>
+
           <Link
-            className={navItem}
-            to="/projects"
-            onClick={() => setIsMenuOpen(false)}
+            className={linkClass("#projects")}
+            to="/#projects"
+            onClick={() => { setIsMenuOpen(false); setActiveHash("#projects") }}
           >
             <Trans>Projects</Trans>
           </Link>
+
           <Link
-            className={navItem}
-            to="/certificates"
-            onClick={() => setIsMenuOpen(false)}
+            className={linkClass("#certificates")}
+            to="/#certificates"
+            onClick={() => { setIsMenuOpen(false); setActiveHash("#certificates") }}
           >
             <Trans>Certificates</Trans>
           </Link>
         </div>
 
-        <div className={controlsWrapper}>
+        <div className={styles.controlsWrapper}>
           <LanguageSwitcher />
-          <ThemeToggle />
+          {/* <ThemeToggle /> */}
         </div>
 
         <button
           ref={buttonRef}
-          className={hamburgerButton}
+          className={styles.hamburgerButton}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           aria-expanded={isMenuOpen}
         >
-          <span className={`${lines} ${isMenuOpen ? "first-line" : ""}`} />
-          <span className={`${lines} ${isMenuOpen ? "second-line" : ""}`} />
-          <span className={`${lines} ${isMenuOpen ? "third-line" : ""}`} />
+          <span className={`${styles.lines} ${isMenuOpen ? styles.firstLine : ""}`} />
+          <span className={`${styles.lines} ${isMenuOpen ? styles.secondLine : ""}`} />
+          <span className={`${styles.lines} ${isMenuOpen ? styles.thirdLine : ""}`} />
         </button>
       </nav>
     </header>

@@ -1,17 +1,23 @@
 .navbar {
-  position: fixed;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
-  background: #ffffff;
+  /* Use semi-transparent bg so backdrop-filter can be seen */
+  background-color: rgba(51, 51, 51, 0.55);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
   padding: 0;
 }
 
 .navbarWrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   max-width: 1200px;
   margin: auto;
@@ -25,6 +31,7 @@
   color: #6e8efb;
   text-decoration: none;
   background: linear-gradient(to right, #6e8efb, #a777e3);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -35,17 +42,14 @@
 }
 
 .navItem {
-  color: #333;
+  color: #faf9f9;
   text-decoration: none;
   position: relative;
   padding-bottom: 5px;
   text-transform: uppercase;
 }
 
-.navItem:hover {
-  color: #6e8efb;
-}
-
+/* underline default — схований */
 .navItem::after {
   content: "";
   position: absolute;
@@ -54,12 +58,24 @@
   width: 0;
   height: 2px;
   background: #6e8efb;
-  transition: width 0.3s ease;
+  transition: width 0.28s ease, transform 0.28s ease;
+  transform-origin: left;
 }
 
+/* hover розкриває підкреслення */
 .navItem:hover::after {
   width: 100%;
 }
+
+/* active class (CSS module .active) — показує підкреслення та змінює колір тексту */
+.active {
+  color: #6e8efb;
+}
+.active::after {
+  width: 100%;
+  background: #6e8efb;
+}
+
 .controlsWrapper {
   display: flex;
   align-items: center;

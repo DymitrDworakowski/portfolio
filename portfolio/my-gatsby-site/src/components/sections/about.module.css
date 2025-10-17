@@ -1,0 +1,109 @@
+/* Використовуємо ваші CSS-змінні */
+.project-container {
+  margin-top: 30px;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+
+  transition: background 0.3s ease, color 0.3s ease;
+}
+.aboutLine {
+  display: block;
+
+  height: 4px;
+  background: gold;
+
+  border-radius: 2px;
+}
+.project-title {
+  color: gold;
+  font-size: 2.5rem;
+}
+
+.project-section {
+  max-width: 600px;
+}
+.project-skills {
+  max-width: 600px;
+}
+.techSkills {
+  margin: 1rem 0;
+}
+.projectItems {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: center;
+  gap: 0.1rem;
+  padding: 0;
+}
+.skillItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.3rem 0.8rem;
+}
+.skillLogo {
+  margin-bottom: 0.5rem;
+}
+.skillName {
+  font-size: 0.8rem;
+  color: white;
+}
+.experience-item,
+.education-item {
+  margin-bottom: 2rem;
+}
+
+.experience-meta,
+.education-meta {
+  color: var(--secondary);
+  font-style: italic;
+  margin: 0.5rem 0;
+  opacity: 0.8;
+}
+
+.experience-list,
+.hobbies-list {
+  padding-left: 1.5rem;
+  color: var(--text);
+}
+
+.experience-list li,
+.hobbies-list li {
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+
+h2 {
+  color: white;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid rgba(var(--primary), 0.2);
+  padding-bottom: 0.5rem;
+}
+.aboutP {
+  color: white;
+  font-size: 1rem;
+  max-width: 600px;
+}
+
+h3 {
+  color: white;
+  font-size: 1.4rem;
+  margin: 1rem 0 0.5rem;
+}
+
+/* Додаткові покращення для темного режиму */
+.dark-mode .project-section {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode h2 {
+  border-bottom-color: rgba(var(--primary), 0.3);
+}
+
+.dark-mode .experience-meta,
+.dark-mode .education-meta {
+  opacity: 0.9;
+}

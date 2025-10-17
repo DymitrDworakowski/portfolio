@@ -1,120 +1,137 @@
 import * as React from "react"
-import { Rocket, User, Code, Award } from "lucide-react"
+import { Phone, Mail, Github, Linkedin } from "lucide-react"
+import { motion } from "framer-motion"
 import Layout from "../components/layout"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { graphql } from "gatsby"
+import DecryptedText from "../components/DecryptedText"
 import Seo from "../components/seo"
-import { 
+import AboutSection from "../components/sections/AboutSection"
+import ProjectsSection from "../components/sections/ProjectsSection"
+import CertificatesSection from "../components/sections/CertificatesSection"
+import ContactSection from "../components/sections/ContactSection"
+
+import {
   container,
   hero,
   heroContent,
   heroTitle,
   heroSubtitle,
-  heroText,
-  sections,
-  section,
-  sectionTitle,
-  skillsGrid,
-  skillCard,
-  skillCategory,
-  skillList,
-  skillItem,
-  about,
-  aboutText
+  heroTitle_container,
+  cv,
+  cvButton,
+  cvInfo,
+  cvInfoText,
+  cvInfoDivider,
+  contactItems,
+  contactItem,
 } from "./index.module.css"
 
 const IndexPage = () => {
   const { t } = useTranslation(["home"])
 
-  const hardSkills = [
-    { name: "React", level: 45 },
-    { name: "Gatsby", level: 35 },
-    { name: "Node.js", level: 40 },
-    { name: "CSS", level: 67 },
-    { name: "HTML", level: 90 },
-    { name: "JavaScript", level: 50 },
-    { name: "Python", level: 20 },
-    { name: "Django", level: 10 },
-    { name: "AWS", level: 10 },
-    { name: "Docker", level: 40 }
-  ]
-
-  const softSkills = [
-    t("home:skills.thinking"),
-    t("home:skills.communication"),
-    t("home:skills.teamwork"),
-    t("home:skills.timeManagement")
-  ]
-
   return (
     <Layout pageTitle={t("home:pageTitle")}>
       <div className={container}>
-        {/* Hero Section */}
-        <section className={hero}>
-          <div className={heroContent}>
-              <h1 className={heroTitle}>
-                <Rocket size={32} style={{verticalAlign: 'middle', marginRight: 8}} />
-                {t("home:hero.title")}
-              </h1>
-              <h2 className={heroSubtitle}>
-                <User size={24} style={{verticalAlign: 'middle', marginRight: 6}} />
-                {t("home:hero.subtitle")}
-              </h2>
-              <p className={heroText}>
-                {t("home:hero.description")}
+        {/* CV bar */}
+        <div className={cv}>
+          <div className={cvInfo}>
+            <span className={cvInfoDivider}></span>
+            <p className={cvInfoText}>Open to work</p>
+          </div>
+          <a
+            href="/data/Dymitr_Dworakowski_CV.pdf"
+            download="Dymitr_Dworakowski_CV.pdf"
+            className={cvButton}
+          >
+            Download CV
+          </a>
+        </div>
+
+        {/* HERO */}
+        <section id="hero" className={hero}>
+          <motion.div
+            className={heroContent}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+          >
+            <h2 className={heroSubtitle}>{t("home:hero.subtitle")}</h2>
+            <h1 className={heroTitle}>
+              <div className={heroTitle_container}>
+                <DecryptedText
+                  text={t("home:hero.title")}
+                  animateOn="view"
+                  revealDirection="center"
+                />
+                <DecryptedText
+                  text={t("home:hero.title_2")}
+                  animateOn="view"
+                  revealDirection="center"
+                />
+              </div>
+            </h1>
+
+            <div className={contactItems}>
+              <p className={contactItem}>
+                <Phone style={{ color: "gold" }} /> +48 577 177 636
               </p>
-          </div>
-        </section>
-
-        {/* Skills Section */}
-        <section className={sections}>
-          <div className={section}>
-            <h2 className={sectionTitle}>{t("home:skills.technical")}</h2>
-            <div className={skillsGrid}>
-              {hardSkills.map((skill) => (
-                  <div key={skill.name} className={skillCard}>
-                    <div className={skillCategory}>
-                      <h3>
-                        <Code size={18} style={{verticalAlign: 'middle', marginRight: 4}} />
-                        {skill.name}
-                      </h3>
-                      <div className={skillList}>
-                        <div 
-                          className={skillItem} 
-                          style={{ width: `${skill.level}%` }}
-                        ></div>
-                      </div>
-                      <span>{skill.level}%</span>
-                    </div>
-                  </div>
-              ))}
+              <p className={contactItem}>
+                <Mail style={{ color: "gold" }} /> dymitr.dworakowski@gmail.com
+              </p>
+              <p className={contactItem}>
+                <Github style={{ color: "gold" }} /> GitHub: example
+              </p>
+              <p className={contactItem}>
+                <Linkedin style={{ color: "gold" }} /> LinkedIn: example
+              </p>
             </div>
-          </div>
-
-          <div className={section}>
-            <h2 className={sectionTitle}>{t("home:skills.soft")}</h2>
-            <div className={skillsGrid}>
-              {softSkills.map((skill) => (
-                  <div key={skill} className={skillCard}>
-                    <div className={skillCategory}>
-                      <h3>
-                        <Award size={18} style={{verticalAlign: 'middle', marginRight: 4}} />
-                        {skill}
-                      </h3>
-                    </div>
-                  </div>
-              ))}
-            </div>
-          </div>
+          </motion.div>
         </section>
 
-        {/* About Section */}
-        <section className={about}>
-          <h2 className={sectionTitle}>{t("home:about.title")}</h2>
-          <p className={aboutText}>
-            {t("home:about.description")}
-          </p>
-        </section>
+        {/* ABOUT */}
+        <motion.section
+          id="about"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          <AboutSection />
+        </motion.section>
+
+        {/* PROJECTS */}
+        <motion.section
+          id="projects"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          <ProjectsSection />
+        </motion.section>
+
+        {/* CERTIFICATES */}
+        <motion.section
+          id="certificates"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          <CertificatesSection />
+        </motion.section>
+
+        {/* CONTACT */}
+        <motion.section
+          id="contact"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          <ContactSection />
+        </motion.section>
       </div>
     </Layout>
   )
@@ -134,9 +151,8 @@ export const query = graphql`
   }
 `
 
-// Fixed Head component - either use static title or pass pageContext
 export const Head = ({ pageContext }) => (
-  <Seo title={pageContext?.language === 'en' ? "Home" : "Strona główna"} />
+  <Seo title={pageContext?.language === "en" ? "Home" : "Strona główna"} />
 )
 
 export default IndexPage

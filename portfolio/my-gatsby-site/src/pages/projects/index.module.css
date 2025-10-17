@@ -1,36 +1,28 @@
 .projectsGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   gap: 2rem;
   padding: 2rem;
   max-width: 1400px;
   margin: 0 auto;
-  background-color: var(--background);
 }
 
 .projectCard {
   display: flex;
   flex-direction: column;
-  background: var(--background);
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-decoration: none;
-  color: var(--text);
-  border: 1px solid var(--border-color, #ddd);
-  height: 100%;
-}
 
-.projectCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+
+  color: var(--text);
+
+  height: 100%;
 }
 
 .projectImageContainer {
   position: relative;
   width: 100%;
-  aspect-ratio: 16/9;
+
   overflow: hidden;
 }
 
@@ -102,7 +94,7 @@
     padding: 1rem;
     gap: 1.5rem;
   }
-  
+
   .projectContent {
     padding: 1.25rem;
   }
