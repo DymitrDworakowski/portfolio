@@ -13,86 +13,103 @@ import { Trans } from "gatsby-plugin-react-i18next"
 
 <div className="project-page">
 
-  <h1 className="project-page__title"><Trans i18nKey="contactconn_title">Contactconn Project</Trans></h1>
+<h1 className="project-page__title">
+  <Trans i18nKey="contactconn_title">Contactconn Project</Trans>
+</h1>
 
-  ## <Trans i18nKey="contactconn_description_title">Project Description</Trans>
+## <Trans i18nKey="contactconn_description_title">Project Description</Trans>
 
-  **<Trans i18nKey="contactconn_description">Contact Management Web Application</Trans>** — <Trans i18nKey="contactconn_description_text">Helps users efficiently manage and organize their contacts with React frontend and Node.js/MongoDB backend.</Trans>
+**<Trans i18nKey="contactconn_description">Contact Management Web Application</Trans>** — <Trans i18nKey="contactconn_description_text">Helps users efficiently manage and organize their contacts with React frontend and Node.js/MongoDB backend.</Trans>
 
-  ### <Trans i18nKey="contactconn_features.title">Key Features</Trans>
+### <Trans i18nKey="contactconn_features.title">Key Features</Trans>
+<ul className="features">
+<li>
+  <h4><Trans i18nKey="contactconn_features.management">Contact Management</Trans></h4>
+  <Trans i18nKey="contactconn_features.management_text">Add, edit, delete contacts with detailed info</Trans>
+</li>
+<li>
+  <h4><Trans i18nKey="contactconn_features.favorites">Favorites System</Trans></h4>
+  <Trans i18nKey="contactconn_features.favorites_text">Mark important contacts for quick access</Trans>
+</li>
+<li>
+  <h4><Trans i18nKey="contactconn_features.auth">User Authentication</Trans></h4>
+  <Trans i18nKey="contactconn_features.text">Secure access to personal contacts</Trans>
+</li>
+</ul>
 
-  - **<Trans i18nKey="contactconn_features.management">Contact Management</Trans>**  
-    <Trans i18nKey="contactconn_features.management_text">Add, edit, delete contacts with detailed info</Trans>
-  
-  - **<Trans i18nKey="contactconn_features.favorites">Favorites System</Trans>**  
-    <Trans i18nKey="contactconn_features.favorites_text">Mark important contacts for quick access</Trans>
+## <Trans i18nKey="contactconn_screenshots.title">App Screenshots</Trans>
 
-  - **<Trans i18nKey="contactconn_features.auth">User Authentication</Trans>**  
-    <Trans i18nKey="contactconn_features.text">Secure access to personal contacts</Trans>
+<div className="project-gallery">
+  <figure className="project-gallery__item">
+    <img
+      src="/images/contact-home.png"
+      alt="Home Page"
+      className="project-gallery__image"
+    />
+    <figcaption className="project-gallery__caption">
+      <Trans i18nKey="contactconn_screenshots.home_text">Welcome screen with auth options</Trans>
+    </figcaption>
+  </figure>
 
-  ## <Trans i18nKey="">App Screenshots</Trans>
+  <figure className="project-gallery__item">
+    <img
+      src="/images/contact-contacts.png"
+      alt="Contacts Page"
+      className="project-gallery__image"
+    />
+    <figcaption className="project-gallery__caption">
+      <Trans i18nKey="contactconn_screenshots.contacts_text">Contact management interface</Trans>
+    </figcaption>
+  </figure>
+</div>
 
-  <div className="project-gallery">
-    <figure className="project-gallery__item">
-      <img
-        src="/images/contact-home.png"
-        alt={<Trans i18nKey="contactconn_screenshots.home">Home Page</Trans>}
-        className="project-gallery__image"
-      />
-      <figcaption className="project-gallery__caption">
-        <Trans i18nKey="contactconn_screenshots.home_text">Welcome screen with auth options</Trans>
-      </figcaption>
-    </figure>
-    
-    <figure className="project-gallery__item">
-      <img
-        src="/images/contact-contacts.png"
-        alt={<Trans i18nKey="contactconn_screenshots.contacts">Contacts Page</Trans>}
-        className="project-gallery__image"
-      />
-      <figcaption className="project-gallery__caption">
-        <Trans i18nKey="contactconn_screenshots.contacts_text">Contact management interface</Trans>
-      </figcaption>
-    </figure>
-  </div>
+## <Trans i18nKey="contactconn_technologies">Technologies</Trans>
 
-  ## <Trans i18nKey="contactconn_technologies">Technologies</Trans>
+<div className="tech-stack">
+  <span className="tech-stack__item">JavaScript</span>
+  <span className="tech-stack__item">SCSS</span>
+  <span className="tech-stack__item">React</span>
+  <span className="tech-stack__item">Node.js</span>
+  <span className="tech-stack__item">MongoDB</span>
+</div>
 
-  <div className="tech-stack">
-    <span className="tech-stack__item">JavaScript</span>
-    <span className="tech-stack__item">SCSS</span>
-    <span className="tech-stack__item">React</span>
-    <span className="tech-stack__item">Node.js</span>
-    <span className="tech-stack__item">MongoDB</span>
-  </div>
+## <Trans i18nKey="contactconn_workflow">How It Works</Trans>
 
-  ## <Trans i18nKey="contactconn_workflow">How It Works</Trans>
-
+<div className="how-work">
   <Trans i18nKey="contactconn_workflow_text">
-    Users authenticate to access their contact list. All changes sync in real-time with the MongoDB database via Node.js backend API. The responsive interface works seamlessly across devices.
+    Users authenticate to access their contact list. All changes sync in
+    real-time with the MongoDB database via Node.js backend API. The responsive
+    interface works seamlessly across devices.
   </Trans>
+</div>
 
-  ## <Trans i18nKey="contactconn.links">Project Links</Trans>
+## <Trans i18nKey="contactconn.links">Project Links</Trans>
 
-  <div className="project-links">
-    <a href="https://dymitrdworakowski.github.io/phonebook/" className="project-links__link">
-      <Trans>Live Demo</Trans>
-    </a>
-    <a href="https://github.com/DymitrDworakowski/phonebook" className="project-links__link">
-      <Trans>GitHub Repo</Trans>
-    </a>
-    <a href="https://github.com/DymitrDworakowski/nodejs-hw-rest-api" className="project-links__link">
-      <Trans>Backend Code</Trans>
-    </a>
-  </div>
+<div className="project-links">
+  <a
+    href="https://dymitrdworakowski.github.io/phonebook/"
+    className="project-links__link"
+  >
+    <Trans>Live Demo</Trans>
+  </a>
+  <a
+    href="https://github.com/DymitrDworakowski/phonebook"
+    className="project-links__link"
+  >
+    <Trans>GitHub Repo</Trans>
+  </a>
+  <a
+    href="https://github.com/DymitrDworakowski/nodejs-hw-rest-api"
+    className="project-links__link"
+  >
+    <Trans>Backend Code</Trans>
+  </a>
+</div>
 
-    ## <Trans i18nKey="contactconn.links">Additional</Trans>
-  
- - **<Trans i18nKey="contactconn_additional.details">
-     The application was built using modern web technologies. Frontend uses React.js to create interactive UI while backend is based on Node.js with Express.js.
-  </Trans>**
-  
-  - **<Trans i18nKey="contactconn_additional.hosting">
-    Backend is hosted on Render.com ensuring high availability and reliability.
-  </Trans>**
+## <Trans i18nKey="contactconn_additional.title">Additional</Trans>
+
+<p className="additional-item"><strong><Trans i18nKey="contactconn_additional.details">The application was built using modern web technologies. Frontend uses React.js to create interactive UI while backend is based on Node.js with Express.js.</Trans></strong></p>
+
+<p className="additional-item"><strong><Trans i18nKey="contactconn_additional.hosting">Backend is hosted on Render.com ensuring high availability and reliability.</Trans></strong></p>
+
 </div>
